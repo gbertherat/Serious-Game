@@ -1,21 +1,22 @@
 package v1;
 
 /**
- * La classe Player permet la création de profil de joueur.
+ * La classe Player permet la création de profil joueur.
  * @author Guillaume
  */
 public class Player {
 	// Vars //
-	static int count = 0;
-	int id;
-	String nom;
-	String prenom;
-	int age;
-	String mail;
-	String username;
-	String password;
-	int vie;
-	int score;
+	protected static int count = 0;
+	protected int id;
+	protected String nom;
+	protected String prenom;
+	protected int age;
+	protected String mail;
+	protected String licence;
+	protected String username;
+	protected String password;
+	protected int vie;
+	protected int score;
 	
 	/**
 	 * Constructeur par defaut de la classe Player
@@ -25,8 +26,9 @@ public class Player {
 		id = count;
 		nom = "default";
 		prenom = "default";
-		age = -1;
+		age = 0;
 		mail = "default";
+		licence = "default";
 		username = "default";
 		password = null;
 		vie = 0;
@@ -40,13 +42,14 @@ public class Player {
 	 * @param age - L'age du joueur
 	 * @param mail - Le mail du joueur
 	 */
-	public Player(String nom, String prenom, int age, String mail, String username, String password) {
+	public Player(String nom, String prenom, int age, String mail, String licence, String username, String password) {
 		count++;
 		this.id = count;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.age = age;
 		this.mail = mail;
+		this.licence = licence;
 		this.username = username;
 		this.password = password;
 		this.vie = 0;
@@ -136,6 +139,23 @@ public class Player {
 	 */
 	public void setMail(String mail) {
 		this.mail = mail;
+	}
+	
+	// LICENCE //
+	/**
+	 * Permet de récupérer la licence d'un joueur
+	 * @return (String) licence - La licence du joueur
+	 */
+	public String getLicence() {
+		return this.licence;
+	}
+	
+	/**
+	 * Permet de définir la licence d'un joueur
+	 * @param (String) licence - La licence à définir
+	 */
+	public void setLicence(String licence) {
+		this.licence = licence;
 	}
 	
 	// USERNAME //
