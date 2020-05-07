@@ -17,6 +17,7 @@ public class Player {
 	protected String password;
 	protected int vie;
 	protected int score;
+	protected int defis;
 	
 	/**
 	 * Constructeur par defaut de la classe Player
@@ -33,6 +34,7 @@ public class Player {
 		password = null;
 		vie = 0;
 		score = 0;
+		defis = 0;
 	}
 	
 	/**
@@ -54,6 +56,7 @@ public class Player {
 		this.password = password;
 		this.vie = 0;
 		this.score = 0;
+		this.defis = 0;
 	}
 	
 	// ID //
@@ -237,7 +240,10 @@ public class Player {
 				"\nAge: " + age +
 				"\nMail: " + mail +
 				"\nUsername: " + username +
-				"\nPassword: " + password;
+				"\nPassword: " + password +
+				"\nVie: " + vie +
+				"\nScore: " + score +
+				"\nDefis: " + defis; 
 	}
 	
 	// EQUALS //
