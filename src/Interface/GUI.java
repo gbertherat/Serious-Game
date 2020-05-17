@@ -14,6 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import v1.Defi;
 import v1.Player;
 
 /**
@@ -23,10 +24,12 @@ import v1.Player;
 public class GUI{
 	protected JFrame frame;
 	protected ArrayList<Player> listeJoueurs;
+	protected ArrayList<Defi> listeDefis;
 	protected static int idSession = 0;
 	
 	public GUI(JFrame frame) {
 		listeJoueurs = new ArrayList<>();
+		listeDefis = new ArrayList<>();
 		this.frame = frame;
 	}
 	
@@ -53,6 +56,31 @@ public class GUI{
 	
 	public void delJoueur(Player player) {
 		this.listeJoueurs.remove(player);
+	}
+	
+	// LISTE JOUEURS //
+	/**
+	 * Permet de récupérer la liste des joueurs
+	 * @return la liste des joueurs
+	 */
+	public ArrayList<Defi> getListeDefis() {
+		return listeDefis;
+	}
+
+	/**
+	 * Permet de définir la liste des joueurs
+	 * @param listeJoueurs - la liste à définir
+	 */
+	public void setListeDefis(ArrayList<Defi> listeDefis) {
+		this.listeDefis = listeDefis;
+	}
+	
+	public void addDefi(Defi defi) {
+		this.listeDefis.add(defi);
+	}
+	
+	public void delDefi(Defi defi) {
+		this.listeDefis.remove(defi);
 	}
 	
 	/**
@@ -154,6 +182,7 @@ public class GUI{
 	public static void main(String[] args) {
 		JFrame frame = new JFrame();
 		GUI myGui = new GUI(frame);
+		myGui.addJoueur(new Player("Bertherat", "Guillaume", 19, "bertherat.guillaume@gmail.com", "Informatique", "Motzen", "123"));
 		myGui.repaint();
 	}
 }

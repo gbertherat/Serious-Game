@@ -6,7 +6,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -59,7 +58,7 @@ public class Inscription {
 		pageInscription.add(inscription);
 		panel.add(pageInscription);
 		
-		panel.add(Box.createRigidArea(new Dimension(500,10)));
+		panel.add(Box.createRigidArea(new Dimension(500,30)));
 		
 		// NOM
 		JPanel nomPanel = new JPanel();
@@ -71,11 +70,9 @@ public class Inscription {
 		nomPanel.add(Box.createRigidArea(new Dimension(30,30)));
 		
 		JTextField nomInput = new JTextField();
-		nomInput.setMaximumSize(new Dimension(200, 30));
+		nomInput.setMaximumSize(new Dimension(200, 20));
 		nomPanel.add(nomInput);
 		panel.add(nomPanel);
-		
-		panel.add(Box.createRigidArea(new Dimension(500, 10)));
 		
 		// PRENOM
 		JPanel prenomPanel = new JPanel();
@@ -87,7 +84,7 @@ public class Inscription {
 		prenomPanel.add(Box.createRigidArea(new Dimension(10,30)));
 		
 		JTextField prenomInput = new JTextField();
-		prenomInput.setMaximumSize(new Dimension(200, 30));
+		prenomInput.setMaximumSize(new Dimension(200, 20));
 		prenomPanel.add(prenomInput);
 		panel.add(prenomPanel);
 		
@@ -202,7 +199,6 @@ public class Inscription {
 		panel.add(errorPanel);
 		
 		// BOUTON : CONFIRMER
-		Connexion page = new Connexion(myGui, frame);
 		JPanel confirmPanel = new JPanel();
 		confirmPanel.setLayout(new BoxLayout(confirmPanel, BoxLayout.LINE_AXIS));
 		
@@ -219,8 +215,6 @@ public class Inscription {
 				String username = inUsername.getText();
 				String password = inPassword.getText();
 				
-				boolean found = false;
-				
 				if(nom.length() < 3) {
 					errorLabel.setText("Erreur: Nom invalide (< 3 caractères)");
 				} else if(prenom.length() < 3) {
@@ -233,8 +227,8 @@ public class Inscription {
 					errorLabel.setText("Erreur: Username invalide (< 3 caractères)");
 					for(Player p : myGui.getListeJoueurs()) {
 						if(p.getUsername().equals(username)) {
-							found = true;
 							errorLabel.setText("Erreur: Username déjà pris");
+							break;
 						}
 					}
 				} else if(password.length() < 3) {
@@ -246,7 +240,7 @@ public class Inscription {
 					ActionListener connexion = new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							page.repaint();
+							new Connexion(myGui, frame).repaint();
 						}
 					};
 					Timer timer = new Timer(1000, connexion);

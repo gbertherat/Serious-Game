@@ -111,6 +111,7 @@ public class Connexion {
 					String password = inPassword.getText();
 					if(selected.getPassword().equals(password)) {
 						GUI.idSession = selected.getID();
+						new Menu(myGui, frame).repaint();
 					}
 				}
 				
