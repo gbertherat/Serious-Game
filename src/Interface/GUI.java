@@ -50,6 +50,16 @@ public class GUI{
 		this.listeJoueurs = listeJoueurs;
 	}
 	
+	public Player getPlayer(int id) {
+		Player toReturn = null;
+		for(Player p : listeJoueurs) {
+			if(p.getID() == id) {
+				return p;
+			}
+		}
+		return toReturn;
+	}
+	
 	public void addJoueur(Player player) {
 		this.listeJoueurs.add(player);
 	}
@@ -136,9 +146,7 @@ public class GUI{
 		buttonPanel1.add(seConnecter);
 		main.add(buttonPanel1);
 		
-		
 		main.add(Box.createRigidArea(new Dimension(500,40)));
-		
 		
 		// BOUTON S'INSCRIRE
 		Inscription pageInscription = new Inscription(this, frame);

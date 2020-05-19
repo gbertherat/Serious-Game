@@ -15,6 +15,7 @@ public class Player {
 	protected String licence;
 	protected String username;
 	protected String password;
+	protected Bulletin myBulletin;
 	protected int vie;
 	protected int score;
 	protected int defis;
@@ -28,10 +29,11 @@ public class Player {
 		nom = "default";
 		prenom = "default";
 		age = 0;
-		mail = "default";
+		mail = null;
 		licence = "default";
-		username = "default";
+		username = null;
 		password = null;
+		myBulletin = null;
 		vie = 0;
 		score = 0;
 		defis = 0;
@@ -54,6 +56,7 @@ public class Player {
 		this.licence = licence;
 		this.username = username;
 		this.password = password;
+		this.myBulletin = null;
 		this.vie = 0;
 		this.score = 0;
 		this.defis = 0;
@@ -193,6 +196,15 @@ public class Player {
 	 */
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	// BULLETIN //
+	public Bulletin getBulletin() {
+		return this.myBulletin;
+	}
+	
+	public void setBulletin(Bulletin bulletin) {
+		this.myBulletin = bulletin;
 	}
 	
 	// VIE //

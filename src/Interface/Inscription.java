@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -20,6 +21,7 @@ import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import v1.Bulletin;
 import v1.Player;
 
 /**
@@ -143,7 +145,6 @@ public class Inscription {
 		licenceLabel.setFont(new Font("Arial", Font.PLAIN, 16));
 		licenceLabelPanel.add(licenceLabel);
 		panel.add(licenceLabelPanel);
-		panel.add(Box.createRigidArea(new Dimension(10,10)));
 		
 		JPanel licencePanel = new JPanel();
 		licencePanel.setLayout(new BoxLayout(licencePanel, BoxLayout.LINE_AXIS));
@@ -187,6 +188,29 @@ public class Inscription {
 		
 		panel.add(Box.createRigidArea(new Dimension(500,10)));
 		
+		// NOTES //
+		JPanel noteLabelPanel = new JPanel();
+		noteLabelPanel.setLayout(new BoxLayout(noteLabelPanel, BoxLayout.LINE_AXIS));
+		JLabel noteLabel = new JLabel("Entrez vos moyennes:");
+		noteLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+		noteLabelPanel.add(noteLabel);
+		panel.add(noteLabelPanel);
+		
+		JPanel notePanel = new JPanel();
+		notePanel.setLayout(new BoxLayout(notePanel, BoxLayout.LINE_AXIS));
+		
+		int numberOfFields = 15;
+		JTextField[] fields = new JTextField[numberOfFields];
+		for(int i = 0; i < fields.length; i++) {
+			fields[i] = new JTextField();
+			fields[i].setMaximumSize(new Dimension(25,20));
+			notePanel.add(fields[i]);
+		}
+		
+		panel.add(notePanel);
+		
+		panel.add(Box.createRigidArea(new Dimension(500,10)));
+		
 		// ERROR
 		JPanel errorPanel = new JPanel();
 		errorPanel.setLayout(new BoxLayout(errorPanel, BoxLayout.LINE_AXIS));
@@ -214,39 +238,83 @@ public class Inscription {
 				String licence = licenceBox.getSelectedItem().toString();
 				String username = inUsername.getText();
 				String password = inPassword.getText();
+				Bulletin newBulletin;
+				int score = 0;
 				
 				if(nom.length() < 3) {
 					errorLabel.setText("Erreur: Nom invalide (< 3 caractères)");
+					return;
 				} else if(prenom.length() < 3) {
 					errorLabel.setText("Erreur: Prénom invalide (< 3 caractères)");
+					return;
 				} else if(mail.length() < 3) {
 					errorLabel.setText("Erreur: Mail invalide (< 3 caractères)");
-				} else if(!isValid(inMail.getText())) {
+					return;
+				} else if(!isValid(mail)) {
 					errorLabel.setText("Erreur: Mail invalide (Format incorrecte)"); 
+					return;
 				} else if(username.length() < 3) {
 					errorLabel.setText("Erreur: Username invalide (< 3 caractères)");
+					return;
+				} else if(password.length() < 3) {
+					errorLabel.setText("Erreur: Password invalide (< 3 caractères) ");
+					return;
+				} else {
 					for(Player p : myGui.getListeJoueurs()) {
 						if(p.getUsername().equals(username)) {
 							errorLabel.setText("Erreur: Username déjà pris");
-							break;
+							return;
+						} 
+						if(p.getMail().equals(mail)) {
+							errorLabel.setText("Erreur: Mail déjà pris");
+							return;
 						}
 					}
-				} else if(password.length() < 3) {
-					errorLabel.setText("Erreur: Password invalide (< 3 caractères) ");
-				} else {
-					errorLabel.setText("Utilisateur créé!");
-					myGui.addJoueur(new Player(nom, prenom, age, mail, licence, username, password));
-					System.out.println(myGui.getListeJoueurs());
-					ActionListener connexion = new ActionListener() {
-						@Override
-						public void actionPerformed(ActionEvent arg0) {
-							new Connexion(myGui, frame).repaint();
-						}
-					};
-					Timer timer = new Timer(1000, connexion);
-					timer.start();
-					timer.setRepeats(false);
+	
+					int note = -1;
+					ArrayList<Integer> notes = new ArrayList<>();
+					newBulletin = new Bulletin();
+					
+					for(int i = 0; i < numberOfFields; i++) {
+						if(!fields[i].getText().isEmpty()) {
+							try {
+								note = Integer.parseInt(fields[i].getText());
+							} catch (NumberFormatException e) {
+								errorLabel.setText("Erreur: Entrez des moyennes valides");
+								return;
+							}
+							
+							if(note <= 20 && note >= 0) {
+								score = score + note;
+								notes.add(note);
+							} else {
+								errorLabel.setText("Erreur: Entrez des moyennes valides");
+								return;
+							}
+						}	
+					}
+					if(score == 0) {
+						errorLabel.setText("Erreur: Entrez des moyennes");
+						return;
+					}
+					newBulletin.setListeNote(notes);
 				}
+				
+				errorLabel.setText("Utilisateur créé!");
+				Player newPlayer = new Player(nom, prenom, age, mail, licence, username, password);
+				newPlayer.setBulletin(newBulletin);
+				newPlayer.setVie(score);
+				myGui.addJoueur(newPlayer);
+				
+				ActionListener connexion = new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						new Connexion(myGui, frame).repaint();
+					}
+				};
+				Timer timer = new Timer(1000, connexion);
+				timer.start();
+				timer.setRepeats(false);
 			}	
 		});
 		confirmPanel.add(confirm);

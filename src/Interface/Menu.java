@@ -31,7 +31,7 @@ public class Menu {
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
-			panel.add(Box.createRigidArea(new Dimension(500,30)));
+			panel.add(Box.createRigidArea(new Dimension(500,10)));
 			panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 			
 			// TITRE //
@@ -42,7 +42,34 @@ public class Menu {
 			titrePanel.add(titre);
 			panel.add(titrePanel);
 			
-			panel.add(Box.createRigidArea(new Dimension(500,30)));
+			panel.add(Box.createRigidArea(new Dimension(500,20)));
+			
+			// USERNAME //
+			JPanel userPanel = new JPanel();
+			userPanel.setLayout(new BoxLayout(userPanel, BoxLayout.LINE_AXIS));
+			JLabel user = new JLabel("Utilisateur: " + myGui.getPlayer(GUI.idSession).getNom() + " " + myGui.getPlayer(GUI.idSession).getPrenom());
+			user.setFont(new Font("Arial", Font.PLAIN, 16));
+			userPanel.add(user);
+			panel.add(userPanel);
+			
+			panel.add(Box.createRigidArea(new Dimension (500,5)));
+			
+			// BOUTON : PROFIL //
+			Profil myProfil = new Profil(myGui, frame);
+			
+			JPanel profilPanel = new JPanel();
+			profilPanel.setLayout(new BoxLayout(profilPanel, BoxLayout.LINE_AXIS));
+			JButton profilButton = new JButton("Mon profil");
+			profilButton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					myProfil.repaint();
+				}
+			});
+			profilPanel.add(profilButton);
+			panel.add(profilPanel);
+			
+			panel.add(Box.createRigidArea(new Dimension (500,30)));
 			
 			// BOUTON : LANCER UN DEFI //
 			JPanel lancerDefiPanel = new JPanel();
@@ -53,7 +80,7 @@ public class Menu {
 			lancerDefiPanel.add(lancerDefi);
 			panel.add(lancerDefiPanel);
 			
-			panel.add(Box.createRigidArea(new Dimension(500,30)));
+			panel.add(Box.createRigidArea(new Dimension(500,20)));
 			
 			// NOMBRE DE DEFI //
 			JPanel nbDefiPanel = new JPanel();
