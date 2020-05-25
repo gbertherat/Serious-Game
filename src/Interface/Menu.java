@@ -77,6 +77,11 @@ public class Menu {
 			
 			JButton lancerDefi = new JButton("Lancer un défi");
 			lancerDefi.setMaximumSize(new Dimension(150,50));
+			lancerDefi.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent arg0) {
+					(new LancerDefi(myGui, frame)).repaint();
+				}
+			});
 			lancerDefiPanel.add(lancerDefi);
 			panel.add(lancerDefiPanel);
 			
@@ -89,7 +94,7 @@ public class Menu {
 			int nbrDefi = 0;
 			LocalDate dateFin = null;
 			for(Defi d : myGui.getListeDefis()) {
-				if(d.getDestinataire().getID() == GUI.idSession && !d.isTermine()) {
+				if(d.getDestinataire().getID() == GUI.idSession && !d.isAccepte()) {
 					nbrDefi++;
 					if(dateFin != null && d.getDateExpiration().isBefore(dateFin)) {
 						dateFin = d.getDateExpiration();
