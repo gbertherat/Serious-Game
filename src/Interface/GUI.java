@@ -228,7 +228,10 @@ public class GUI{
 		GUI myGui = new GUI(frame);
 		myGui.addJoueur(new Player("Mister", "Guest", 19, "mail@test.com", "Informatique", "Guest", "123"));
 		myGui.addJoueur(new Admin("Bertherat", "Guillaume", 19, "bertherat.guillaume@gmail.com", "Informatique", "Motzen", "123"));
-		myGui.addDefi(new Defi(new Question("Test", "Test"), myGui.getListeJoueurs().get(0), myGui.getListeJoueurs().get(1), 5));
+		for(int i = 0; i < 21; i++) {
+			myGui.addDefi(new Defi(new Question(String.valueOf(i), "Test", "Test"), myGui.getPlayer(1), myGui.getPlayer(2), 10));
+		}
+		
 		myGui.repaint();
 	}
 }

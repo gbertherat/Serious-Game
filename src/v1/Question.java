@@ -10,6 +10,7 @@ public class Question {
 	// VARS //
 	private static int count = 0;
 	private int id;
+	private String titre;
 	private String contenu;
 	private String categorie;
 	private ArrayList<String> listeReponses;
@@ -22,6 +23,7 @@ public class Question {
 	public Question() {
 		count++;
 		id = count;
+		setTitre("default");
 		contenu = "default";
 		listeReponses = new ArrayList<String>();
 		categorie = "default";
@@ -34,9 +36,10 @@ public class Question {
 	 * @param contenu - Le contenu de la question
 	 * @param categorie - La catégorie de la question
 	 */
-	public Question(String contenu, String categorie) {
+	public Question(String titre, String contenu, String categorie) {
 		count++;
 		this.id = count;
+		this.setTitre(titre);
 		this.contenu = contenu;
 		this.listeReponses = new ArrayList<String>();
 		this.categorie = categorie;
@@ -60,7 +63,25 @@ public class Question {
 	public void setID(int id) {
 		this.id = id;
 	}
+
+	// TITRE //
 	
+	/**
+	 * Permet de récupérer le titre d'une question
+	 * @return titre - Le titre de la question
+	 */
+	public String getTitre() {
+		return titre;
+	}
+
+	/**
+	 * Permet de définir le titre d'une question
+	 * @param titre - Le titre à définir
+	 */
+	public void setTitre(String titre) {
+		this.titre = titre;
+	}
+
 	// CONTENU //
 	/**
 	 * Permet de récupérer le contenu d'une question

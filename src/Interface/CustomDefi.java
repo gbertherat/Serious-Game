@@ -188,18 +188,21 @@ public class CustomDefi {
 					//System.out.println(fieldTitre + "\n" + fieldCategorie + "\n" + fieldQuestion + "\n" + fieldReponse + "\n" + fieldDestinataire);
 				
 					if(fieldTitre.length() < 3) {
-						messageLabel.setText("Titre invalide (< 20 caractères)");
+						messageLabel.setText("Erreur : Titre invalide (< 3 caractères)");
+						return;
+					} else if(fieldTitre.length() > 20) {
+						messageLabel.setText("Erreur : Titre invalide (> 20 caractères");
 						return;
 					} else if(fieldQuestion.length() < 20) {
-						messageLabel.setText("Question invalide (< 20 caractères)");
+						messageLabel.setText("Erreur : Question invalide (< 20 caractères)");
 						return;
 					} else if(fieldReponse.length() < 20) {
-						messageLabel.setText("Réponse invalide (< 20 caractères)");
+						messageLabel.setText("Erreur : Réponse invalide (< 20 caractères)");
 						return;
 					}
 					
 					boolean error = true;
-					Question newQuestion = new Question(fieldQuestion, fieldCategorie);
+					Question newQuestion = new Question(fieldTitre, fieldQuestion, fieldCategorie);
 					newQuestion.addReponse(fieldReponse);
 					for(Player p: myGui.getListeJoueurs()) {
 						if((p.getNom() + " " + p.getPrenom()).equals(fieldDestinataire)) {

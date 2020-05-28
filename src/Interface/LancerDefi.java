@@ -1,6 +1,5 @@
 package Interface;
 
-import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -14,8 +13,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-import v1.Player;
-
 public class LancerDefi {
 	private GUI myGui;
 	private JFrame frame;
@@ -27,8 +24,6 @@ public class LancerDefi {
 	
 	public void repaint() {
 		if(GUI.idSession != 0) {
-			Player selected = myGui.getPlayer(GUI.idSession);
-			
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();

@@ -244,8 +244,14 @@ public class Inscription {
 				if(nom.length() < 3) {
 					errorLabel.setText("Erreur: Nom invalide (< 3 caractères)");
 					return;
+				} else if(nom.length() > 20) {
+					errorLabel.setText("Erreur: Nom invalide (> 20 caractères)");
+					return;
 				} else if(prenom.length() < 3) {
 					errorLabel.setText("Erreur: Prénom invalide (< 3 caractères)");
+					return;
+				} else if(prenom.length() > 20) {
+					errorLabel.setText("Erreur: Prénom invalide (> 20 caractères");
 					return;
 				} else if(mail.length() < 3) {
 					errorLabel.setText("Erreur: Mail invalide (< 3 caractères)");
@@ -255,6 +261,9 @@ public class Inscription {
 					return;
 				} else if(username.length() < 3) {
 					errorLabel.setText("Erreur: Username invalide (< 3 caractères)");
+					return;
+				} else if(username.length() > 20) {
+					errorLabel.setText("Erreur: Username invalide (> 20 caractères)");
 					return;
 				} else if(password.length() < 3) {
 					errorLabel.setText("Erreur: Password invalide (< 3 caractères) ");
@@ -288,7 +297,7 @@ public class Inscription {
 								score = score + note;
 								notes.add(note);
 							} else {
-								errorLabel.setText("Erreur: Entrez des moyennes valides");
+								errorLabel.setText("Erreur: Entrez des moyennes valides (Entre 0 et 20)");
 								return;
 							}
 						}	
