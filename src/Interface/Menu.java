@@ -16,10 +16,11 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import v1.Defi;
+import v1.Player;
 
 public class Menu {
-	GUI myGui;
-	JFrame frame;
+	private GUI myGui;
+	private JFrame frame;
 	
 	public Menu(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
@@ -28,6 +29,8 @@ public class Menu {
 	
 	void repaint() {
 		if(GUI.idSession != 0) {
+			Player selected = myGui.getPlayer(GUI.idSession);
+			
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
@@ -47,7 +50,7 @@ public class Menu {
 			// USERNAME //
 			JPanel userPanel = new JPanel();
 			userPanel.setLayout(new BoxLayout(userPanel, BoxLayout.LINE_AXIS));
-			JLabel user = new JLabel("Utilisateur: " + myGui.getPlayer(GUI.idSession).getNom() + " " + myGui.getPlayer(GUI.idSession).getPrenom());
+			JLabel user = new JLabel("Utilisateur: " + selected.getNom() + " " + selected.getPrenom());
 			user.setFont(new Font("Arial", Font.PLAIN, 16));
 			userPanel.add(user);
 			panel.add(userPanel);
@@ -60,6 +63,7 @@ public class Menu {
 			JPanel profilPanel = new JPanel();
 			profilPanel.setLayout(new BoxLayout(profilPanel, BoxLayout.LINE_AXIS));
 			JButton profilButton = new JButton("Mon profil");
+			profilButton.setMaximumSize(new Dimension(150, 25));
 			profilButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
@@ -69,7 +73,29 @@ public class Menu {
 			profilPanel.add(profilButton);
 			panel.add(profilPanel);
 			
-			panel.add(Box.createRigidArea(new Dimension (500,30)));
+			panel.add(Box.createRigidArea(new Dimension (500,5)));
+			
+			// BOUTON : ADMIN PANEL //
+			if(selected.getClass().getSimpleName().equals("Admin")) {
+				JPanel adminPanel = new JPanel();
+				adminPanel.setLayout(new BoxLayout(adminPanel, BoxLayout.LINE_AXIS));
+				
+				JButton adminButton = new JButton("Administration");
+				adminButton.setMaximumSize(new Dimension(150, 25));
+				adminButton.addActionListener(new ActionListener() {
+
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						new Administration(myGui, frame).repaint();
+					}
+					
+				});
+				adminPanel.add(adminButton);
+				panel.add(adminPanel);
+				panel.add(Box.createRigidArea(new Dimension (500,5)));
+			}
+			
+			panel.add(Box.createRigidArea(new Dimension (500,20)));
 			
 			// BOUTON : LANCER UN DEFI //
 			JPanel lancerDefiPanel = new JPanel();
@@ -94,7 +120,7 @@ public class Menu {
 			int nbrDefi = 0;
 			LocalDate dateFin = null;
 			for(Defi d : myGui.getListeDefis()) {
-				if(d.getDestinataire().getID() == GUI.idSession && !d.isAccepte()) {
+				if(d.getDestinataire().getID() == GUI.idSession && !d.isAccepte() && d.isReviewed()) {
 					nbrDefi++;
 					if(dateFin != null && d.getDateExpiration().isBefore(dateFin)) {
 						dateFin = d.getDateExpiration();
@@ -102,7 +128,7 @@ public class Menu {
 				}
 			}
 			
-			JLabel nbDefi = new JLabel("Vous avez " + nbrDefi + " défis en attente.");
+			JLabel nbDefi = new JLabel("Vous avez " + nbrDefi + " défi(s) en attente.");
 			nbDefi.setFont(new Font("Arial", Font.PLAIN, 16));
 			nbDefiPanel.add(nbDefi);
 			panel.add(nbDefiPanel);
@@ -127,7 +153,7 @@ public class Menu {
 			accDefiPanel.add(accDefi);
 			panel.add(accDefiPanel);
 			
-			panel.add(Box.createRigidArea(new Dimension(500,30)));
+			panel.add(Box.createRigidArea(new Dimension(500,20)));
 			
 			// BOUTON : SE DECONNECTER //
 			JPanel decoPanel = new JPanel();
@@ -149,7 +175,7 @@ public class Menu {
 			decoPanel.add(decoButton);
 			panel.add(decoPanel);
 			
-			panel.add(Box.createRigidArea(new Dimension(500,30)));
+			panel.add(Box.createRigidArea(new Dimension(500,20)));
 			
 			// BOUTON : QUITER //
 			JPanel quitPanel = new JPanel();

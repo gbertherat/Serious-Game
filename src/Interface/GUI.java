@@ -14,8 +14,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import v1.Admin;
 import v1.Defi;
 import v1.Player;
+import v1.Question;
 
 /**
  * La classe GUI permet la création de l'interface utilisateur, elle contient aussi le main()
@@ -25,11 +27,13 @@ public class GUI{
 	protected JFrame frame;
 	protected ArrayList<Player> listeJoueurs;
 	protected ArrayList<Defi> listeDefis;
+	protected ArrayList<Question> listeQuestions;
 	protected static int idSession = 0;
 	
 	public GUI(JFrame frame) {
-		listeJoueurs = new ArrayList<>();
-		listeDefis = new ArrayList<>();
+		this.listeJoueurs = new ArrayList<>();
+		this.listeDefis = new ArrayList<>();
+		this.listeQuestions = new ArrayList<>();
 		this.frame = frame;
 	}
 	
@@ -85,14 +89,46 @@ public class GUI{
 		this.listeDefis = listeDefis;
 	}
 	
+	/**
+	 * Permet d'ajouter un défi à la liste des défis
+	 * @param defi - Le défi à ajouter
+	 */
 	public void addDefi(Defi defi) {
 		this.listeDefis.add(defi);
 	}
 	
+	/**
+	 * Permet de supprimer un défi de la liste des défis
+	 * @param defi - Le défi à supprimer
+	 */
 	public void delDefi(Defi defi) {
 		this.listeDefis.remove(defi);
 	}
 	
+	/**
+	 * Permet de récupérer la liste des questions
+	 * @return listeQuestions - La liste des questions
+	 */
+	public ArrayList<Question> getListeQuestions() {
+		return listeQuestions;
+	}
+
+	/**
+	 * Permet de définir la liste des questions
+	 * @param listeQuestions - La liste à définir
+	 */
+	public void setListeQuestions(ArrayList<Question> listeQuestions) {
+		this.listeQuestions = listeQuestions;
+	}
+	
+	public void addQuestion(Question question) {
+		listeQuestions.add(question);
+	}
+	
+	public void delQuestion(Question question) {
+		listeQuestions.remove(question);
+	}
+
 	/**
 	 * Permet l'affichage du menu principale
 	 */
@@ -190,7 +226,9 @@ public class GUI{
 	public static void main(String[] args) {
 		JFrame frame = new JFrame();
 		GUI myGui = new GUI(frame);
-		myGui.addJoueur(new Player("Bertherat", "Guillaume", 19, "bertherat.guillaume@gmail.com", "Informatique", "Motzen", "123"));
+		myGui.addJoueur(new Player("Mister", "Guest", 19, "mail@test.com", "Informatique", "Guest", "123"));
+		myGui.addJoueur(new Admin("Bertherat", "Guillaume", 19, "bertherat.guillaume@gmail.com", "Informatique", "Motzen", "123"));
+		myGui.addDefi(new Defi(new Question("Test", "Test"), myGui.getListeJoueurs().get(0), myGui.getListeJoueurs().get(1), 5));
 		myGui.repaint();
 	}
 }

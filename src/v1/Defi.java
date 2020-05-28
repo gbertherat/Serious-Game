@@ -17,6 +17,7 @@ public class Defi {
 	private int points;
 	private LocalDate date;
 	private LocalDate dateExpiration;
+	private boolean reviewed;
 	private boolean accepte;
 	private boolean termine;
 	
@@ -28,9 +29,11 @@ public class Defi {
 		id = count;
 		question = null;
 		expediteur = null;
+		destinataire = null;
 		points = 0;
 		date = LocalDate.now();
 		dateExpiration = date.plus(2, ChronoUnit.DAYS);
+		reviewed = false;
 		accepte = false;
 		termine = false;
 	}
@@ -49,6 +52,7 @@ public class Defi {
 		this.destinataire = destinataire;
 		this.points = points;
 		this.date = LocalDate.now();
+		this.reviewed = false;
 		this.accepte = false;
 		this.termine = false;
 	}
@@ -153,6 +157,23 @@ public class Defi {
 	 */
 	public void setDateExpiration(LocalDate dateExpiration) {
 		this.dateExpiration = dateExpiration;
+	}
+	
+	// REVIEWED //
+	/**
+	 * Permet de récupérer le booléen admin reviewed
+	 * @return (boolean) reviewed - Le booléen admin reviewed
+	 */
+	public boolean isReviewed() {
+		return reviewed;
+	}
+	
+	/**
+	 * Permet de définir le booléen admin reviewed
+	 * @param reviewed - Le booléen à définir
+	 */
+	public void setReviewed(boolean reviewed) {
+		this.reviewed = reviewed;
 	}
 	
 	
