@@ -97,9 +97,9 @@ public class Menu {
 			
 			panel.add(Box.createRigidArea(new Dimension (500,20)));
 			
-			// BOUTON : LANCER UN DEFI //
-			JPanel lancerDefiPanel = new JPanel();
-			lancerDefiPanel.setLayout(new BoxLayout(lancerDefiPanel, BoxLayout.LINE_AXIS));
+			// BOUTONS : LANCER UN DEFI && ACCEPTER DEFI //
+			JPanel buttonsPanel = new JPanel();
+			buttonsPanel.setLayout(new BoxLayout(buttonsPanel, BoxLayout.LINE_AXIS));
 			
 			JButton lancerDefi = new JButton("Lancer un défi");
 			lancerDefi.setMaximumSize(new Dimension(150,50));
@@ -108,10 +108,15 @@ public class Menu {
 					(new LancerDefi(myGui, frame)).repaint();
 				}
 			});
-			lancerDefiPanel.add(lancerDefi);
-			panel.add(lancerDefiPanel);
+			buttonsPanel.add(lancerDefi);
+			buttonsPanel.add(Box.createRigidArea(new Dimension(10, 20)));
 			
-			panel.add(Box.createRigidArea(new Dimension(500,20)));
+			JButton accDefi = new JButton("Accepter un défi");
+			accDefi.setMaximumSize(new Dimension(150,50));
+			buttonsPanel.add(accDefi);
+			
+			panel.add(buttonsPanel);
+			panel.add(Box.createRigidArea(new Dimension(500,10)));
 			
 			// NOMBRE DE DEFI //
 			JPanel nbDefiPanel = new JPanel();
@@ -144,16 +149,7 @@ public class Menu {
 				panel.add(datePanel);
 			}
 			
-			// BOUTON : ACCEPTER UN DEFI //
-			JPanel accDefiPanel = new JPanel();
-			accDefiPanel.setLayout(new BoxLayout(accDefiPanel, BoxLayout.LINE_AXIS));
-			
-			JButton accDefi = new JButton("Accepter un défi");
-			accDefi.setMaximumSize(new Dimension(150,50));
-			accDefiPanel.add(accDefi);
-			panel.add(accDefiPanel);
-			
-			panel.add(Box.createRigidArea(new Dimension(500,20)));
+			panel.add(Box.createRigidArea(new Dimension(500, 10)));
 			
 			// BOUTON : SE DECONNECTER //
 			JPanel decoPanel = new JPanel();

@@ -15,6 +15,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JSlider;
 import javax.swing.JTextField;
 import javax.swing.Timer;
@@ -53,6 +54,7 @@ public class Inscription {
 		panel.add(Box.createRigidArea(new Dimension(500,10)));
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 		
+		// TITRE //
 		JPanel pageInscription = new JPanel();
 		pageInscription.setLayout(new BoxLayout(pageInscription, BoxLayout.LINE_AXIS));
 		JLabel inscription = new JLabel("Page d'inscription");
@@ -67,12 +69,13 @@ public class Inscription {
 		nomPanel.setLayout(new BoxLayout(nomPanel, BoxLayout.LINE_AXIS));
 		
 		JLabel nomLabel = new JLabel("Nom: ");
-		nomLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+		nomLabel.setFont(new Font("Arial", Font.BOLD, 15));
 		nomPanel.add(nomLabel);
-		nomPanel.add(Box.createRigidArea(new Dimension(30,30)));
+		nomPanel.add(Box.createRigidArea(new Dimension(34,30)));
 		
 		JTextField nomInput = new JTextField();
-		nomInput.setMaximumSize(new Dimension(200, 20));
+		nomInput.setMaximumSize(new Dimension(200, 25));
+		nomInput.setPreferredSize(new Dimension(200, 25));
 		nomPanel.add(nomInput);
 		panel.add(nomPanel);
 		
@@ -81,12 +84,13 @@ public class Inscription {
 		prenomPanel.setLayout(new BoxLayout(prenomPanel, BoxLayout.LINE_AXIS));
 		
 		JLabel prenomLabel = new JLabel("Prenom: ");
-		prenomLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+		prenomLabel.setFont(new Font("Arial", Font.BOLD, 15));
 		prenomPanel.add(prenomLabel);
 		prenomPanel.add(Box.createRigidArea(new Dimension(10,30)));
 		
 		JTextField prenomInput = new JTextField();
-		prenomInput.setMaximumSize(new Dimension(200, 20));
+		prenomInput.setMaximumSize(new Dimension(200, 25));
+		prenomInput.setPreferredSize(new Dimension(200, 25));
 		prenomPanel.add(prenomInput);
 		panel.add(prenomPanel);
 		
@@ -97,7 +101,7 @@ public class Inscription {
 		ageLabelPanel.setLayout(new BoxLayout(ageLabelPanel, BoxLayout.LINE_AXIS));
 		
 		JLabel ageLabel = new JLabel("Age: 20");
-		ageLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+		ageLabel.setFont(new Font("Arial", Font.BOLD, 15));
 		ageLabelPanel.add(ageLabel);
 		panel.add(ageLabelPanel);
 		
@@ -107,8 +111,6 @@ public class Inscription {
 		JSlider ageInput = new JSlider(JSlider.HORIZONTAL, 16, 30, 20);
 		ageInput.setMajorTickSpacing(1);
 		ageInput.setMinorTickSpacing(1);
-		ageInput.setPaintTicks(true);
-		ageInput.setPaintLabels(true);
 		ageInput.setMaximumSize(new Dimension(300,50));
 		ageInput.addChangeListener(new ChangeListener() {
 			@Override
@@ -119,42 +121,41 @@ public class Inscription {
 		agePanel.add(ageInput);
 		panel.add(agePanel);
 		
-		panel.add(Box.createRigidArea(new Dimension(500, 10)));
+		panel.add(Box.createRigidArea(new Dimension(500, 20)));
 		
 		// MAIL
 		JPanel mailPanel = new JPanel();
 		mailPanel.setLayout(new BoxLayout(mailPanel, BoxLayout.LINE_AXIS));
 	
 		JLabel mailLabel = new JLabel("Mail: ");
-		mailLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+		mailLabel.setFont(new Font("Arial", Font.BOLD, 15));
 		mailPanel.add(mailLabel);
 		mailPanel.add(Box.createRigidArea(new Dimension(40,10)));
 		
 		JTextField inMail = new JTextField();
-		inMail.setMaximumSize(new Dimension(200, 30));
+		inMail.setMaximumSize(new Dimension(200, 25));
+		inMail.setPreferredSize(new Dimension(200, 25));
 		mailPanel.add(inMail);
 		panel.add(mailPanel);
 		
 		panel.add(Box.createRigidArea(new Dimension(500, 10)));
 		
 		// LICENCE
-		JPanel licenceLabelPanel = new JPanel();
-		licenceLabelPanel.setLayout(new BoxLayout(licenceLabelPanel, BoxLayout.LINE_AXIS));
-		
-		JLabel licenceLabel = new JLabel("Licence:");
-		licenceLabel.setFont(new Font("Arial", Font.PLAIN, 16));
-		licenceLabelPanel.add(licenceLabel);
-		panel.add(licenceLabelPanel);
-		
 		JPanel licencePanel = new JPanel();
 		licencePanel.setLayout(new BoxLayout(licencePanel, BoxLayout.LINE_AXIS));
 		
+		JLabel licenceLabel = new JLabel("Licence:");
+		licenceLabel.setFont(new Font("Arial", Font.BOLD, 15));
+		licencePanel.add(licenceLabel);
+		licencePanel.add(Box.createRigidArea(new Dimension(20, 10)));
+		
 		JComboBox<String> licenceBox = new JComboBox<String>(licenceList);
 		licenceBox.setSelectedIndex(0);
-		licenceBox.setMaximumSize(new Dimension(200,20));
-		licenceBox.add(licencePanel);
-		panel.add(licenceBox);
-		
+		licenceBox.setMaximumSize(new Dimension(200,25));
+		licenceBox.setPreferredSize(new Dimension(200, 25));
+		licencePanel.add(licenceBox);
+		panel.add(licencePanel);
+
 		panel.add(Box.createRigidArea(new Dimension(500, 10)));
 		
 		// USERNAME
@@ -162,11 +163,12 @@ public class Inscription {
 		usernamePanel.setLayout(new BoxLayout(usernamePanel, BoxLayout.LINE_AXIS));
 		
 		JLabel usernameLabel = new JLabel("Username: ");
-		usernameLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+		usernameLabel.setFont(new Font("Arial", Font.BOLD, 15));
 		usernamePanel.add(usernameLabel);
 		
 		JTextField inUsername = new JTextField();
-		inUsername.setMaximumSize(new Dimension(200,30));
+		inUsername.setMaximumSize(new Dimension(200,25));
+		inUsername.setPreferredSize(new Dimension(200, 25));
 		usernamePanel.add(inUsername);
 		panel.add(usernamePanel);
 		
@@ -177,12 +179,13 @@ public class Inscription {
 		passwordPanel.setLayout(new BoxLayout(passwordPanel, BoxLayout.LINE_AXIS));
 		
 		JLabel passwordLabel = new JLabel("Password: ");
-		passwordLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+		passwordLabel.setFont(new Font("Arial", Font.BOLD, 15));
 		passwordPanel.add(passwordLabel);
 		passwordPanel.add(Box.createRigidArea(new Dimension(2,5)));
 		
-		JTextField inPassword = new JTextField();
-		inPassword.setMaximumSize(new Dimension(200,30));
+		JPasswordField inPassword = new JPasswordField();
+		inPassword.setMaximumSize(new Dimension(200,25));
+		inPassword.setPreferredSize(new Dimension(200, 25));
 		passwordPanel.add(inPassword);
 		panel.add(passwordPanel);
 		
@@ -191,10 +194,11 @@ public class Inscription {
 		// NOTES //
 		JPanel noteLabelPanel = new JPanel();
 		noteLabelPanel.setLayout(new BoxLayout(noteLabelPanel, BoxLayout.LINE_AXIS));
-		JLabel noteLabel = new JLabel("Entrez vos moyennes:");
-		noteLabel.setFont(new Font("Arial", Font.PLAIN, 16));
+		JLabel noteLabel = new JLabel("Entrez vos moyennes (sur 20):");
+		noteLabel.setFont(new Font("Arial", Font.BOLD, 15));
 		noteLabelPanel.add(noteLabel);
 		panel.add(noteLabelPanel);
+		panel.add(Box.createRigidArea(new Dimension(500, 10)));
 		
 		JPanel notePanel = new JPanel();
 		notePanel.setLayout(new BoxLayout(notePanel, BoxLayout.LINE_AXIS));
@@ -222,12 +226,15 @@ public class Inscription {
 		errorPanel.add(errorLabel);
 		panel.add(errorPanel);
 		
+		panel.add(Box.createRigidArea(new Dimension(500,10)));
+		
 		// BOUTON : CONFIRMER
 		JPanel confirmPanel = new JPanel();
 		confirmPanel.setLayout(new BoxLayout(confirmPanel, BoxLayout.LINE_AXIS));
 		
 		JButton confirm = new JButton("Confirmer");
 		confirm.setMaximumSize(new Dimension(100,50));
+		confirm.setPreferredSize(new Dimension(100, 50));
 		confirm.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -308,7 +315,7 @@ public class Inscription {
 					}
 					newBulletin.setListeNote(notes);
 				}
-				
+				confirmPanel.remove(confirm);
 				errorLabel.setText("Utilisateur créé!");
 				Player newPlayer = new Player(nom, prenom, age, mail, licence, username, password);
 				newPlayer.setBulletin(newBulletin);
@@ -329,6 +336,8 @@ public class Inscription {
 		confirmPanel.add(confirm);
 		
 		panel.add(confirmPanel);
+		
+		panel.add(Box.createRigidArea(new Dimension(500, 20)));
 		
 		// BOUTON : RETOUR
 		panel.add(Box.createVerticalGlue());

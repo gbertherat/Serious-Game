@@ -1,5 +1,6 @@
 package Interface;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
@@ -13,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import v1.Player;
@@ -78,7 +80,7 @@ public class Connexion {
 		
 		inputPassword.add(Box.createRigidArea(new Dimension(20,10)));
 		
-		JTextField inPassword = new JTextField();
+		JPasswordField inPassword = new JPasswordField();
 		inPassword.setMaximumSize(new Dimension(200,30));
 		inPassword.setMinimumSize(new Dimension(200,30));
 		inPassword.setPreferredSize(new Dimension(200,30));
@@ -86,7 +88,19 @@ public class Connexion {
 		inputPassword.add(inPassword);
 		panel.add(inputPassword);
 		
-		panel.add(Box.createRigidArea(new Dimension(500,30)));
+		panel.add(Box.createRigidArea(new Dimension(500,10)));
+		
+		// MESSAGE //
+		JPanel messagePanel = new JPanel();
+		messagePanel.setLayout(new BoxLayout(messagePanel, BoxLayout.LINE_AXIS));
+		
+		JLabel message = new JLabel("");
+		message.setFont(new Font("Arial", Font.PLAIN, 15));
+		message.setForeground(Color.red);
+		messagePanel.add(message);
+		panel.add(messagePanel);
+		
+		panel.add(Box.createRigidArea(new Dimension(500, 10)));
 		
 		// BOUTON CONFIRMER
 		JPanel confirmPanel = new JPanel();
@@ -112,7 +126,11 @@ public class Connexion {
 					if(selected.getPassword().equals(password)) {
 						GUI.idSession = selected.getID();
 						new Menu(myGui, frame).repaint();
+					} else {
+						message.setText("Identifiants invalides");
 					}
+				} else {
+					message.setText("Identifiants invalides");
 				}
 				
 			}

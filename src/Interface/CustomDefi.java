@@ -26,7 +26,6 @@ import v1.Question;
 public class CustomDefi {
 	private GUI myGui;
 	private JFrame frame;
-	protected static String[] categories = {"C", "Python", "Java", "Réseaux"};
 
 	public CustomDefi(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
@@ -90,7 +89,7 @@ public class CustomDefi {
 			boxPanel.setMaximumSize(new Dimension(500, 30));
 			boxPanel.add(Box.createRigidArea(new Dimension(20, 10)));
 			
-			JComboBox<String> categorieBox = new JComboBox<String>(categories);
+			JComboBox<String> categorieBox = new JComboBox<String>(myGui.categories);
 			categorieBox.setSelectedIndex(0);
 			categorieBox.setMaximumSize(new Dimension(200,20));
 			boxPanel.add(categorieBox);
@@ -195,9 +194,6 @@ public class CustomDefi {
 						return;
 					} else if(fieldQuestion.length() < 20) {
 						messageLabel.setText("Erreur : Question invalide (< 20 caractères)");
-						return;
-					} else if(fieldReponse.length() < 20) {
-						messageLabel.setText("Erreur : Réponse invalide (< 20 caractères)");
 						return;
 					}
 					

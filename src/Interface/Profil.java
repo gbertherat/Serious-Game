@@ -95,7 +95,7 @@ public class Profil {
 		int defiAcc = 0;
 		int defiReussi = 0;
 		for(Defi d : myGui.getListeDefis()) {
-			if(d.getDestinataire().getID() == GUI.idSession){
+			if(d.getDestinataire().getID() == GUI.idSession && d.isReviewed()){
 				defi++;
 				if(d.isAccepte()) {
 					defiAcc++;

@@ -105,7 +105,7 @@ public class Administration {
 				verifyPanel.add(verifyButton);
 				panel.add(verifyPanel);
 				
-				panel.add(Box.createRigidArea(new Dimension(500, 20)));
+				panel.add(Box.createRigidArea(new Dimension(500,90)));
 				
 				// BOUTON : RETOUR //
 				JPanel retourPanel = new JPanel();

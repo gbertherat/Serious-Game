@@ -28,6 +28,7 @@ public class GUI{
 	protected ArrayList<Player> listeJoueurs;
 	protected ArrayList<Defi> listeDefis;
 	protected ArrayList<Question> listeQuestions;
+	public String[] categories = {"C", "Python", "Java", "Réseaux", "Autre"};
 	protected static int idSession = 0;
 	
 	public GUI(JFrame frame) {
@@ -229,7 +230,8 @@ public class GUI{
 		myGui.addJoueur(new Player("Mister", "Guest", 19, "mail@test.com", "Informatique", "Guest", "123"));
 		myGui.addJoueur(new Admin("Bertherat", "Guillaume", 19, "bertherat.guillaume@gmail.com", "Informatique", "Motzen", "123"));
 		for(int i = 0; i < 21; i++) {
-			myGui.addDefi(new Defi(new Question(String.valueOf(i), "Test", "Test"), myGui.getPlayer(1), myGui.getPlayer(2), 10));
+			myGui.addDefi(new Defi(new Question(String.valueOf(i), "Test", "Java"), myGui.getPlayer(1), myGui.getPlayer(2), 10));
+			myGui.getListeDefis().get(i).getQuestion().addReponse("Test: " + String.valueOf(i));
 		}
 		
 		myGui.repaint();

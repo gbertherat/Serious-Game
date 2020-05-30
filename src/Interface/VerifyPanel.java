@@ -88,6 +88,14 @@ public class VerifyPanel {
 					labelFields[(i+((index-1)*7))] = new JLabel('"' + choosen.getQuestion().getTitre() + "\" par " + choosen.getExpediteur().getUsername());
 					buttonFields[(i+((index-1)*7))] = new JButton("Vérifier");
 					
+					final int j = i;
+					buttonFields[(i+((index-1)*7))].addActionListener(new ActionListener() {
+						@Override
+						public void actionPerformed(ActionEvent arg0) {
+							new Verify(myGui, frame).repaint((j+((index-1)*7)));
+						}
+					});
+					
 					questionPanels[(i+((index-1)*7))].add(labelFields[(i+((index-1)*7))]);
 					questionPanels[(i+((index-1)*7))].add(Box.createRigidArea(new Dimension(20, 20)));
 					questionPanels[(i+((index-1)*7))].add(buttonFields[(i+((index-1)*7))]);
@@ -101,7 +109,6 @@ public class VerifyPanel {
 				int nbPages = 1;
 				if(size > 7) {
 					nbPages = (int) Math.floor(size/7);
-					System.out.println(nbPages);
 				}
 				if(nbPages*7 < size) {
 					nbPages++;
@@ -140,6 +147,8 @@ public class VerifyPanel {
 				}
 				panel.add(Box.createVerticalGlue());
 				panel.add(navPanel);
+				
+				panel.add(Box.createRigidArea(new Dimension(500, 30)));
 				
 				// BOUTON : RETOUR //
 				JPanel retourPanel = new JPanel();
