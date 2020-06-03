@@ -1,10 +1,8 @@
 package Interface;
 
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -17,6 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
+import Components.Factory;
 import v1.Player;
 
 /**
@@ -36,79 +35,51 @@ public class Connexion {
 		Container panel = frame.getContentPane();
 		panel.removeAll();
 		panel.revalidate();
-		panel.add(Box.createRigidArea(new Dimension(500,30)));
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+		panel.add(Factory.addSpace(150));
 		
-		JPanel pageConnexion = new JPanel();
-		pageConnexion.setLayout(new BoxLayout(pageConnexion, BoxLayout.LINE_AXIS));
-		JLabel connexion = new JLabel("Page de connexion");
-		connexion.setFont(new Font("Arial", Font.BOLD, 21));
+		// TITRE //
+		JPanel pageConnexion = Factory.addPanel();
+		JLabel connexion = Factory.addLabel("Page de connexion", 21, true);
 		pageConnexion.add(connexion);
 		panel.add(pageConnexion);
 		
-		panel.add(Box.createRigidArea(new Dimension(500,100)));
-		
-		JPanel inputUsername = new JPanel();
-		inputUsername.setLayout(new BoxLayout(inputUsername, BoxLayout.LINE_AXIS));
+		panel.add(Factory.addSpace(30));
 		
 		// USERNAME 
-		JLabel tagUsername = new JLabel("Username: ");
-		tagUsername.setFont(new Font("Arial", Font.PLAIN, 16));
-		tagUsername.setAlignmentX(Component.LEFT_ALIGNMENT);
+		JPanel inputUsername = Factory.addPanel();
+		JLabel tagUsername = Factory.addLabel("Username:", 16, true);
 		inputUsername.add(tagUsername);
+		inputUsername.add(Box.createRigidArea(new Dimension(28,40)));
 		
-		inputUsername.add(Box.createRigidArea(new Dimension(43,10)));
-		
-		JTextField inUsername = new JTextField();
-		inUsername.setMaximumSize(new Dimension(200,30));
-		inUsername.setMinimumSize(new Dimension(200,30));
-		inUsername.setPreferredSize(new Dimension(200,30));
-		inUsername.setAlignmentX(Component.LEFT_ALIGNMENT);
+		JTextField inUsername = Factory.addField(250, 30, true);
 		inputUsername.add(inUsername);
 		panel.add(inputUsername);
 		
-		panel.add(Box.createRigidArea(new Dimension(500,20)));
-		
 		// PASSWORD
-		JPanel inputPassword = new JPanel();
-		inputPassword.setLayout(new BoxLayout(inputPassword, BoxLayout.LINE_AXIS));
-		
-		JLabel tagPassword = new JLabel("Mot de passe: ");
-		tagPassword.setFont(new Font("Arial", Font.PLAIN, 16));
-		tagPassword.setAlignmentX(Component.LEFT_ALIGNMENT);
+		JPanel inputPassword = Factory.addPanel();
+		JLabel tagPassword = Factory.addLabel("Mot de passe:", 16, true);
 		inputPassword.add(tagPassword);
+		inputPassword.add(Box.createRigidArea(new Dimension(7,40)));
 		
-		inputPassword.add(Box.createRigidArea(new Dimension(20,10)));
-		
-		JPasswordField inPassword = new JPasswordField();
-		inPassword.setMaximumSize(new Dimension(200,30));
-		inPassword.setMinimumSize(new Dimension(200,30));
-		inPassword.setPreferredSize(new Dimension(200,30));
-		inPassword.setAlignmentX(Component.LEFT_ALIGNMENT);
+		JPasswordField inPassword = Factory.addPassField(250, 30);
 		inputPassword.add(inPassword);
 		panel.add(inputPassword);
 		
-		panel.add(Box.createRigidArea(new Dimension(500,10)));
+		panel.add(Factory.addSpace(10));
 		
 		// MESSAGE //
-		JPanel messagePanel = new JPanel();
-		messagePanel.setLayout(new BoxLayout(messagePanel, BoxLayout.LINE_AXIS));
-		
-		JLabel message = new JLabel("");
-		message.setFont(new Font("Arial", Font.PLAIN, 15));
+		JPanel messagePanel = Factory.addPanel();
+		JLabel message = Factory.addLabel("", 16, true);
 		message.setForeground(Color.red);
 		messagePanel.add(message);
 		panel.add(messagePanel);
 		
-		panel.add(Box.createRigidArea(new Dimension(500, 10)));
+		panel.add(Factory.addSpace(10));
 		
-		// BOUTON CONFIRMER
-		JPanel confirmPanel = new JPanel();
-		confirmPanel.setLayout(new BoxLayout(confirmPanel, BoxLayout.LINE_AXIS));
-		
-		JButton confirm = new JButton("Confirmer");
-		confirm.setMaximumSize(new Dimension(100,50));
-		confirm.setPreferredSize(new Dimension(100,50));
+		// BOUTON : CONFIRMER
+		JPanel confirmPanel = Factory.addPanel();
+		JButton confirm = Factory.addButton("Confirmer", 150, 50);
 		confirm.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -122,7 +93,7 @@ public class Connexion {
 				}
 				
 				if(selected != null) {
-					String password = inPassword.getText();
+					String password = String.valueOf(inPassword.getPassword());
 					if(selected.getPassword().equals(password)) {
 						GUI.idSession = selected.getID();
 						new Menu(myGui, frame).repaint();
@@ -140,22 +111,21 @@ public class Connexion {
 		
 		panel.add(Box.createVerticalGlue());
 		
-		// BOUTON RETOUR
-		JPanel backPanel = new JPanel();
-		backPanel.setLayout(new BoxLayout(backPanel, BoxLayout.LINE_AXIS));
-		
-		JButton back = new JButton("Retour");
-		back.setMaximumSize(new Dimension(100,50));
+		// BOUTON : RETOUR
+		panel.add(Box.createVerticalGlue());
+		JPanel retourPanel = Factory.addPanel();
+		JButton back = Factory.addButton("Retour", 100, 40);
 		back.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel.removeAll();
 				panel.revalidate();
-				myGui.repaint();
+				panel.repaint();
+				new Start(myGui, frame).repaint();
 			}
 		});
-		backPanel.add(back);
-		backPanel.add(Box.createHorizontalGlue());
-		panel.add(backPanel);
+		retourPanel.add(back);
+		retourPanel.add(Box.createHorizontalGlue());
+		panel.add(retourPanel);
 		
 		panel.repaint();
 	}

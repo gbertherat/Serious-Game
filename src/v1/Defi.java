@@ -1,6 +1,6 @@
 package v1;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 /**
@@ -15,8 +15,8 @@ public class Defi {
 	private Player expediteur;
 	private Player destinataire;
 	private int points;
-	private LocalDate date;
-	private LocalDate dateExpiration;
+	private LocalDateTime date;
+	private LocalDateTime dateExpiration;
 	private boolean reviewed;
 	private boolean accepte;
 	private boolean termine;
@@ -31,7 +31,7 @@ public class Defi {
 		expediteur = null;
 		destinataire = null;
 		points = 0;
-		date = LocalDate.now();
+		date = LocalDateTime.now();
 		dateExpiration = date.plus(2, ChronoUnit.DAYS);
 		reviewed = false;
 		accepte = false;
@@ -51,7 +51,8 @@ public class Defi {
 		this.expediteur = expediteur;
 		this.destinataire = destinataire;
 		this.points = points;
-		this.date = LocalDate.now();
+		this.date = LocalDateTime.now();
+		this.dateExpiration = date.plus(2, ChronoUnit.DAYS);
 		this.reviewed = false;
 		this.accepte = false;
 		this.termine = false;
@@ -130,7 +131,7 @@ public class Defi {
 	 * Permet de récupérer la date d'envoi d'un défi
 	 * @return (LocalDate) date - La date d'envoi du défi
 	 */
-	public LocalDate getDate() {
+	public LocalDateTime getDate() {
 		return date;
 	}
 
@@ -138,7 +139,7 @@ public class Defi {
 	 * Permet de définir la date d'envoi d'un défi
 	 * @param (LocalDate) date - La date à définir
 	 */
-	public void setDate(LocalDate date) {
+	public void setDate(LocalDateTime date) {
 		this.date = date;
 	}
 
@@ -147,7 +148,7 @@ public class Defi {
 	 * Permet de récupérer la date d'expiration d'un défi
 	 * @return (LocalDate) dateExpiration - La date d'expiration du défi
 	 */
-	public LocalDate getDateExpiration() {
+	public LocalDateTime getDateExpiration() {
 		return dateExpiration;
 	}
 
@@ -155,7 +156,7 @@ public class Defi {
 	 * Permet de définir la date d'expiration d'un défi
 	 * @param (LocalDate) dateExpiration - La date à définir
 	 */
-	public void setDateExpiration(LocalDate dateExpiration) {
+	public void setDateExpiration(LocalDateTime dateExpiration) {
 		this.dateExpiration = dateExpiration;
 	}
 	

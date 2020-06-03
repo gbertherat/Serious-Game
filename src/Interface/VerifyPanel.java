@@ -2,7 +2,6 @@ package Interface;
 
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -14,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Components.Factory;
 import v1.Defi;
 import v1.Player;
 
@@ -33,26 +33,20 @@ public class VerifyPanel {
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();
-				panel.add(Box.createRigidArea(new Dimension(500,40)));
 				panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+				panel.add(Box.createRigidArea(new Dimension(500,40)));
 			
 				// TITRE //
-				JPanel titrePanel = new JPanel();
-				titrePanel.setLayout(new BoxLayout(titrePanel, BoxLayout.LINE_AXIS));
-				
-				JLabel titre = new JLabel("Vérification des questions");
-				titre.setFont(new Font("Arial", Font.BOLD, 21));
+				JPanel titrePanel = Factory.addPanel();
+				JLabel titre = Factory.addLabel("Vérification des questions", 21, true);
 				titrePanel.add(titre);
 				panel.add(titrePanel);
 				
 				panel.add(Box.createRigidArea(new Dimension(500, 30)));
 				
 				// HEADER //
-				JPanel headPanel = new JPanel();
-				headPanel.setLayout(new BoxLayout(headPanel, BoxLayout.LINE_AXIS));
-				
-				JLabel headLabel = new JLabel("Les questions à vérifier:");
-				headLabel.setFont(new Font("Arial", Font.BOLD, 16));
+				JPanel headPanel = Factory.addPanel();
+				JLabel headLabel = Factory.addLabel("Les questions à vérifier:", 16, true);
 				headPanel.add(headLabel);
 				panel.add(headPanel);
 				
@@ -67,56 +61,50 @@ public class VerifyPanel {
 				}
 				
 				Defi choosen = null;
+				JPanel mainPanel = Factory.addPanel();
 				
-				JPanel mainPanel = new JPanel();
-				mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.LINE_AXIS));
-				
-
 				int size = liste.size();
 				JPanel[] questionPanels = new JPanel[size];
 				JLabel[] labelFields = new JLabel[size];
 				JButton[] buttonFields = new JButton[size];
-				for(int i = 0; i < 7; i++) {
-					if((i+((index-1)*7)) == size){
+				for(int i = 0; i < 10; i++) {
+					if((i+((index-1)*10)) == size){
 						break;
 					}
 					
-					choosen = liste.get((i+((index-1)*7)));
+					choosen = liste.get((i+((index-1)*10)));
 					
-					questionPanels[((i+((index-1)*7)))] = new JPanel();
-					questionPanels[((i+((index-1)*7)))].setLayout(new BoxLayout(questionPanels[(i+((index-1)*7))], BoxLayout.LINE_AXIS));
-					labelFields[(i+((index-1)*7))] = new JLabel('"' + choosen.getQuestion().getTitre() + "\" par " + choosen.getExpediteur().getUsername());
-					buttonFields[(i+((index-1)*7))] = new JButton("Vérifier");
+					questionPanels[((i+((index-1)*10)))] = Factory.addPanel();
+					labelFields[(i+((index-1)*10))] = Factory.addLabel('"' + choosen.getQuestion().getTitre() + "\" par " + choosen.getExpediteur().getUsername(), 14, false);
+					buttonFields[(i+((index-1)*10))] = Factory.addButton("Vérifier", 100, 25);
 					
-					final int j = i;
-					buttonFields[(i+((index-1)*7))].addActionListener(new ActionListener() {
+					final Defi defiSel = choosen;
+					buttonFields[(i+((index-1)*10))].addActionListener(new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							new Verify(myGui, frame).repaint((j+((index-1)*7)));
+							new Verify(myGui, frame).repaint(defiSel.getId());
 						}
 					});
 					
-					questionPanels[(i+((index-1)*7))].add(labelFields[(i+((index-1)*7))]);
-					questionPanels[(i+((index-1)*7))].add(Box.createRigidArea(new Dimension(20, 20)));
-					questionPanels[(i+((index-1)*7))].add(buttonFields[(i+((index-1)*7))]);
+					questionPanels[(i+((index-1)*10))].add(labelFields[(i+((index-1)*10))]);
+					questionPanels[(i+((index-1)*10))].add(Box.createRigidArea(new Dimension(20, 20)));
+					questionPanels[(i+((index-1)*10))].add(buttonFields[(i+((index-1)*10))]);
 					
-					panel.add(questionPanels[(i+((index-1)*7))]);
-					panel.add(Box.createRigidArea(new Dimension(20, 10)));
+					panel.add(questionPanels[(i+((index-1)*10))]);
+					panel.add(Box.createRigidArea(new Dimension(20, 5)));
 				}
 				panel.add(mainPanel);
 				
 				// BOUTONS : NAVIGATION //
 				int nbPages = 1;
-				if(size > 7) {
-					nbPages = (int) Math.floor(size/7);
+				if(size > 10) {
+					nbPages = (int) Math.floor(size/10);
 				}
-				if(nbPages*7 < size) {
+				if(nbPages*10 < size) {
 					nbPages++;
 				}
 				
-				JPanel navPanel = new JPanel();
-				navPanel.setLayout(new BoxLayout(navPanel, BoxLayout.LINE_AXIS));
-				
+				JPanel navPanel = Factory.addPanel();
 				if(index > 1) {
 					JButton precButton = new JButton("<-");
 					precButton.addActionListener(new ActionListener() {
@@ -130,7 +118,7 @@ public class VerifyPanel {
 					navPanel.add(precButton);
 				}
 				navPanel.add(Box.createRigidArea(new Dimension(20, 20)));
-				JLabel numPage = new JLabel("Page: " + index + "/" + nbPages);
+				JLabel numPage = Factory.addLabel("Page: " + index + "/" + nbPages, 15, true);
 				navPanel.add(numPage);
 				navPanel.add(Box.createRigidArea(new Dimension(20, 20)));
 				if(index < nbPages) {
@@ -148,23 +136,19 @@ public class VerifyPanel {
 				panel.add(Box.createVerticalGlue());
 				panel.add(navPanel);
 				
-				panel.add(Box.createRigidArea(new Dimension(500, 30)));
-				
 				// BOUTON : RETOUR //
-				JPanel retourPanel = new JPanel();
-				retourPanel.setLayout(new BoxLayout(retourPanel, BoxLayout.LINE_AXIS));
-				
-				JButton retourButton = new JButton("Retour");
-				retourButton.addActionListener(new ActionListener() {
-		
-					@Override
-					public void actionPerformed(ActionEvent arg0) {
+				panel.add(Box.createVerticalGlue());
+				JPanel retourPanel = Factory.addPanel();
+				JButton back = Factory.addButton("Retour", 100, 40);
+				back.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						panel.removeAll();
+						panel.revalidate();
+						panel.repaint();
 						new Administration(myGui, frame).repaint();
 					}
-					
 				});
-				retourPanel.add(Box.createVerticalGlue());
-				retourPanel.add(retourButton);
+				retourPanel.add(back);
 				retourPanel.add(Box.createHorizontalGlue());
 				panel.add(retourPanel);
 				

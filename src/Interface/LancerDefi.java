@@ -2,7 +2,6 @@ package Interface;
 
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,6 +11,8 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+
+import Components.Factory;
 
 public class LancerDefi {
 	private GUI myGui;
@@ -27,25 +28,20 @@ public class LancerDefi {
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
-			panel.add(Box.createRigidArea(new Dimension(500,10)));
 			panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+			panel.add(Box.createRigidArea(new Dimension(500,150)));
 		
 			// TITRE //
-			JPanel titrePanel = new JPanel();
-			titrePanel.setLayout(new BoxLayout(titrePanel, BoxLayout.LINE_AXIS));
-			JLabel titre = new JLabel("Envoyer un défi");
-			titre.setFont(new Font("Arial", Font.BOLD, 21));
+			JPanel titrePanel = Factory.addPanel();
+			JLabel titre = Factory.addLabel("Envoyer un défi", 21, true);
 			titrePanel.add(titre);
 			panel.add(titrePanel);
 			
-			panel.add(Box.createRigidArea(new Dimension(500, 100)));
+			panel.add(Box.createRigidArea(new Dimension(500, 30)));
 			
 			// QUESTION //
-			JPanel questionPanel = new JPanel();
-			questionPanel.setLayout(new BoxLayout(questionPanel, BoxLayout.LINE_AXIS));
-			
-			JLabel questionLabel = new JLabel("Quel type de défi voulez-vous envoyez?");
-			questionLabel.setFont(new Font("Arial", Font.BOLD, 16));
+			JPanel questionPanel = Factory.addPanel();
+			JLabel questionLabel = Factory.addLabel("Quel type de défi voulez-vous envoyez?", 16, true);
 			questionPanel.add(questionLabel);
 			panel.add(questionPanel);
 			
@@ -54,49 +50,40 @@ public class LancerDefi {
 			panel.repaint();
 			
 			// BOUTONS
-			JPanel buttonPanel = new JPanel();
-			buttonPanel.setLayout(new BoxLayout(buttonPanel, BoxLayout.LINE_AXIS));
+			JPanel buttonPanel = Factory.addPanel();
 			buttonPanel.setMaximumSize(new Dimension(500, 75));
 			buttonPanel.add(Box.createRigidArea(new Dimension(40, 20)));
 			
 			// QUESTION EXISTANTE
-			JButton existButton = new JButton("Question existante");
-			existButton.setMaximumSize(new Dimension(200, 50));
-			existButton.setPreferredSize(new Dimension(200, 50));
+			JButton existButton = Factory.addButton("Question existante", 200, 50);
 			buttonPanel.add(existButton);
 			
 			buttonPanel.add(Box.createRigidArea(new Dimension(20, 20)));
 			
 			// QUESTION PERSONNALISE
-			JButton customButton = new JButton("Question personnalisée");
-			customButton.setMaximumSize(new Dimension(200, 50));
-			customButton.setPreferredSize(new Dimension(200, 50));
+			JButton customButton = Factory.addButton("Question personnalisée", 200, 50);
 			customButton.addActionListener(new ActionListener() {
-
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
 					new CustomDefi(myGui, frame).repaint();
 				}
-				
 			});
 			buttonPanel.add(customButton);
 			panel.add(buttonPanel);
 			
 			// BOUTON : RETOUR //
-			JPanel retourPanel = new JPanel();
-			retourPanel.setLayout(new BoxLayout(retourPanel, BoxLayout.LINE_AXIS));
-			
-			JButton retourButton = new JButton("Retour");
-			retourButton.addActionListener(new ActionListener() {
-	
-				@Override
-				public void actionPerformed(ActionEvent arg0) {
+			panel.add(Box.createVerticalGlue());
+			JPanel retourPanel = Factory.addPanel();
+			JButton back = Factory.addButton("Retour", 100, 40);
+			back.addActionListener(new ActionListener() {
+				public void actionPerformed(ActionEvent e) {
+					panel.removeAll();
+					panel.revalidate();
+					panel.repaint();
 					new Menu(myGui, frame).repaint();
 				}
-				
 			});
-			retourPanel.add(Box.createVerticalGlue());
-			retourPanel.add(retourButton);
+			retourPanel.add(back);
 			retourPanel.add(Box.createHorizontalGlue());
 			panel.add(retourPanel);
 		

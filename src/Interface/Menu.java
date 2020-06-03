@@ -1,20 +1,20 @@
 package Interface;
 
 import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 
-import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Components.Factory;
 import v1.Defi;
 import v1.Player;
 
@@ -34,54 +34,39 @@ public class Menu {
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
-			panel.add(Box.createRigidArea(new Dimension(500,10)));
 			panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+			panel.add(Factory.addSpace(50));
 			
 			// TITRE //
-			JPanel titrePanel = new JPanel();
-			titrePanel.setLayout(new BoxLayout(titrePanel, BoxLayout.LINE_AXIS));
-			JLabel titre = new JLabel("Serious-Game");
-			titre.setFont(new Font("Arial", Font.BOLD, 21));
+			JPanel titrePanel = Factory.addPanel();
+			JLabel titre = Factory.addLabel("Serious-Game", 21, true);
 			titrePanel.add(titre);
 			panel.add(titrePanel);
 			
-			panel.add(Box.createRigidArea(new Dimension(500,20)));
+			panel.add(Factory.addSpace(20));
 			
 			// USERNAME //
-			JPanel userPanel = new JPanel();
-			userPanel.setLayout(new BoxLayout(userPanel, BoxLayout.LINE_AXIS));
-			JLabel user = new JLabel("Utilisateur: " + selected.getNom() + " " + selected.getPrenom());
-			user.setFont(new Font("Arial", Font.PLAIN, 16));
+			JPanel userPanel = Factory.addPanel();
+			JLabel user = Factory.addLabel("Utilisateur: " + selected.getUsername(), 16, false);
 			userPanel.add(user);
 			panel.add(userPanel);
 			
-			panel.add(Box.createRigidArea(new Dimension (500,5)));
-			
 			// BOUTON : PROFIL //
-			Profil myProfil = new Profil(myGui, frame);
-			
-			JPanel profilPanel = new JPanel();
-			profilPanel.setLayout(new BoxLayout(profilPanel, BoxLayout.LINE_AXIS));
-			JButton profilButton = new JButton("Mon profil");
-			profilButton.setMaximumSize(new Dimension(150, 25));
+			JPanel profilPanel = Factory.addPanel();
+			JButton profilButton = Factory.addButton("Mon profil", 150, 30);
 			profilButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
-					myProfil.repaint();
+					new Profil(myGui, frame).repaint();
 				}
 			});
 			profilPanel.add(profilButton);
 			panel.add(profilPanel);
-			
-			panel.add(Box.createRigidArea(new Dimension (500,5)));
-			
+
 			// BOUTON : ADMIN PANEL //
 			if(selected.getClass().getSimpleName().equals("Admin")) {
-				JPanel adminPanel = new JPanel();
-				adminPanel.setLayout(new BoxLayout(adminPanel, BoxLayout.LINE_AXIS));
-				
-				JButton adminButton = new JButton("Administration");
-				adminButton.setMaximumSize(new Dimension(150, 25));
+				JPanel adminPanel = Factory.addPanel();
+				JButton adminButton = Factory.addButton("Administration", 150, 30);
 				adminButton.addActionListener(new ActionListener() {
 
 					@Override
@@ -92,93 +77,83 @@ public class Menu {
 				});
 				adminPanel.add(adminButton);
 				panel.add(adminPanel);
-				panel.add(Box.createRigidArea(new Dimension (500,5)));
 			}
 			
-			panel.add(Box.createRigidArea(new Dimension (500,20)));
+			panel.add(Factory.addSpace(30));
+			
+			// NOMBRE DE DEFI //
+			JPanel nbDefiPanel = Factory.addPanel();
+			
+			int nbrDefi = 0;
+			LocalDateTime dateFin = LocalDateTime.now().plus(3, ChronoUnit.DAYS);
+			for(Defi d : myGui.getListeDefis()) {
+				if(d.getDestinataire().getID() == GUI.idSession && !d.isAccepte() && d.isReviewed()) {
+					nbrDefi++;
+					if(d.getDateExpiration().isBefore(dateFin)) {
+						dateFin = d.getDateExpiration();
+					}
+				}
+			}
+			
+			JLabel nbDefi = Factory.addLabel("Vous avez " + nbrDefi + " défi(s) en attente.", 16, false);
+			nbDefiPanel.add(nbDefi);
+			panel.add(nbDefiPanel);
+			
+			// DATE EXPIRATION //
+			if(dateFin != null) {
+				JPanel datePanel = Factory.addPanel();
+				
+				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy à HH:mm");
+				String formattedString = dateFin.format(formatter);
+				
+				JLabel dateExp = Factory.addLabel("Attention: Un défi se termine le " + formattedString, 15, true);
+				datePanel.add(dateExp);
+				panel.add(datePanel);
+			}
 			
 			// BOUTONS : LANCER UN DEFI && ACCEPTER DEFI //
-			JPanel buttonsPanel = new JPanel();
-			buttonsPanel.setLayout(new BoxLayout(buttonsPanel, BoxLayout.LINE_AXIS));
-			
-			JButton lancerDefi = new JButton("Lancer un défi");
-			lancerDefi.setMaximumSize(new Dimension(150,50));
+			JPanel buttonsPanel = Factory.addPanel();
+			JButton lancerDefi = Factory.addButton("Envoyer un défi", 150, 50);
 			lancerDefi.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
 					(new LancerDefi(myGui, frame)).repaint();
 				}
 			});
 			buttonsPanel.add(lancerDefi);
-			buttonsPanel.add(Box.createRigidArea(new Dimension(10, 20)));
 			
-			JButton accDefi = new JButton("Accepter un défi");
-			accDefi.setMaximumSize(new Dimension(150,50));
-			buttonsPanel.add(accDefi);
-			
-			panel.add(buttonsPanel);
-			panel.add(Box.createRigidArea(new Dimension(500,10)));
-			
-			// NOMBRE DE DEFI //
-			JPanel nbDefiPanel = new JPanel();
-			nbDefiPanel.setLayout(new BoxLayout(nbDefiPanel, BoxLayout.LINE_AXIS));
-			
-			int nbrDefi = 0;
-			LocalDate dateFin = null;
-			for(Defi d : myGui.getListeDefis()) {
-				if(d.getDestinataire().getID() == GUI.idSession && !d.isAccepte() && d.isReviewed()) {
-					nbrDefi++;
-					if(dateFin != null && d.getDateExpiration().isBefore(dateFin)) {
-						dateFin = d.getDateExpiration();
-					}
+			JButton accDefi = Factory.addButton("Accepter un défi", 150, 50);
+			accDefi.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					new AccepterDefi(myGui, frame).repaint(1);
 				}
-			}
+			});
+			buttonsPanel.add(accDefi);
+			panel.add(buttonsPanel);
 			
-			JLabel nbDefi = new JLabel("Vous avez " + nbrDefi + " défi(s) en attente.");
-			nbDefi.setFont(new Font("Arial", Font.PLAIN, 16));
-			nbDefiPanel.add(nbDefi);
-			panel.add(nbDefiPanel);
-			
-			// DATE EXPIRATION //
-			if(dateFin != null) {
-				JPanel datePanel = new JPanel();
-				datePanel.setLayout(new BoxLayout(datePanel, BoxLayout.LINE_AXIS));
-				
-				JLabel dateExp = new JLabel("Attention: Un défi se termine le " + dateFin.toString() + " !");
-				dateExp.setFont(new Font("Arial", Font.BOLD, 15));
-				datePanel.add(dateExp);
-				panel.add(datePanel);
-			}
-			
-			panel.add(Box.createRigidArea(new Dimension(500, 10)));
+			panel.add(Factory.addSpace(30));
 			
 			// BOUTON : SE DECONNECTER //
-			JPanel decoPanel = new JPanel();
-			decoPanel.setLayout(new BoxLayout(decoPanel, BoxLayout.LINE_AXIS));
+			JPanel decoPanel = Factory.addPanel();
 			
-			JButton decoButton = new JButton("Se déconnecter");
-			decoButton.setMaximumSize(new Dimension(150,50));
+			JButton decoButton = Factory.addButton("Se déconnecter", 150, 50);
 			decoButton.addActionListener(new ActionListener() {
-
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
 					GUI.idSession = 0;
 					panel.removeAll();
 					panel.revalidate();
-					myGui.repaint();
+					new Start(myGui, frame).repaint();
 				}
-				
 			});
 			decoPanel.add(decoButton);
 			panel.add(decoPanel);
 			
-			panel.add(Box.createRigidArea(new Dimension(500,20)));
+			panel.add(Factory.addSpace(30));
 			
 			// BOUTON : QUITER //
-			JPanel quitPanel = new JPanel();
-			quitPanel.setLayout(new BoxLayout(quitPanel, BoxLayout.LINE_AXIS));
-			
-			JButton quitButton = new JButton("Quitter");
-			quitButton.setMaximumSize(new Dimension(150,50));
+			JPanel quitPanel = Factory.addPanel();
+			JButton quitButton = Factory.addButton("Quitter", 150, 50);
 			quitButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {

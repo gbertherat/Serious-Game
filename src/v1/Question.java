@@ -23,7 +23,7 @@ public class Question {
 	public Question() {
 		count++;
 		id = count;
-		setTitre("default");
+		titre = "default";
 		contenu = "default";
 		listeReponses = new ArrayList<String>();
 		categorie = "default";
@@ -39,7 +39,7 @@ public class Question {
 	public Question(String titre, String contenu, String categorie) {
 		count++;
 		this.id = count;
-		this.setTitre(titre);
+		this.titre = titre;
 		this.contenu = contenu;
 		this.listeReponses = new ArrayList<String>();
 		this.categorie = categorie;

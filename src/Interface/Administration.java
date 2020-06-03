@@ -2,7 +2,6 @@ package Interface;
 
 import java.awt.Container;
 import java.awt.Dimension;
-import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,6 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import Components.Factory;
 import v1.Defi;
 import v1.Player;
 
@@ -32,39 +32,28 @@ public class Administration {
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();
-				panel.add(Box.createRigidArea(new Dimension(500,40)));
 				panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
+				panel.add(Box.createRigidArea(new Dimension(500, 110)));
 			
 				// TITRE //
-				JPanel titrePanel = new JPanel();
-				titrePanel.setLayout(new BoxLayout(titrePanel, BoxLayout.LINE_AXIS));
-				
-				JLabel titre = new JLabel("Menu administration");
-				titre.setFont(new Font("Arial", Font.BOLD, 21));
+				JPanel titrePanel = Factory.addPanel();
+				JLabel titre = Factory.addLabel("Menu administration", 21, true);
 				titrePanel.add(titre);
 				panel.add(titrePanel);
 				
-				panel.add(Box.createRigidArea(new Dimension(500, 70)));
+				panel.add(Box.createRigidArea(new Dimension(500, 30)));
 				
 				// BOUTON : GERER LES UTILISATEURS //
-				JPanel usersPanel = new JPanel();
-				usersPanel.setLayout(new BoxLayout(usersPanel, BoxLayout.LINE_AXIS));
-				
-				JButton usersButton = new JButton("Gérer les utilisateurs");
-				usersButton.setMaximumSize(new Dimension(200, 50));
-				usersButton.setPreferredSize(new Dimension(200, 50));
+				JPanel usersPanel = Factory.addPanel();
+				JButton usersButton = Factory.addButton("Gérer les utilisateurs", 200, 50);
 				usersPanel.add(usersButton);
 				panel.add(usersPanel);
 				
 				panel.add(Box.createRigidArea(new Dimension(500, 20)));
 				
 				// BOUTON : GERER LES QUESTIONS //
-				JPanel questionsPanel = new JPanel();
-				questionsPanel.setLayout(new BoxLayout(questionsPanel, BoxLayout.LINE_AXIS));
-				
-				JButton questionsButton = new JButton("Gérer les questions");
-				questionsButton.setMaximumSize(new Dimension(200, 50));
-				questionsButton.setPreferredSize(new Dimension(200, 50));
+				JPanel questionsPanel = Factory.addPanel();
+				JButton questionsButton = Factory.addButton("Gérer les questions", 200, 50);
 				questionsPanel.add(questionsButton);
 				panel.add(questionsPanel);
 				
@@ -78,29 +67,22 @@ public class Administration {
 					}
 				}
 				
-				JPanel labelPanel = new JPanel();
-				labelPanel.setLayout(new BoxLayout(labelPanel, BoxLayout.LINE_AXIS));
-				
-				JLabel label = new JLabel("Il y a " + nbDefi + " défi(s) en attente de vérification.");
-				label.setFont(new Font("Arial", Font.PLAIN, 15));
+				JPanel labelPanel = Factory.addPanel();
+				JLabel label = Factory.addLabel("Il y a " + nbDefi + " défi(s) en attente de vérification.", 15, false);
 				labelPanel.add(label);
 				panel.add(labelPanel);
 				
 				panel.add(Box.createRigidArea(new Dimension(500, 10)));
 				
-				JPanel verifyPanel = new JPanel();
+				JPanel verifyPanel = Factory.addPanel();
 				verifyPanel.setLayout(new BoxLayout(verifyPanel, BoxLayout.LINE_AXIS));
 				
-				JButton verifyButton = new JButton("Vérifier les questions");
-				verifyButton.setMaximumSize(new Dimension(200, 50));
-				verifyButton.setPreferredSize(new Dimension(200, 50));
+				JButton verifyButton = Factory.addButton("Vérifier les questions", 200, 50);
 				verifyButton.addActionListener(new ActionListener() {
-
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
 						new VerifyPanel(myGui, frame).repaint(1);
-					}
-					
+					}	
 				});
 				verifyPanel.add(verifyButton);
 				panel.add(verifyPanel);
@@ -108,20 +90,18 @@ public class Administration {
 				panel.add(Box.createRigidArea(new Dimension(500,90)));
 				
 				// BOUTON : RETOUR //
-				JPanel retourPanel = new JPanel();
-				retourPanel.setLayout(new BoxLayout(retourPanel, BoxLayout.LINE_AXIS));
-				
-				JButton retourButton = new JButton("Retour");
-				retourButton.addActionListener(new ActionListener() {
-		
-					@Override
-					public void actionPerformed(ActionEvent arg0) {
+				panel.add(Box.createVerticalGlue());
+				JPanel retourPanel = Factory.addPanel();
+				JButton back = Factory.addButton("Retour", 100, 40);
+				back.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						panel.removeAll();
+						panel.revalidate();
+						panel.repaint();
 						new Menu(myGui, frame).repaint();
 					}
-					
 				});
-				retourPanel.add(Box.createVerticalGlue());
-				retourPanel.add(retourButton);
+				retourPanel.add(back);
 				retourPanel.add(Box.createHorizontalGlue());
 				panel.add(retourPanel);
 				
