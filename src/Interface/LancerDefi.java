@@ -56,6 +56,12 @@ public class LancerDefi {
 			
 			// QUESTION EXISTANTE
 			JButton existButton = Factory.addButton("Question existante", 200, 50);
+			existButton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					new AllQuestions(myGui, frame).repaint(1);
+				}
+			});
 			buttonPanel.add(existButton);
 			
 			buttonPanel.add(Box.createRigidArea(new Dimension(20, 20)));

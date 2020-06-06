@@ -7,7 +7,12 @@ import java.time.temporal.ChronoUnit;
  * La classe Defi permet la création de défis.
  * @author Guillaume
  */
-public class Defi {
+public class Defi implements java.io.Serializable{
+	/**
+	 * Version serial
+	 */
+	private static final long serialVersionUID = 7168126960424290878L;
+	
 	// VARS //
 	private static int count = 0;
 	private int id;
@@ -56,6 +61,14 @@ public class Defi {
 		this.reviewed = false;
 		this.accepte = false;
 		this.termine = false;
+	}
+
+	public static int getCount() {
+		return count;
+	}
+
+	public static void setCount(int count) {
+		Defi.count = count;
 	}
 
 	// ID //
@@ -241,6 +254,7 @@ public class Defi {
 				"\nPoints: " + points +
 				"\nDate d'envoi: " + date +
 				"\nDate d'expiration: " + dateExpiration +
+				"\nReviewed? " + reviewed +
 				"\nAccepté? " + accepte +
 				"\nTerminé? " + termine;
 	}

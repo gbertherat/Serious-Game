@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowEvent;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -64,7 +63,7 @@ public class Menu {
 			panel.add(profilPanel);
 
 			// BOUTON : ADMIN PANEL //
-			if(selected.getClass().getSimpleName().equals("Admin")) {
+			if(selected.isAdmin()) {
 				JPanel adminPanel = Factory.addPanel();
 				JButton adminButton = Factory.addButton("Administration", 150, 30);
 				adminButton.addActionListener(new ActionListener() {
@@ -85,11 +84,13 @@ public class Menu {
 			JPanel nbDefiPanel = Factory.addPanel();
 			
 			int nbrDefi = 0;
-			LocalDateTime dateFin = LocalDateTime.now().plus(3, ChronoUnit.DAYS);
+			LocalDateTime dateFin = null;
 			for(Defi d : myGui.getListeDefis()) {
 				if(d.getDestinataire().getID() == GUI.idSession && !d.isAccepte() && d.isReviewed()) {
 					nbrDefi++;
-					if(d.getDateExpiration().isBefore(dateFin)) {
+					if(dateFin == null) {
+						dateFin = d.getDateExpiration();
+					} else if(d.getDateExpiration().isBefore(dateFin)) {
 						dateFin = d.getDateExpiration();
 					}
 				}

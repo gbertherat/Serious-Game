@@ -1,12 +1,17 @@
 package Interface;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import v1.Admin;
 import v1.Defi;
 import v1.Player;
 import v1.Question;
@@ -16,6 +21,7 @@ import v1.Question;
  * @author Guillaume
  */
 public class GUI{
+
 	protected JFrame frame;
 	protected ArrayList<Player> listeJoueurs;
 	protected ArrayList<Defi> listeDefis;
@@ -58,6 +64,11 @@ public class GUI{
 		this.listeJoueurs = listeJoueurs;
 	}
 	
+	/**
+	 * Permet de récupérer un joueur grâce à son ID
+	 * @param id - L'id du joueur
+	 * @return Le joueur s'il existe, null sinon
+	 */
 	public Player getPlayer(int id) {
 		for(Player p : listeJoueurs) {
 			if(p.getID() == id) {
@@ -67,15 +78,22 @@ public class GUI{
 		return null;
 	}
 	
+	/**
+	 * Permet d'ajouter un joueur à la liste des joueurs
+	 * @param player - Le jouer à ajouter
+	 */
 	public void addJoueur(Player player) {
 		this.listeJoueurs.add(player);
 	}
 	
+	/**
+	 * Permet de supprimer un joueur de la liste des joueurs
+	 * @param player - Le joueur à supprimer
+	 */
 	public void delJoueur(Player player) {
 		this.listeJoueurs.remove(player);
 	}
 	
-	// LISTE JOUEURS //
 	/**
 	 * Permet de récupérer la liste des joueurs
 	 * @return la liste des joueurs
@@ -133,26 +151,105 @@ public class GUI{
 		this.listeQuestions = listeQuestions;
 	}
 	
+	/**
+	 * Permet d'ajouter une question à la liste des questions
+	 * @param question - La question à ajouter
+	 */
 	public void addQuestion(Question question) {
 		listeQuestions.add(question);
 	}
 	
+	/**
+	 * Permet de supprimer une question de la liste des questions
+	 * @param question - La question à supprimer
+	 */
 	public void delQuestion(Question question) {
 		listeQuestions.remove(question);
 	}
+	
+	public Question getQuestion(int id) {
+		for(Question q : listeQuestions) {
+			if(q.getID() == id) {
+				return q;
+			}
+		}
+		return null;
+	}
+	
+	public void saveAll() {
+		try {
+			new File("ser/data.ser").delete();
+			FileOutputStream saveFile = new FileOutputStream("ser/data.ser");
+			ObjectOutputStream out = new ObjectOutputStream(saveFile);
+			
+			out.writeObject(this.getListeJoueurs());
+			out.writeObject(this.getListeQuestions());
+			out.writeObject(this.getListeDefis());
+			
+			out.close();
+			saveFile.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	public void loadAll() {
+		try {
+			FileInputStream saveFile = new FileInputStream("ser/data.ser");		
+			ObjectInputStream in = new ObjectInputStream(saveFile);
+			
+			Object joueurs = new ArrayList<>();
+			ArrayList<Question> questions = new ArrayList<>();
+			ArrayList<Defi> defis = new ArrayList<>();
+			
+			joueurs = (ArrayList<Player>) in.readObject();
+			questions = (ArrayList<Question>) in.readObject();
+			defis = (ArrayList<Defi>) in.readObject();
+			
+			this.setListeJoueurs((ArrayList<Player>) joueurs);
+			this.setListeQuestions(questions);
+			this.setListeDefis(defis);
+			
+			if(this.getListeJoueurs().size() > 0) {
+				Player.setCount(this.getListeJoueurs().get(this.getListeJoueurs().size()-1).getID());
+			}
+			
+			if(this.getListeQuestions().size() > 0) {
+				Question.setCount(this.getListeQuestions().get(this.getListeQuestions().size()-1).getID());
+			}
+			
+			if(this.getListeDefis().size() > 0) {
+				Defi.setCount(this.getListeDefis().get(this.getListeDefis().size()-1).getId());
+			}	
+			
+			in.close();
+			saveFile.close();
+		} catch (IOException | ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+	}
 
 	// MAIN //
-	public static void main(String[] args) {	
+	public static void main(String[] args) {
+		
 		JFrame frame = new JFrame();
 		GUI myGui = new GUI(frame);
+		/*
+		myGui.addJoueur(new Player("Bertherat", "Guillaume", 19, "mail@test.com", "Informatique", "Motzen", "123"));
+		myGui.getPlayer(1).setAdmin(true);
 		myGui.addJoueur(new Player("Mister", "Guest", 19, "mail@test.com", "Informatique", "Guest", "123"));
-		myGui.addJoueur(new Admin("Bertherat", "Guillaume", 19, "bertherat.guillaume@gmail.com", "Informatique", "Motzen", "123"));
 		for(int i = 0; i < 21; i++) {
 			myGui.addDefi(new Defi(new Question(String.valueOf(i), "Test", "Java"), myGui.getPlayer(1), myGui.getPlayer(2), 3));
 			myGui.getListeDefis().get(i).getQuestion().addReponse(String.valueOf(i));
+			myGui.getListeDefis().get(i).getQuestion().addReponse("test");
 			myGui.getListeDefis().get(i).setReviewed(true);
 		}
-		
+		myGui.saveAll();
+		*/
+		myGui.loadAll();
 		new Start(myGui, frame).repaint();
+		
 	}
+	
 }

@@ -255,7 +255,7 @@ public class Inscription {
 				newPlayer.setBulletin(newBulletin);
 				newPlayer.setVie(score);
 				myGui.addJoueur(newPlayer);
-				
+				myGui.saveAll();
 				ActionListener connexion = new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent arg0) {

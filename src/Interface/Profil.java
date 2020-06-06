@@ -65,15 +65,11 @@ public class Profil {
 		// NOMBRE DEFI //
 		int defi = 0;
 		int defiAcc = 0;
-		int defiReussi = 0;
 		for(Defi d : myGui.getListeDefis()) {
 			if(d.getDestinataire().getID() == GUI.idSession && d.isReviewed()){
 				defi++;
 				if(d.isAccepte()) {
 					defiAcc++;
-				}
-				if(d.isTermine()) {
-					defiReussi++;
 				}
 			}
 		}
@@ -109,7 +105,7 @@ public class Profil {
 		JLabel DefiReussi = Factory.addLabel("Nombre de défis réussis: ", 18, true);
 		nbDefiPanel3.add(DefiReussi);
 		
-		JLabel nbDefiReussi = Factory.addLabel(String.valueOf(defiReussi), 18, false);
+		JLabel nbDefiReussi = Factory.addLabel(String.valueOf(selected.getDefisReussis()), 18, false);
 		nbDefiPanel3.add(nbDefiReussi);
 		panel.add(nbDefiPanel3);
 
@@ -121,7 +117,7 @@ public class Profil {
 		JLabel scoreLabel = Factory.addLabel("Score: ", 18, true);
 		scorePanel.add(scoreLabel);
 		
-		JLabel score = Factory.addLabel(String.valueOf(defiReussi*10), 18, false);
+		JLabel score = Factory.addLabel(String.valueOf(selected.getScore()), 18, false);
 		scorePanel.add(score);
 		panel.add(scorePanel);
 		

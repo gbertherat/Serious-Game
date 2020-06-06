@@ -2,7 +2,12 @@ package v1;
 
 import java.util.ArrayList;
 
-public class Bulletin {
+public class Bulletin implements java.io.Serializable{
+	/**
+	 * Version serial
+	 */
+	private static final long serialVersionUID = 8311730116008434511L;
+	
 	private static int count = 0;
 	private int id;
 	private ArrayList<Integer> listeNotes;

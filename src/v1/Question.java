@@ -6,7 +6,12 @@ import java.util.ArrayList;
  * La classe Question permet la création de questions
  * @author Guillaume
  */
-public class Question {
+public class Question implements java.io.Serializable{
+	/**
+	 * Version serial
+	 */
+	private static final long serialVersionUID = -6111312377771338140L;
+	
 	// VARS //
 	private static int count = 0;
 	private int id;
@@ -47,6 +52,14 @@ public class Question {
 		this.nbJuste = 0;
 	}
 	
+	public static int getCount() {
+		return count;
+	}
+
+	public static void setCount(int count) {
+		Question.count = count;
+	}
+
 	// ID //
 	/**
 	 * Permet de récupérer l'id d'une question
@@ -189,6 +202,7 @@ public class Question {
 	 */
 	public String toString() {
 		StringBuffer toReturn = new StringBuffer("ID: " + id +
+				"\nTitre: " + titre +
 				"\nContenu: " + contenu +
 				"\nCategorie: " + categorie +
 				"\nListe réponses: " + listeReponses +

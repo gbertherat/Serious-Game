@@ -6,6 +6,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -126,9 +127,11 @@ public class CustomDefi {
 			destinatairePanel.add(destinataireLabel);
 			
 			String[] joueurs = new String[myGui.getListeJoueurs().size()-1];
-			for(int i = 0; i < myGui.getListeJoueurs().size(); i++) {
-				if(myGui.getListeJoueurs().get(i) != selected) {
-					joueurs[i] = myGui.getListeJoueurs().get(i).getUsername();
+			int i = 0;
+			for(Player p : myGui.getListeJoueurs()) {
+				if(p != selected) {
+					joueurs[i] = p.getUsername();
+					i++;
 				}
 			}
 			
@@ -160,8 +163,14 @@ public class CustomDefi {
 					String fieldCategorie = categorieBox.getSelectedItem().toString();
 					String fieldQuestion = contenuField.getText();
 					String fieldReponse =  reponseField.getText();
-					String fieldDestinataire = destinataireBox.getSelectedItem().toString();
-
+					String fieldDestinataire = "";
+					try {
+						fieldDestinataire = destinataireBox.getSelectedItem().toString();
+					} catch(NullPointerException e) {
+						messageLabel.setText("Erreur: Destinataire invalide");
+						return;
+					}
+					
 					if(fieldTitre.length() < 3) {
 						messageLabel.setText("Erreur : Titre invalide (< 3 caractères)");
 						return;
@@ -179,9 +188,10 @@ public class CustomDefi {
 					boolean error = true;
 					Question newQuestion = new Question(fieldTitre, fieldQuestion, fieldCategorie);
 					
+					newQuestion.setReponses(new ArrayList<String>());
 					String[] allReponses = fieldReponse.split(";");
 					for(String r : allReponses) {
-						newQuestion.addReponse(r);
+						newQuestion.addReponse(r.toLowerCase());
 					}
 					
 					for(Player p: myGui.getListeJoueurs()) {
@@ -191,6 +201,7 @@ public class CustomDefi {
 							Defi newDefi = new Defi(newQuestion, selected, p, 0);
 							myGui.addDefi(newDefi);
 							messageLabel.setText("Défi envoyé!");
+							myGui.saveAll();
 							ActionListener menu = new ActionListener() {
 								@Override
 								public void actionPerformed(ActionEvent arg0) {

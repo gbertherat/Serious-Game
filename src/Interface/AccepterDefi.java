@@ -18,17 +18,31 @@ import Components.Factory;
 import v1.Defi;
 import v1.Player;
 
+/**
+ * La classe AccepterDefi correspond à la fenêtre affichant tous les défis disponibles et de pouvoir en accepter un.
+ * @author Guillaume
+ */
 public class AccepterDefi {
 	GUI myGui;
 	JFrame frame;
 	
+	/**
+	 * Constructeur de la classe AccepterDefi
+	 * @param myGui - Le GUI
+	 * @param frame - La frame du GUI
+	 */
 	public AccepterDefi(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet d'afficher la fenêtre pour accepter un défi
+	 * @param index - Le numéro de la page
+	 */
 	public void repaint(int index) {
-		if(GUI.idSession != 0) {			
+		if(GUI.idSession != 0) {
+			// On récupère le panel principal
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
@@ -45,28 +59,27 @@ public class AccepterDefi {
 				
 			panel.add(Box.createRigidArea(new Dimension(500,10)));
 			
-			// HEADER //
+			// LISTE DES DEFIS DISPONIBLE //
 			ArrayList<Defi> liste = new ArrayList<>();
-			for(Defi p : myGui.getListeDefis()) {
-				if(p.isReviewed() && !p.isTermine() && p.getDestinataire() == selected) {
-					liste.add(p);
+			for(Defi p : myGui.getListeDefis()) { // On récupère tous les défis disponibles
+				if(p.isReviewed() && !p.isAccepte() && !p.isTermine() && p.getDestinataire() == selected) {
+					liste.add(p); // On ajoute le défi à la liste des défis disponibles s'il n'a pas déjà été accepté et terminé
 				}
 			}
 			
 			Defi choosen = null;
 			JPanel mainPanel = Factory.addPanel();
-			
 			int size = liste.size();
 			JPanel[] questionPanels = new JPanel[size];
 			JLabel[] labelFields = new JLabel[size];
 			JButton[] buttonFields = new JButton[size];
-			for(int i = 0; i < 10; i++) {
+			DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM à HH:mm"); // Formattage du LocalDateTime
+			for(int i = 0; i < 10; i++) { // On affiche 10 défis par page
 				if((i+((index-1)*10)) == size){
 					break;
 				}
 				
 				choosen = liste.get((i+((index-1)*10)));
-				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy à HH:mm");
 				String formattedString = choosen.getDateExpiration().format(formatter);
 				
 				questionPanels[((i+((index-1)*10)))] = Factory.addPanel();
@@ -100,23 +113,25 @@ public class AccepterDefi {
 			}
 			
 			JPanel navPanel = Factory.addPanel();
-			
+			// BOUTON : PAGE PRECEDENTE //
 			if(index > 1) {
 				JButton precButton = new JButton("<-");
 				precButton.addActionListener(new ActionListener() {
-
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
 						new AccepterDefi(myGui, frame).repaint(index-1);
 					}
-					
 				});
 				navPanel.add(precButton);
 			}
 			navPanel.add(Box.createRigidArea(new Dimension(20, 20)));
+			
+			// NUMERO DE LA PAGE ACTUELLE //
 			JLabel numPage = new JLabel("Page: " + index + "/" + nbPages);
 			navPanel.add(numPage);
 			navPanel.add(Box.createRigidArea(new Dimension(20, 20)));
+			
+			// BOUTON : PAGE SUIVANTE //
 			if(index < nbPages) {
 				JButton nextButton = new JButton("->");
 				nextButton.addActionListener(new ActionListener() {

@@ -28,7 +28,7 @@ public class Administration {
 	public void repaint() {
 		if(GUI.idSession != 0) {
 			Player selected = myGui.getPlayer(GUI.idSession);
-			if(selected.getClass().getSimpleName().equals("Admin")) {
+			if(selected.isAdmin()) {
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();
@@ -46,6 +46,12 @@ public class Administration {
 				// BOUTON : GERER LES UTILISATEURS //
 				JPanel usersPanel = Factory.addPanel();
 				JButton usersButton = Factory.addButton("Gérer les utilisateurs", 200, 50);
+				usersButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent arg0) {
+						new UsersPanel(myGui, frame).repaint(1);
+					}
+				});
 				usersPanel.add(usersButton);
 				panel.add(usersPanel);
 				
@@ -54,6 +60,12 @@ public class Administration {
 				// BOUTON : GERER LES QUESTIONS //
 				JPanel questionsPanel = Factory.addPanel();
 				JButton questionsButton = Factory.addButton("Gérer les questions", 200, 50);
+				questionsButton.addActionListener(new ActionListener() {
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						new QuestionsPanel(myGui, frame).repaint(1);	
+					}
+				});
 				questionsPanel.add(questionsButton);
 				panel.add(questionsPanel);
 				

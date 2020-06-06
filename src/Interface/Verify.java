@@ -7,6 +7,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
@@ -41,7 +42,7 @@ public class Verify {
 	public void repaint(int id) {
 		if(GUI.idSession != 0) {
 			Player selected = myGui.getPlayer(GUI.idSession);
-			if(selected.getClass().getSimpleName().equals("Admin")) {
+			if(selected.isAdmin()) {
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();
@@ -126,6 +127,7 @@ public class Verify {
 				panel.add(contenuPanel);
 				
 				JTextArea contenuField = Factory.addTextArea(440, 80, true);
+				contenuField.setText(question.getContenu());
 				JScrollPane scrollPanel = Factory.addScroll(contenuField, 440, 80);
 				panel.add(scrollPanel);
 				
@@ -248,13 +250,14 @@ public class Verify {
 						defiSel.setPoints(fieldPoint);
 						defiSel.setDateExpiration(LocalDateTime.now().plus(2, ChronoUnit.DAYS));
 						
+						question.setReponses(new ArrayList<String>());
 						String[] allReponses = fieldReponse.split(";");
 						for(String r : allReponses) {
-							question.addReponse(r);
+							question.addReponse(r.toLowerCase());
 						}
 						myGui.addQuestion(question);
 						defiSel.setReviewed(true);
-						System.out.println(myGui.getListeDefis());
+						myGui.saveAll();
 						ActionListener panel = new ActionListener() {
 							@Override
 							public void actionPerformed(ActionEvent arg0) {
@@ -280,7 +283,7 @@ public class Verify {
 							nbPress = 0;
 							myGui.delDefi(defiSel);
 							messageLabel.setText("Question supprimée");
-							
+							myGui.saveAll();
 							ActionListener panel = new ActionListener() {
 								@Override
 								public void actionPerformed(ActionEvent arg0) {

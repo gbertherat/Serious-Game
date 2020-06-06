@@ -4,7 +4,12 @@ package v1;
  * La classe Player permet la création de profil joueur.
  * @author Guillaume
  */
-public class Player {
+public class Player implements java.io.Serializable{
+	/**
+	 * Version serial
+	 */
+	private static final long serialVersionUID = 8093318821280100491L;
+	
 	// Vars //
 	protected static int count = 0;
 	protected int id;
@@ -19,6 +24,8 @@ public class Player {
 	protected int vie;
 	protected int score;
 	protected int defis;
+	protected int defisReussis;
+	protected boolean admin;
 	
 	/**
 	 * Constructeur par defaut de la classe Player
@@ -37,6 +44,8 @@ public class Player {
 		vie = 0;
 		score = 0;
 		defis = 0;
+		defisReussis = 0;
+		admin = false;
 	}
 	
 	/**
@@ -60,8 +69,18 @@ public class Player {
 		this.vie = 0;
 		this.score = 0;
 		this.defis = 0;
+		this.defisReussis = 0;
+		this.admin = false;
 	}
 	
+	public static int getCount() {
+		return count;
+	}
+
+	public static void setCount(int count) {
+		Player.count = count;
+	}
+
 	// ID //
 	/**
 	 * Permet de récupérer l'ID d'un joueur
@@ -241,6 +260,30 @@ public class Player {
 		this.score = score;
 	}
 	
+	public int getDefis() {
+		return defis;
+	}
+
+	public void setDefis(int defis) {
+		this.defis = defis;
+	}
+
+	public int getDefisReussis() {
+		return defisReussis;
+	}
+
+	public void setDefisReussis(int defisReussis) {
+		this.defisReussis = defisReussis;
+	}
+
+	public boolean isAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(boolean admin) {
+		this.admin = admin;
+	}
+
 	// TOSTRING //
 	/**
 	 * Permet d'afficher les attributs d'un joueur dans la console
@@ -251,11 +294,14 @@ public class Player {
 				"\nPrenom: " + prenom +
 				"\nAge: " + age +
 				"\nMail: " + mail +
+				"\nLicence: " + licence +
 				"\nUsername: " + username +
 				"\nPassword: " + password +
 				"\nVie: " + vie +
 				"\nScore: " + score +
-				"\nDefis: " + defis; 
+				"\nBulletin: " + myBulletin +
+				"\nDefis: " + defis +
+				"\nDefis réussis: " + defisReussis;
 	}
 	
 	// EQUALS //

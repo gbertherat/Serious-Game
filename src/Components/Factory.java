@@ -3,14 +3,12 @@ package Components;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JPasswordField;
@@ -21,8 +19,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.SpinnerModel;
 import javax.swing.SpinnerNumberModel;
-
-import Interface.GUI;
 
 public class Factory {
 	public static JPanel addPanel() {
@@ -89,7 +85,11 @@ public class Factory {
 	
 	public static JComboBox<String> addBox(String[] list, int width, int height){
 		JComboBox<String> box = new JComboBox<String>(list);
-		box.setSelectedIndex(0);
+		try {
+			box.setSelectedIndex(0);
+		} catch(IllegalArgumentException e) {
+			;
+		}
 		
 		Dimension dimension = new Dimension(width, height);
 		box.setMinimumSize(dimension);
@@ -132,6 +132,11 @@ public class Factory {
 		pane.setMaximumSize(dimension);
 		pane.setPreferredSize(dimension);
 		return pane;
+	}
+	
+	public static JCheckBox addCheck() {
+		JCheckBox box = new JCheckBox();
+		return box;
 	}
 	
 	public static Component addSpace(int height) {
