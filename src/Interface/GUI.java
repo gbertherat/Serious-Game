@@ -34,11 +34,7 @@ public class GUI{
 		this.listeDefis = new ArrayList<>();
 		this.listeQuestions = new ArrayList<>();
 		this.frame = frame;
-		frame.setTitle("Serious-Game by Bertherat Guillaume");
-		frame.setSize(1024, 576);
-		frame.setResizable(false);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.setLocationRelativeTo(null);
+		
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
@@ -232,8 +228,11 @@ public class GUI{
 
 	// MAIN //
 	public static void main(String[] args) {
-		
 		JFrame frame = new JFrame();
+		frame.setTitle("Serious-Game by Bertherat Guillaume");
+		frame.setSize(1024, 576);
+		frame.setResizable(false);
+		frame.setLocationRelativeTo(null);
 		GUI myGui = new GUI(frame);
 		/*
 		myGui.addJoueur(new Player("Bertherat", "Guillaume", 19, "mail@test.com", "Informatique", "Motzen", "123"));

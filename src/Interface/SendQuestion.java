@@ -19,6 +19,7 @@ import javax.swing.Timer;
 
 import Components.Factory;
 import v1.Defi;
+import v1.Mail;
 import v1.Player;
 import v1.Question;
 
@@ -26,6 +27,7 @@ public class SendQuestion {
 	private GUI myGui;
 	private JFrame frame;
 	private static int nbPress = 0;
+	private Player destinataire = null;
 	
 	public SendQuestion(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
@@ -155,7 +157,7 @@ public class SendQuestion {
 						nbPress = 0;
 						sendPanel.remove(sendButton);
 						messageLabel.setText("Question envoyée!");
-						Player destinataire = null;
+						
 						for(Player p : myGui.getListeJoueurs()) {
 							if(p.getUsername().equals(destinataireBox.getSelectedItem().toString())){
 								destinataire = p;
@@ -173,9 +175,15 @@ public class SendQuestion {
 						newDefi.setReviewed(true);
 						myGui.addDefi(newDefi);
 						myGui.saveAll();
+						
 						ActionListener panel = new ActionListener() {
 							@Override
 							public void actionPerformed(ActionEvent arg0) {
+								Mail.sendMail(destinataire.getMail(), 
+										"Vous avez reçu un défi!", 
+										"Le joueur " + selected.getUsername() + " viens de vous envoyer un défi! Venez vite y répondre!\n"
+												+ "Serious-Game by Bertherat Guillaume");
+								messageLabel.setText("Question envoyée!");
 								new Menu(myGui, frame).repaint();
 							}
 						};

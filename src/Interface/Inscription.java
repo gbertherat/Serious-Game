@@ -5,12 +5,16 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -18,6 +22,11 @@ import javax.swing.JPasswordField;
 import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.Timer;
+import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.filechooser.FileSystemView;
+
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.text.PDFTextStripper;
 
 import Components.Factory;
 import v1.Bulletin;
@@ -30,6 +39,7 @@ import v1.Player;
 public class Inscription {
 	protected GUI myGui;
 	protected JFrame frame;
+	protected File selectedFile = null;
 	protected static String[] licenceList = {"Informatique", "Mathématique"};
 	
 	/**
@@ -135,7 +145,50 @@ public class Inscription {
 		
 		panel.add(Factory.addSpace(20));
 		
+		
 		// NOTES //
+		JPanel fileLabelPanel = Factory.addPanel();
+		JLabel fileLabel = Factory.addLabel("Veuillez choisir le fichier PDF contenant vos moyennes", 14, false);
+		fileLabelPanel.add(fileLabel);
+		panel.add(fileLabelPanel);
+		
+		JPanel filePanel = Factory.addPanel();
+		JButton fileButton = Factory.addButton("Choisir un fichier", 150, 40);
+		fileButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				JFrame fileFrame = new JFrame();
+				fileFrame.setMaximumSize(new Dimension(600, 450));
+				fileFrame.setPreferredSize(new Dimension(600, 450));
+				fileFrame.setMinimumSize(new Dimension(600, 450));
+				fileFrame.setLocationRelativeTo(null);
+				fileFrame.setResizable(false);
+				
+				GUI fileGUI = new GUI(fileFrame);
+				
+				fileGUI.loadAll();
+				Container filePanel = new JPanel();
+				
+				JFileChooser fileChooser = new JFileChooser(FileSystemView.getFileSystemView().getHomeDirectory());
+				fileChooser.setDialogTitle("Selectionnez un fichier PDF");
+				fileChooser.setAcceptAllFileFilterUsed(false);
+				fileChooser.addChoosableFileFilter(new FileNameExtensionFilter("PDF", "pdf"));
+				
+				filePanel.add(fileChooser);
+				
+				int returnValue = fileChooser.showOpenDialog(null);
+				if (returnValue == JFileChooser.APPROVE_OPTION) {
+					selectedFile = fileChooser.getSelectedFile();
+					fileLabel.setText("Fichier selectionné: " + selectedFile.getName());
+				}
+			}
+		});
+		filePanel.add(fileButton);
+		panel.add(filePanel);
+		
+		panel.add(Factory.addSpace(10));
+		
+		/*
 		JPanel noteLabelPanel = Factory.addPanel();
 		JLabel noteLabel = Factory.addLabel("Entrez vos moyennes (sur 20):", 15, true);
 		noteLabelPanel.add(noteLabel);
@@ -156,6 +209,7 @@ public class Inscription {
 		panel.add(notePanel);
 		
 		panel.add(Box.createRigidArea(new Dimension(720,10)));
+		*/
 		
 		// ERROR
 		JPanel errorPanel = Factory.addPanel();
@@ -179,8 +233,9 @@ public class Inscription {
 				String licence = licenceBox.getSelectedItem().toString();
 				String username = inUsername.getText();
 				String password = String.valueOf(inPassword.getPassword());
-				Bulletin newBulletin;
-				int score = 0;
+				ArrayList<Integer> notes;
+				Bulletin newBulletin = null;
+				int vie = 0;
 				
 				if(nom.length() < 3) {
 					errorLabel.setText("Erreur: Nom invalide (< 3 caractères)");
@@ -220,40 +275,58 @@ public class Inscription {
 							return;
 						}
 					}
-	
-					int note = -1;
-					ArrayList<Integer> notes = new ArrayList<>();
-					newBulletin = new Bulletin();
 					
-					for(int i = 0; i < numberOfFields; i++) {
-						if(!fields[i].getText().isEmpty()) {
-							try {
-								note = Integer.parseInt(fields[i].getText());
-							} catch (NumberFormatException e) {
-								errorLabel.setText("Erreur: Entrez des moyennes valides");
-								return;
-							}
-							
-							if(note <= 20 && note >= 0) {
-								score = score + note;
-								notes.add(note);
-							} else {
-								errorLabel.setText("Erreur: Entrez des moyennes valides (Entre 0 et 20)");
-								return;
-							}
-						}	
-					}
-					if(score == 0) {
-						errorLabel.setText("Erreur: Entrez des moyennes");
+					if(selectedFile == null) {
+						errorLabel.setText("Erreur: Veuillez choisir un fichier");
 						return;
 					}
-					newBulletin.setListeNote(notes);
 				}
+				
+				try {
+				PDDocument document = PDDocument.load(selectedFile);
+			    PDFTextStripper stripper = new PDFTextStripper();
+			    
+			    String text = stripper.getText(document);
+			    String[] pdfLines = text.split("\n");
+			    
+			    if(!pdfLines[0].contains("Université de la Nouvelle-Calédonie")) {
+			    	document.close();
+			    	errorLabel.setText("Erreur: Veuillez choisir un fichier valide");
+					return;
+			    }
+			    
+			    notes = new ArrayList<>();
+			    Pattern p = Pattern.compile("([0-9])");
+			    int i = 0;
+			    for(String line : pdfLines) {
+			    	Matcher m = p.matcher(line);
+			    	if(i > 8) {
+				    	if(m.find() && !line.contains("UE") && !line.contains("Moyenne")) {
+				    		line = line.substring(line.length()-6,line.length()-4);
+				    		notes.add(Integer.parseInt(line));
+				    	}
+			    	}
+			    	i++;
+			    }
+		    	document.close();
+				} catch(Exception e) {
+					errorLabel.setText("Erreur: Veuillez choisir un fichier valide");
+					return;
+				}
+				newBulletin = new Bulletin();
+				newBulletin.setListeNote(notes);
+				
+				for(int i : notes) {
+					vie += i;
+				}
+				
 				confirmPanel.remove(confirm);
 				errorLabel.setText("Utilisateur créé!");
+				
 				Player newPlayer = new Player(nom, prenom, age, mail, licence, username, password);
 				newPlayer.setBulletin(newBulletin);
-				newPlayer.setVie(score);
+				newPlayer.setVie(vie);
+				
 				myGui.addJoueur(newPlayer);
 				myGui.saveAll();
 				ActionListener connexion = new ActionListener() {
