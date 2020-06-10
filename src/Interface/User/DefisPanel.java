@@ -1,4 +1,4 @@
-package Interface;
+package Interface.User;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -15,6 +15,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Components.Factory;
+import Interface.GUI;
 import v1.Defi;
 import v1.Player;
 
@@ -22,7 +23,7 @@ import v1.Player;
  * La classe AccepterDefi correspond à la fenêtre affichant tous les défis disponibles et de pouvoir en accepter un.
  * @author Guillaume
  */
-public class AccepterDefi {
+public class DefisPanel {
 	GUI myGui;
 	JFrame frame;
 	
@@ -31,7 +32,7 @@ public class AccepterDefi {
 	 * @param myGui - Le GUI
 	 * @param frame - La frame du GUI
 	 */
-	public AccepterDefi(GUI myGui, JFrame frame) {
+	public DefisPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
@@ -119,7 +120,7 @@ public class AccepterDefi {
 				precButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
-						new AccepterDefi(myGui, frame).repaint(index-1);
+						new DefisPanel(myGui, frame).repaint(index-1);
 					}
 				});
 				navPanel.add(precButton);
@@ -138,7 +139,7 @@ public class AccepterDefi {
 
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
-						new AccepterDefi(myGui, frame).repaint(index+1);
+						new DefisPanel(myGui, frame).repaint(index+1);
 					}
 					
 				});

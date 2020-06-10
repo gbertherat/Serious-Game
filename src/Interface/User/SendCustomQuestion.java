@@ -1,4 +1,4 @@
-package Interface;
+package Interface.User;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -21,15 +21,16 @@ import javax.swing.JTextField;
 import javax.swing.Timer;
 
 import Components.Factory;
+import Interface.GUI;
 import v1.Defi;
 import v1.Player;
 import v1.Question;
 
-public class CustomDefi {
+public class SendCustomQuestion {
 	private GUI myGui;
 	private JFrame frame;
 
-	public CustomDefi(GUI myGui, JFrame frame) {
+	public SendCustomQuestion(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
@@ -234,7 +235,7 @@ public class CustomDefi {
 					panel.removeAll();
 					panel.revalidate();
 					panel.repaint();
-					new LancerDefi(myGui, frame).repaint();
+					new SendQuestionPanel(myGui, frame).repaint();
 				}
 			});
 			retourPanel.add(back);

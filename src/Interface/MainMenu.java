@@ -14,11 +14,11 @@ import javax.swing.JPanel;
 
 import Components.Factory;
 
-public class Start {
+public class MainMenu {
 	private GUI myGui;
 	private JFrame frame;
 	
-	public Start(GUI myGui, JFrame frame) {
+	public MainMenu(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}

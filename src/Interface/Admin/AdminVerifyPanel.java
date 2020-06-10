@@ -1,4 +1,4 @@
-package Interface;
+package Interface.Admin;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -14,13 +14,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Components.Factory;
+import Interface.GUI;
+import v1.Defi;
 import v1.Player;
 
-public class UsersPanel {
+public class AdminVerifyPanel {
 	private GUI myGui;
 	private JFrame frame;
 	
-	public UsersPanel(GUI myGui, JFrame frame) {
+	public AdminVerifyPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
@@ -33,22 +35,35 @@ public class UsersPanel {
 				panel.removeAll();
 				panel.revalidate();
 				panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
-				panel.add(Box.createRigidArea(new Dimension(1024,20)));
+				panel.add(Box.createRigidArea(new Dimension(500,40)));
 			
 				// TITRE //
 				JPanel titrePanel = Factory.addPanel();
-				
-				JLabel titre = Factory.addLabel("Liste des utilisateurs", 21, true);
+				JLabel titre = Factory.addLabel("Vérification des questions", 21, true);
 				titrePanel.add(titre);
 				panel.add(titrePanel);
 				
-				panel.add(Box.createRigidArea(new Dimension(500, 20)));	
+				panel.add(Box.createRigidArea(new Dimension(500, 30)));
 				
-				// LISTE UTILISATEURS //
-				Player choosen = null;
-				ArrayList<Player> liste = myGui.getListeJoueurs();
+				// HEADER //
+				JPanel headPanel = Factory.addPanel();
+				JLabel headLabel = Factory.addLabel("Les questions à vérifier:", 16, true);
+				headPanel.add(headLabel);
+				panel.add(headPanel);
+				
+				panel.add(Box.createRigidArea(new Dimension(500, 20)));
+				
+				// QUESTIONS //
+				ArrayList<Defi> liste = new ArrayList<>();
+				for(Defi d: myGui.getListeDefis()) {
+					if(!d.isReviewed()) {
+						liste.add(d);	
+					}
+				}
+				
+				Defi choosen = null;
 				int size = liste.size();
-				JPanel[] userPanels = new JPanel[size];
+				JPanel[] questionPanels = new JPanel[size];
 				JLabel[] labelFields = new JLabel[size];
 				JButton[] buttonFields = new JButton[size];
 				for(int i = 0; i < 10; i++) {
@@ -58,24 +73,24 @@ public class UsersPanel {
 					
 					choosen = liste.get((i+((index-1)*10)));
 					
-					userPanels[((i+((index-1)*10)))] = Factory.addPanel();
-					userPanels[((i+((index-1)*10)))].setMaximumSize(new Dimension(400, 40));
-					labelFields[(i+((index-1)*10))] = Factory.addLabel(choosen.getUsername(), 16, false);
-					buttonFields[(i+((index-1)*10))] = Factory.addButton("Modifier", 100, 25);
+					questionPanels[((i+((index-1)*10)))] = Factory.addPanel();
+					questionPanels[((i+((index-1)*10)))].setMaximumSize(new Dimension(400, 40));
+					labelFields[(i+((index-1)*10))] = Factory.addLabel('"' + choosen.getQuestion().getTitre() + "\" par " + choosen.getExpediteur().getUsername(), 14, false);
+					buttonFields[(i+((index-1)*10))] = Factory.addButton("Vérifier", 100, 25);
 					
-					final Player playerSel = choosen;
+					final Defi defiSel = choosen;
 					buttonFields[(i+((index-1)*10))].addActionListener(new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							new EditUser(myGui, frame).repaint(playerSel.getID());
+							new AdminVerifyQuestion(myGui, frame).repaint(defiSel.getId());
 						}
 					});
 					
-					userPanels[(i+((index-1)*10))].add(labelFields[(i+((index-1)*10))]);
-					userPanels[(i+((index-1)*10))].add(Box.createRigidArea(new Dimension(20, 20)));
-					userPanels[(i+((index-1)*10))].add(buttonFields[(i+((index-1)*10))]);
+					questionPanels[(i+((index-1)*10))].add(labelFields[(i+((index-1)*10))]);
+					questionPanels[(i+((index-1)*10))].add(Box.createRigidArea(new Dimension(20, 20)));
+					questionPanels[(i+((index-1)*10))].add(buttonFields[(i+((index-1)*10))]);
 					
-					panel.add(userPanels[(i+((index-1)*10))]);
+					panel.add(questionPanels[(i+((index-1)*10))]);
 					panel.add(Box.createRigidArea(new Dimension(20, 5)));
 				}
 				
@@ -95,7 +110,7 @@ public class UsersPanel {
 
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							new UsersPanel(myGui, frame).repaint(index-1);
+							new AdminVerifyPanel(myGui, frame).repaint(index-1);
 						}
 						
 					});
@@ -111,7 +126,7 @@ public class UsersPanel {
 
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							new UsersPanel(myGui, frame).repaint(index+1);
+							new AdminVerifyPanel(myGui, frame).repaint(index+1);
 						}
 						
 					});
@@ -129,7 +144,7 @@ public class UsersPanel {
 						panel.removeAll();
 						panel.revalidate();
 						panel.repaint();
-						new Administration(myGui, frame).repaint();
+						new AdminPanel(myGui, frame).repaint();
 					}
 				});
 				retourPanel.add(back);

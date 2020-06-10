@@ -1,4 +1,4 @@
-package Interface;
+package Interface.Admin;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -13,14 +13,16 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Components.Factory;
+import Interface.GUI;
+import Interface.User.Menu;
 import v1.Defi;
 import v1.Player;
 
-public class Administration {
+public class AdminPanel {
 	private GUI myGui;
 	private JFrame frame;
 	
-	public Administration(GUI myGui, JFrame frame) {
+	public AdminPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
@@ -49,7 +51,7 @@ public class Administration {
 				usersButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
-						new UsersPanel(myGui, frame).repaint(1);
+						new AdminUsersPanel(myGui, frame).repaint(1);
 					}
 				});
 				usersPanel.add(usersButton);
@@ -63,7 +65,7 @@ public class Administration {
 				questionsButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						new QuestionsPanel(myGui, frame).repaint(1);	
+						new AdminQuestionPanel(myGui, frame).repaint(1);	
 					}
 				});
 				questionsPanel.add(questionsButton);
@@ -93,7 +95,7 @@ public class Administration {
 				verifyButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
-						new VerifyPanel(myGui, frame).repaint(1);
+						new AdminVerifyPanel(myGui, frame).repaint(1);
 					}	
 				});
 				verifyPanel.add(verifyButton);

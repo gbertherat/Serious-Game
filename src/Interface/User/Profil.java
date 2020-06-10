@@ -1,4 +1,4 @@
-package Interface;
+package Interface.User;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Components.Factory;
+import Interface.GUI;
 import v1.Defi;
 import v1.Player;
 
@@ -25,14 +26,14 @@ public class Profil {
 		this.frame = frame;
 	}
 	
-	public void repaint() {
+	public void repaint(int id) {
 		Container panel = frame.getContentPane();
 		panel.removeAll();
 		panel.revalidate();
 		panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 		panel.add(Factory.addSpace(50));
 		
-		Player selected = myGui.getPlayer(GUI.idSession);
+		Player selected = myGui.getPlayer(id);
 		
 		// TITRE //
 		JPanel titrePanel = Factory.addPanel();
@@ -133,7 +134,22 @@ public class Profil {
 		viePanel.add(vie);
 		panel.add(viePanel);
 		
-		panel.add(Factory.addSpace(10));
+		panel.add(Factory.addSpace(20));
+		
+		// BOUTON : MODIFIER MON PROFIL
+		if(id == GUI.idSession) {
+			JPanel editPanel = Factory.addPanel();
+			JButton editButton = Factory.addButton("Modifier mon profil", 150, 40);
+			editButton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					new EditProfile(myGui, frame).repaint(id);
+				}
+			});
+			editPanel.add(editButton);
+			panel.add(editPanel);
+			panel.add(Factory.addSpace(10));
+		}
 		
 		// BOUTON : RETOUR
 		panel.add(Box.createVerticalGlue());

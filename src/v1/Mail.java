@@ -29,7 +29,6 @@ public class Mail {
                 });
 
         try {
-
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress("from@gmail.com"));
             message.setRecipient(Message.RecipientType.TO, new InternetAddress(destinataire));

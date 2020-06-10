@@ -1,4 +1,4 @@
-package Interface;
+package Interface.User;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -14,13 +14,14 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Components.Factory;
+import Interface.GUI;
 import v1.Question;
 
-public class AllQuestions {
+public class QuestionPanel {
 	private GUI myGui;
 	private JFrame frame;
 	
-	public AllQuestions(GUI myGui, JFrame frame) {
+	public QuestionPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
@@ -57,8 +58,8 @@ public class AllQuestions {
 				choosen = liste.get((i+((index-1)*10)));
 				
 				userPanels[((i+((index-1)*10)))] = Factory.addPanel();
-				userPanels[((i+((index-1)*10)))].setMaximumSize(new Dimension(400, 40));
 				labelFields[(i+((index-1)*10))] = Factory.addLabel(choosen.getTitre(), 16, false);
+				labelFields[(i+((index-1)*10))].setMaximumSize(new Dimension(100, 40));
 				buttonFields[(i+((index-1)*10))] = Factory.addButton("Envoyer", 100, 25);
 				
 				final Question questionSel = choosen;
@@ -93,7 +94,7 @@ public class AllQuestions {
 	
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
-						new AllQuestions(myGui, frame).repaint(index-1);
+						new QuestionPanel(myGui, frame).repaint(index-1);
 					}
 					
 				});
@@ -109,7 +110,7 @@ public class AllQuestions {
 	
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
-						new AllQuestions(myGui, frame).repaint(index+1);
+						new QuestionPanel(myGui, frame).repaint(index+1);
 					}
 					
 				});
@@ -127,7 +128,7 @@ public class AllQuestions {
 					panel.removeAll();
 					panel.revalidate();
 					panel.repaint();
-					new LancerDefi(myGui, frame).repaint();
+					new SendQuestionPanel(myGui, frame).repaint();
 				}
 			});
 			retourPanel.add(back);

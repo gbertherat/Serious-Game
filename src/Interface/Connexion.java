@@ -16,6 +16,8 @@ import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
 import Components.Factory;
+import Interface.User.Menu;
+import v1.Password;
 import v1.Player;
 
 /**
@@ -93,15 +95,17 @@ public class Connexion {
 				}
 				
 				if(selected != null) {
-					String password = String.valueOf(inPassword.getPassword());
+					String password = Password.encryptPassword(String.valueOf(inPassword.getPassword()));
 					if(selected.getPassword().equals(password)) {
 						GUI.idSession = selected.getID();
 						new Menu(myGui, frame).repaint();
 					} else {
 						message.setText("Identifiants invalides");
+						return;
 					}
 				} else {
 					message.setText("Identifiants invalides");
+					return;
 				}
 				
 			}
@@ -120,7 +124,7 @@ public class Connexion {
 				panel.removeAll();
 				panel.revalidate();
 				panel.repaint();
-				new Start(myGui, frame).repaint();
+				new MainMenu(myGui, frame).repaint();
 			}
 		});
 		retourPanel.add(back);

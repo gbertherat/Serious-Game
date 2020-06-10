@@ -1,4 +1,4 @@
-package Interface;
+package Interface.User;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -18,6 +18,7 @@ import javax.swing.JTextField;
 import javax.swing.Timer;
 
 import Components.Factory;
+import Interface.GUI;
 import v1.Defi;
 import v1.Player;
 import v1.Question;

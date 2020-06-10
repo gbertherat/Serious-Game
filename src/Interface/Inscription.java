@@ -30,6 +30,7 @@ import org.apache.pdfbox.text.PDFTextStripper;
 
 import Components.Factory;
 import v1.Bulletin;
+import v1.Password;
 import v1.Player;
 
 /**
@@ -131,8 +132,7 @@ public class Inscription {
 		JTextField inUsername = Factory.addField(250, 25, true);
 		usernamePanel.add(inUsername);
 		panel.add(usernamePanel);
-		
-		
+			
 		// PASSWORD
 		JPanel passwordPanel = Factory.addPanel();
 		JLabel passwordLabel = Factory.addLabel("Password: ", 15, true);
@@ -144,8 +144,7 @@ public class Inscription {
 		panel.add(passwordPanel);
 		
 		panel.add(Factory.addSpace(20));
-		
-		
+	
 		// NOTES //
 		JPanel fileLabelPanel = Factory.addPanel();
 		JLabel fileLabel = Factory.addLabel("Veuillez choisir le fichier PDF contenant vos moyennes", 14, false);
@@ -187,29 +186,6 @@ public class Inscription {
 		panel.add(filePanel);
 		
 		panel.add(Factory.addSpace(10));
-		
-		/*
-		JPanel noteLabelPanel = Factory.addPanel();
-		JLabel noteLabel = Factory.addLabel("Entrez vos moyennes (sur 20):", 15, true);
-		noteLabelPanel.add(noteLabel);
-		panel.add(noteLabelPanel);
-		panel.add(Factory.addSpace(10));
-		
-		JPanel notePanel = new JPanel();
-		notePanel.setLayout(new BoxLayout(notePanel, BoxLayout.LINE_AXIS));
-		
-		int numberOfFields = 15;
-		JTextField[] fields = new JTextField[numberOfFields];
-		for(int i = 0; i < fields.length; i++) {
-			fields[i] = Factory.addField(30, 30, true);
-			notePanel.add(fields[i]);
-			notePanel.add(Box.createRigidArea(new Dimension(10, 10)));
-		}
-		
-		panel.add(notePanel);
-		
-		panel.add(Box.createRigidArea(new Dimension(720,10)));
-		*/
 		
 		// ERROR
 		JPanel errorPanel = Factory.addPanel();
@@ -323,7 +299,7 @@ public class Inscription {
 				confirmPanel.remove(confirm);
 				errorLabel.setText("Utilisateur créé!");
 				
-				Player newPlayer = new Player(nom, prenom, age, mail, licence, username, password);
+				Player newPlayer = new Player(nom, prenom, age, mail, licence, username, Password.encryptPassword(password));
 				newPlayer.setBulletin(newBulletin);
 				newPlayer.setVie(vie);
 				
@@ -352,7 +328,7 @@ public class Inscription {
 				panel.removeAll();
 				panel.revalidate();
 				panel.repaint();
-				new Start(myGui, frame).repaint();
+				new MainMenu(myGui, frame).repaint();
 			}
 		});
 		retourPanel.add(back);

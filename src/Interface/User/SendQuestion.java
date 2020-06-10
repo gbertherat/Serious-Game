@@ -1,4 +1,4 @@
-package Interface;
+package Interface.User;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -18,6 +18,7 @@ import javax.swing.JTextField;
 import javax.swing.Timer;
 
 import Components.Factory;
+import Interface.GUI;
 import v1.Defi;
 import v1.Mail;
 import v1.Player;
@@ -48,7 +49,7 @@ public class SendQuestion {
 			// TITRE //
 			JPanel titrePanel = Factory.addPanel();
 			
-			JLabel titre = Factory.addLabel("Liste des questions", 21, true);
+			JLabel titre = Factory.addLabel("Envoyer une question", 21, true);
 			titrePanel.add(titre);
 			panel.add(titrePanel);
 			
@@ -156,7 +157,7 @@ public class SendQuestion {
 					} else {
 						nbPress = 0;
 						sendPanel.remove(sendButton);
-						messageLabel.setText("Question envoyée!");
+						messageLabel.setText("Question envoyée! Veuillez patienter");
 						
 						for(Player p : myGui.getListeJoueurs()) {
 							if(p.getUsername().equals(destinataireBox.getSelectedItem().toString())){
@@ -205,7 +206,7 @@ public class SendQuestion {
 					panel.removeAll();
 					panel.revalidate();
 					panel.repaint();
-					new LancerDefi(myGui, frame).repaint();
+					new QuestionPanel(myGui, frame).repaint(1);
 				}
 			});
 			retourPanel.add(back);

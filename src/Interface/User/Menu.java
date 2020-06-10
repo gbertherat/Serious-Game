@@ -1,4 +1,4 @@
-package Interface;
+package Interface.User;
 
 import java.awt.Container;
 import java.awt.event.ActionEvent;
@@ -14,6 +14,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Components.Factory;
+import Interface.GUI;
+import Interface.MainMenu;
+import Interface.Admin.AdminPanel;
 import v1.Defi;
 import v1.Player;
 
@@ -26,7 +29,7 @@ public class Menu {
 		this.frame = frame;
 	}
 	
-	void repaint() {
+	public void repaint() {
 		if(GUI.idSession != 0) {
 			Player selected = myGui.getPlayer(GUI.idSession);
 			
@@ -56,7 +59,7 @@ public class Menu {
 			profilButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
-					new Profil(myGui, frame).repaint();
+					new Profil(myGui, frame).repaint(GUI.idSession);
 				}
 			});
 			profilPanel.add(profilButton);
@@ -70,7 +73,7 @@ public class Menu {
 
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
-						new Administration(myGui, frame).repaint();
+						new AdminPanel(myGui, frame).repaint();
 					}
 					
 				});
@@ -117,7 +120,7 @@ public class Menu {
 			JButton lancerDefi = Factory.addButton("Envoyer un défi", 150, 50);
 			lancerDefi.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent arg0) {
-					(new LancerDefi(myGui, frame)).repaint();
+					(new SendQuestionPanel(myGui, frame)).repaint();
 				}
 			});
 			buttonsPanel.add(lancerDefi);
@@ -126,11 +129,25 @@ public class Menu {
 			accDefi.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
-					new AccepterDefi(myGui, frame).repaint(1);
+					new DefisPanel(myGui, frame).repaint(1);
 				}
 			});
 			buttonsPanel.add(accDefi);
 			panel.add(buttonsPanel);
+			
+			panel.add(Factory.addSpace(30));
+			
+			// BOUTON : CLASSEMENT //
+			JPanel classementPanel = Factory.addPanel();
+			JButton classementButton = Factory.addButton("Classement", 150, 50);
+			classementButton.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					new Classement(myGui, frame).repaint(1, 1);
+				}
+			});
+			classementPanel.add(classementButton);
+			panel.add(classementPanel);
 			
 			panel.add(Factory.addSpace(30));
 			
@@ -144,7 +161,7 @@ public class Menu {
 					GUI.idSession = 0;
 					panel.removeAll();
 					panel.revalidate();
-					new Start(myGui, frame).repaint();
+					new MainMenu(myGui, frame).repaint();
 				}
 			});
 			decoPanel.add(decoButton);

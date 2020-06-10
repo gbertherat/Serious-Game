@@ -2,6 +2,7 @@ package Interface;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -27,7 +28,7 @@ public class GUI{
 	protected ArrayList<Defi> listeDefis;
 	protected ArrayList<Question> listeQuestions;
 	public String[] categories = {"C", "Python", "Java", "Réseaux", "Autre"};
-	protected static int idSession = 0;
+	public static int idSession = 0;
 	
 	public GUI(JFrame frame) {
 		this.listeJoueurs = new ArrayList<>();
@@ -191,7 +192,7 @@ public class GUI{
 	
 	@SuppressWarnings("unchecked")
 	public void loadAll() {
-		try {
+		try {		
 			FileInputStream saveFile = new FileInputStream("ser/data.ser");		
 			ObjectInputStream in = new ObjectInputStream(saveFile);
 			
@@ -222,33 +223,30 @@ public class GUI{
 			in.close();
 			saveFile.close();
 		} catch (IOException | ClassNotFoundException e) {
-			e.printStackTrace();
+			new File("ser/data.ser");
 		}
 	}
 
 	// MAIN //
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		JFrame frame = new JFrame();
 		frame.setTitle("Serious-Game by Bertherat Guillaume");
 		frame.setSize(1024, 576);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		GUI myGui = new GUI(frame);
+		
 		/*
-		myGui.addJoueur(new Player("Bertherat", "Guillaume", 19, "mail@test.com", "Informatique", "Motzen", "123"));
-		myGui.getPlayer(1).setAdmin(true);
-		myGui.addJoueur(new Player("Mister", "Guest", 19, "mail@test.com", "Informatique", "Guest", "123"));
-		for(int i = 0; i < 21; i++) {
-			myGui.addDefi(new Defi(new Question(String.valueOf(i), "Test", "Java"), myGui.getPlayer(1), myGui.getPlayer(2), 3));
-			myGui.getListeDefis().get(i).getQuestion().addReponse(String.valueOf(i));
-			myGui.getListeDefis().get(i).getQuestion().addReponse("test");
-			myGui.getListeDefis().get(i).setReviewed(true);
-		}
+		Player addMe = new Player();
+		addMe.setUsername("Motzen");
+		addMe.setPassword("40bd001563085fc35165329ea1ff5c5ecbdbbeef");
+		addMe.setAdmin(true);
+		myGui.addJoueur(addMe);
 		myGui.saveAll();
 		*/
-		myGui.loadAll();
-		new Start(myGui, frame).repaint();
 		
+		myGui.loadAll();
+		new MainMenu(myGui, frame).repaint();
 	}
 	
 }

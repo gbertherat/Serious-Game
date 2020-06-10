@@ -1,4 +1,4 @@
-package Interface;
+package Interface.Admin;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -14,14 +14,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Components.Factory;
+import Interface.GUI;
 import v1.Player;
 import v1.Question;
 
-public class QuestionsPanel {
+public class AdminQuestionPanel {
 	private GUI myGui;
 	private JFrame frame;
 	
-	public QuestionsPanel(GUI myGui, JFrame frame) {
+	public AdminQuestionPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
@@ -51,7 +52,7 @@ public class QuestionsPanel {
 				addButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
-						new AddQuestion(myGui, frame).repaint();
+						new AdminAddQuestion(myGui, frame).repaint();
 					}
 				});
 				addPanel.add(addButton);
@@ -74,15 +75,15 @@ public class QuestionsPanel {
 					choosen = liste.get((i+((index-1)*10)));
 					
 					userPanels[((i+((index-1)*10)))] = Factory.addPanel();
-					userPanels[((i+((index-1)*10)))].setMaximumSize(new Dimension(400, 40));
 					labelFields[(i+((index-1)*10))] = Factory.addLabel(choosen.getTitre(), 16, false);
+					labelFields[(i+((index-1)*10))].setMaximumSize(new Dimension(100, 40));
 					buttonFields[(i+((index-1)*10))] = Factory.addButton("Modifier", 100, 25);
 					
 					final Question questionSel = choosen;
 					buttonFields[(i+((index-1)*10))].addActionListener(new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							new EditQuestion(myGui, frame).repaint(questionSel.getID());
+							new AdminEditQuestion(myGui, frame).repaint(questionSel.getID());
 						}
 					});
 					
@@ -110,7 +111,7 @@ public class QuestionsPanel {
 
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							new QuestionsPanel(myGui, frame).repaint(index-1);
+							new AdminQuestionPanel(myGui, frame).repaint(index-1);
 						}
 						
 					});
@@ -126,7 +127,7 @@ public class QuestionsPanel {
 
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
-							new QuestionsPanel(myGui, frame).repaint(index+1);
+							new AdminQuestionPanel(myGui, frame).repaint(index+1);
 						}
 						
 					});
@@ -144,7 +145,7 @@ public class QuestionsPanel {
 						panel.removeAll();
 						panel.revalidate();
 						panel.repaint();
-						new Administration(myGui, frame).repaint();
+						new AdminPanel(myGui, frame).repaint();
 					}
 				});
 				retourPanel.add(back);

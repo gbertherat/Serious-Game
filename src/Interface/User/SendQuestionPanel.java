@@ -1,4 +1,4 @@
-package Interface;
+package Interface.User;
 
 import java.awt.Container;
 import java.awt.Dimension;
@@ -13,12 +13,13 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import Components.Factory;
+import Interface.GUI;
 
-public class LancerDefi {
+public class SendQuestionPanel {
 	private GUI myGui;
 	private JFrame frame;
 	
-	public LancerDefi(GUI myGui, JFrame frame) {
+	public SendQuestionPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
@@ -59,7 +60,7 @@ public class LancerDefi {
 			existButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					new AllQuestions(myGui, frame).repaint(1);
+					new QuestionPanel(myGui, frame).repaint(1);
 				}
 			});
 			buttonPanel.add(existButton);
@@ -71,7 +72,7 @@ public class LancerDefi {
 			customButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
-					new CustomDefi(myGui, frame).repaint();
+					new SendCustomQuestion(myGui, frame).repaint();
 				}
 			});
 			buttonPanel.add(customButton);

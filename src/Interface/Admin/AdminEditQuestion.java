@@ -1,4 +1,4 @@
-package Interface;
+package Interface.Admin;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -20,17 +20,18 @@ import javax.swing.JTextField;
 import javax.swing.Timer;
 
 import Components.Factory;
+import Interface.GUI;
 import v1.Defi;
 import v1.Player;
 import v1.Question;
 
-public class EditQuestion {
+public class AdminEditQuestion {
 	private GUI myGui;
 	private JFrame frame;
 	private Player selected;
 	private static int nbPress = 0;
 	
-	public EditQuestion(GUI myGui, JFrame frame) {
+	public AdminEditQuestion(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
@@ -179,7 +180,7 @@ public class EditQuestion {
 						ActionListener panel = new ActionListener() {
 							@Override
 							public void actionPerformed(ActionEvent arg0) {
-								new QuestionsPanel(myGui, frame).repaint(1);
+								new AdminQuestionPanel(myGui, frame).repaint(1);
 							}
 						};
 						Timer timer = new Timer(2000, panel);
@@ -214,7 +215,7 @@ public class EditQuestion {
 							ActionListener panel = new ActionListener() {
 								@Override
 								public void actionPerformed(ActionEvent arg0) {
-									new QuestionsPanel(myGui, frame).repaint(1);
+									new AdminQuestionPanel(myGui, frame).repaint(1);
 								}
 							};
 							Timer timer = new Timer(2000, panel);
@@ -239,7 +240,7 @@ public class EditQuestion {
 						panel.removeAll();
 						panel.revalidate();
 						panel.repaint();
-						new QuestionsPanel(myGui, frame).repaint(1);
+						new AdminQuestionPanel(myGui, frame).repaint(1);
 					}
 				});
 				retourPanel.add(back);
