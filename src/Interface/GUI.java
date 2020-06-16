@@ -27,6 +27,7 @@ public class GUI{
 	private ArrayList<Question> listeQuestions;
 	public String[] categories = {"C", "Python", "Java", "Réseaux", "Autre"};
 	public static int idSession = 0;
+	public String path = System.getProperty("user.home") + File.separator + "Documents" + File.separator + "Serious-Game_BG";
 	
 	public GUI(JFrame frame) {
 		this.listeJoueurs = new ArrayList<>();
@@ -181,9 +182,9 @@ public class GUI{
 	 * Permet de sauvegarder / serialiser toutes les données du jeu.
 	 */
 	public void saveAll() {
+			new File(path).mkdir();
 		try {
-			new File("ser/data.ser").delete();
-			FileOutputStream saveFile = new FileOutputStream("ser/data.ser");
+			FileOutputStream saveFile = new FileOutputStream(path + File.separator + "data.ser");	
 			ObjectOutputStream out = new ObjectOutputStream(saveFile);
 			
 			out.writeObject(this.getListeJoueurs());
@@ -203,7 +204,7 @@ public class GUI{
 	@SuppressWarnings("unchecked")
 	public void loadAll() {
 		try {		
-			FileInputStream saveFile = new FileInputStream("ser/data.ser");		
+			FileInputStream saveFile = new FileInputStream(path + File.separator + "data.ser");	
 			ObjectInputStream in = new ObjectInputStream(saveFile);
 			
 			Object joueurs = new ArrayList<>();
@@ -233,7 +234,7 @@ public class GUI{
 			in.close();
 			saveFile.close();
 		} catch (IOException | ClassNotFoundException e) {
-			new File("ser/data.ser");
+			new File(path + File.separator + "data.ser");
 		}
 	}
 

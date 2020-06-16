@@ -56,7 +56,7 @@ public class Menu {
 			// On vérifie que l'utilisateur n'a pas dépassé la date limite de réponse à un défi
 			for(Defi d : myGui.getListeDefis()) {
 				if(d.getDestinataire() == selected && d.isReviewed() && !d.isAccepte() && !d.isTermine()) {
-					if(d.getDate().isBefore(LocalDateTime.now())) {
+					if(d.getDateExpiration().isBefore(LocalDateTime.now())) {
 						d.setTermine(true); // Si la date est dépassé, il perds des points de vie et son score diminue
 						selected.setVie(selected.getVie()-d.getPoints());
 						selected.setScore(selected.getScore()-d.getPoints()*10);

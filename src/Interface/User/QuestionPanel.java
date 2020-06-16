@@ -74,7 +74,7 @@ public class QuestionPanel {
 				
 				userPanels[((i+((index-1)*10)))] = Factory.addPanel();
 				labelFields[(i+((index-1)*10))] = Factory.addLabel(choosen.getTitre(), 16, false);
-				labelFields[(i+((index-1)*10))].setMaximumSize(new Dimension(100, 40));
+				labelFields[(i+((index-1)*10))].setMaximumSize(new Dimension(150, 40));
 				buttonFields[(i+((index-1)*10))] = Factory.addButton("Envoyer", 100, 25);
 				
 				final Question questionSel = choosen;

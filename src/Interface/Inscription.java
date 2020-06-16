@@ -13,6 +13,7 @@ import java.util.regex.Pattern;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
@@ -155,7 +156,17 @@ public class Inscription {
 		passwordPanel.add(inPassword);
 		panel.add(passwordPanel);
 		
-		panel.add(Factory.addSpace(20));
+		panel.add(Factory.addSpace(10));
+		
+		// DEBUG : ADMINISTRATEUR //
+		JPanel adminPanel = Factory.addPanel();
+		JLabel adminLabel = Factory.addLabel("(DEBUG) Administrateur: ", 16, true);
+		adminPanel.add(adminLabel);
+		JCheckBox checkBox = Factory.addCheck();
+		adminPanel.add(checkBox);
+		
+		panel.add(adminPanel);
+		panel.add(Factory.addSpace(10));
 	
 		// NOTES //
 		JPanel fileLabelPanel = Factory.addPanel();
@@ -198,7 +209,7 @@ public class Inscription {
 		filePanel.add(fileButton);
 		panel.add(filePanel);
 		
-		panel.add(Factory.addSpace(10));
+		panel.add(Factory.addSpace(5));
 		
 		// ERROR
 		JPanel errorPanel = Factory.addPanel();
@@ -319,6 +330,11 @@ public class Inscription {
 				Player newPlayer = new Player(nom, prenom, age, mail, licence, username, Password.encryptPassword(password));
 				newPlayer.setBulletin(newBulletin);
 				newPlayer.setVie(vie);
+				
+				/* DEBUG */
+				if(checkBox.isSelected()) {
+					newPlayer.setAdmin(true);
+				}
 				
 				myGui.addJoueur(newPlayer);
 				myGui.saveAll();
