@@ -34,14 +34,15 @@ import v1.Password;
 import v1.Player;
 
 /**
- * Permet l'inscription de joueurs
+ * Permet à un joueur de se connecter
  * @author Guillaume
  */
 public class Inscription {
-	protected GUI myGui;
-	protected JFrame frame;
-	protected File selectedFile = null;
-	protected static String[] licenceList = {"Informatique", "Mathématique"};
+	// VARS //
+	private GUI myGui;
+	private JFrame frame;
+	private File selectedFile = null;
+	private static String[] licenceList = {"Informatique", "Mathématique"};
 	
 	/**
 	 * Constructeur de la classe Inscription
@@ -54,9 +55,20 @@ public class Inscription {
 	}
 	
 	/**
+	 * Vérifie le format d'une entrée e-mail
+	 * @param email - L'entrée à vérifier
+	 * @return true s'il s'agît bien d'un format e-mail, false sinon.
+	 */
+	static boolean isValid(String email) {
+		String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+		return email.matches(regex);
+	}
+	
+	/**
 	 * Permet l'affichage de la page inscription
 	 */
 	public void repaint() {
+		// On récupère le panel principal
 		Container panel = frame.getContentPane();
 		panel.removeAll();
 		panel.revalidate();
@@ -156,6 +168,7 @@ public class Inscription {
 		fileButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				// On affiche la fenêtre pour choisir un fichier
 				JFrame fileFrame = new JFrame();
 				fileFrame.setMaximumSize(new Dimension(600, 450));
 				fileFrame.setPreferredSize(new Dimension(600, 450));
@@ -202,6 +215,7 @@ public class Inscription {
 		confirm.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
+				// On récupère les données entrées
 				String nom = nomInput.getText();
 				String prenom = prenomInput.getText();
 				int age = (int) ageInput.getValue();
@@ -213,6 +227,7 @@ public class Inscription {
 				Bulletin newBulletin = null;
 				int vie = 0;
 				
+				// On vérifie les données
 				if(nom.length() < 3) {
 					errorLabel.setText("Erreur: Nom invalide (< 3 caractères)");
 					return;
@@ -258,6 +273,7 @@ public class Inscription {
 					}
 				}
 				
+				// On lit le PDF donné
 				try {
 				PDDocument document = PDDocument.load(selectedFile);
 			    PDFTextStripper stripper = new PDFTextStripper();
@@ -299,6 +315,7 @@ public class Inscription {
 				confirmPanel.remove(confirm);
 				errorLabel.setText("Utilisateur créé!");
 				
+				// On créé un nouvel object Player
 				Player newPlayer = new Player(nom, prenom, age, mail, licence, username, Password.encryptPassword(password));
 				newPlayer.setBulletin(newBulletin);
 				newPlayer.setVie(vie);
@@ -336,15 +353,5 @@ public class Inscription {
 		panel.add(retourPanel);
 		
 		panel.repaint();
-	}
-	
-	/**
-	 * Vérifie le format d'une entrée e-mail
-	 * @param email - L'entrée à vérifier
-	 * @return true s'il s'agît bien d'un format e-mail, false sinon.
-	 */
-	static boolean isValid(String email) {
-		String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-		return email.matches(regex);
 	}
 }

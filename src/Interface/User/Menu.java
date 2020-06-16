@@ -20,24 +20,49 @@ import Interface.Admin.AdminPanel;
 import v1.Defi;
 import v1.Player;
 
+/**
+ * Fenêtre utilisateur principal
+ * @author Guillaume
+ */
 public class Menu {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe Menu
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public Menu(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 */
 	public void repaint() {
 		if(GUI.idSession != 0) {
 			Player selected = myGui.getPlayer(GUI.idSession);
 			
+			// On récupère le panel principal
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
 			panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
 			panel.add(Factory.addSpace(50));
+			
+			// On vérifie que l'utilisateur n'a pas dépassé la date limite de réponse à un défi
+			for(Defi d : myGui.getListeDefis()) {
+				if(d.getDestinataire() == selected && d.isReviewed() && !d.isAccepte() && !d.isTermine()) {
+					if(d.getDate().isBefore(LocalDateTime.now())) {
+						d.setTermine(true); // Si la date est dépassé, il perds des points de vie et son score diminue
+						selected.setVie(selected.getVie()-d.getPoints());
+						selected.setScore(selected.getScore()-d.getPoints()*10);
+					}
+				}
+			}
 			
 			// TITRE //
 			JPanel titrePanel = Factory.addPanel();
@@ -89,7 +114,7 @@ public class Menu {
 			int nbrDefi = 0;
 			LocalDateTime dateFin = null;
 			for(Defi d : myGui.getListeDefis()) {
-				if(d.getDestinataire().getID() == GUI.idSession && !d.isAccepte() && d.isReviewed()) {
+				if(d.getDestinataire().getID() == GUI.idSession && d.isReviewed() && !d.isAccepte() && !d.isTermine()) {
 					nbrDefi++;
 					if(dateFin == null) {
 						dateFin = d.getDateExpiration();

@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 
 /**
- * La classe Defi permet la création de défis.
+ * Classe permettant la création d'object Defi.
  * @author Guillaume
  */
 public class Defi implements java.io.Serializable{
@@ -48,6 +48,7 @@ public class Defi implements java.io.Serializable{
 	 * @param question - La question du défi
 	 * @param expediteur - L'expéditeur du défi
 	 * @param destinataire - Le destinataire du défi
+	 * @param points - Les points du défi
 	 */
 	public Defi(Question question, Player expediteur, Player destinataire, int points) {
 		count++;
@@ -63,10 +64,19 @@ public class Defi implements java.io.Serializable{
 		this.termine = false;
 	}
 
+	// COUNT //
+	/**
+	 * Permet de récupérer le count 
+	 * @return le count
+	 */
 	public static int getCount() {
 		return count;
 	}
-
+	
+	/**
+	 * Permet de définir le count
+	 * @param count - Le count à définir 
+	 */
 	public static void setCount(int count) {
 		Defi.count = count;
 	}
@@ -82,7 +92,7 @@ public class Defi implements java.io.Serializable{
 
 	/**
 	 * Permet de définir l'ID d'un défi
-	 * @param (int) id - L'ID à définir
+	 * @param id - L'ID à définir
 	 */
 	public void setId(int id) {
 		this.id = id;
@@ -99,7 +109,7 @@ public class Defi implements java.io.Serializable{
 
 	/**
 	 * Permet de définir la question d'un défi
-	 * @param (Question) question - La question à définir
+	 * @param question - La question à définir
 	 */
 	public void setQuestion(Question question) {
 		this.question = question;
@@ -116,7 +126,7 @@ public class Defi implements java.io.Serializable{
 
 	/**
 	 * Permet de définir l'expediteur d'un défi
-	 * @param (Player) expediteur - L'expediteur à définir
+	 * @param expediteur - L'expediteur à définir
 	 */
 	public void setExpediteur(Player expediteur) {
 		this.expediteur = expediteur;
@@ -125,7 +135,7 @@ public class Defi implements java.io.Serializable{
 	// DESTINATAIRE //
 	/**
 	 * Permet de récupérer le destinataire d'un défi
-	 * @return (Player) destinataire - Le destinataire du défi
+	 * @return destinataire - Le destinataire du défi
 	 */
 	public Player getDestinataire() {
 		return destinataire;
@@ -133,7 +143,7 @@ public class Defi implements java.io.Serializable{
 
 	/**
 	 * Permet de définir le destinataire d'un défi
-	 * @param (Player) destinataire - Le destinataire à définir
+	 * @param destinataire - Le destinataire à définir
 	 */
 	public void setDestinataire(Player destinataire) {
 		this.destinataire = destinataire;
@@ -142,7 +152,7 @@ public class Defi implements java.io.Serializable{
 	// DATE //
 	/**
 	 * Permet de récupérer la date d'envoi d'un défi
-	 * @return (LocalDate) date - La date d'envoi du défi
+	 * @return date - La date d'envoi du défi
 	 */
 	public LocalDateTime getDate() {
 		return date;
@@ -150,7 +160,7 @@ public class Defi implements java.io.Serializable{
 
 	/**
 	 * Permet de définir la date d'envoi d'un défi
-	 * @param (LocalDate) date - La date à définir
+	 * @param date - La date à définir
 	 */
 	public void setDate(LocalDateTime date) {
 		this.date = date;
@@ -159,7 +169,7 @@ public class Defi implements java.io.Serializable{
 	// DATE EXPIRATION //
 	/**
 	 * Permet de récupérer la date d'expiration d'un défi
-	 * @return (LocalDate) dateExpiration - La date d'expiration du défi
+	 * @return dateExpiration - La date d'expiration du défi
 	 */
 	public LocalDateTime getDateExpiration() {
 		return dateExpiration;
@@ -167,7 +177,7 @@ public class Defi implements java.io.Serializable{
 
 	/**
 	 * Permet de définir la date d'expiration d'un défi
-	 * @param (LocalDate) dateExpiration - La date à définir
+	 * @param dateExpiration - La date à définir
 	 */
 	public void setDateExpiration(LocalDateTime dateExpiration) {
 		this.dateExpiration = dateExpiration;
@@ -176,7 +186,7 @@ public class Defi implements java.io.Serializable{
 	// REVIEWED //
 	/**
 	 * Permet de récupérer le booléen admin reviewed
-	 * @return (boolean) reviewed - Le booléen admin reviewed
+	 * @return reviewed - Le booléen admin reviewed
 	 */
 	public boolean isReviewed() {
 		return reviewed;
@@ -194,7 +204,7 @@ public class Defi implements java.io.Serializable{
 	// ACCEPTE //
 	/**
 	 * Permet de récupérer le booléen accepte d'un défi
-	 * @return (boolean) accepte - Le booléen accepte du défi
+	 * @return accepte - Le booléen accepte du défi
 	 */
 	public boolean isAccepte() {
 		return accepte;
@@ -202,7 +212,7 @@ public class Defi implements java.io.Serializable{
 
 	/**
 	 * Permet de définir le booléen accepte
-	 * @param (boolean) accepte - Le booléen à définir
+	 * @param accepte - Le booléen à définir
 	 */
 	public void setAccepte(boolean accepte) {
 		this.accepte = accepte;
@@ -211,7 +221,7 @@ public class Defi implements java.io.Serializable{
 	// TERMINE //
 	/**
 	 * Permet de récupérer le booléen termine d'un défi
-	 * @return (boolean) termine - Le booléen termine du défi
+	 * @return termine - Le booléen termine du défi
 	 */
 	public boolean isTermine() {
 		return termine;
@@ -219,7 +229,7 @@ public class Defi implements java.io.Serializable{
 
 	/**
 	 * Permet de définir le booléen termine d'un défi
-	 * @param (boolean) termine - Le booléen à définir
+	 * @param termine - Le booléen à définir
 	 */
 	public void setTermine(boolean termine) {
 		this.termine = termine;
@@ -228,7 +238,7 @@ public class Defi implements java.io.Serializable{
 	// POINTS //
 	/**
 	 * Permet de récupérer le nombre de points d'un défi
-	 * @return (int) points - Le nombre de points du défi
+	 * @return points - Le nombre de points du défi
 	 */
 	public int getPoints() {
 		return points;
@@ -236,13 +246,12 @@ public class Defi implements java.io.Serializable{
 
 	/**
 	 * Permet de définir le nombre de points d'un défi
-	 * @param (int) points - Le nombre de points à définir
+	 * @param points - Le nombre de points à définir
 	 */
 	public void setPoints(int points) {
 		this.points = points;
 	}
 	
-	// TOSTRING //
 	/**
 	 * Permet d'afficher la valeur des attributs d'un objet Defi
 	 */
@@ -259,7 +268,6 @@ public class Defi implements java.io.Serializable{
 				"\nTerminé? " + termine;
 	}
 	
-	// EQUALS //
 	/**
 	 * Permet de comparer deux objets defi
 	 * @param defi - L'objet avec lequel comparer

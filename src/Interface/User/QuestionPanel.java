@@ -17,17 +17,32 @@ import Components.Factory;
 import Interface.GUI;
 import v1.Question;
 
+/**
+ * Fenêtre utilisateur pour voir la liste des questions 
+ * @author Guillaume
+ */
 public class QuestionPanel {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe QuestionPanel
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public QuestionPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 * @param index - Numéro de la page à afficher
+	 */
 	public void repaint(int index) {
 		if(GUI.idSession != 0) {
+			// On récupère le panel principal
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();

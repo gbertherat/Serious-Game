@@ -11,21 +11,21 @@ public class Player implements java.io.Serializable{
 	private static final long serialVersionUID = 8093318821280100491L;
 	
 	// Vars //
-	protected static int count = 0;
-	protected int id;
-	protected String nom;
-	protected String prenom;
-	protected int age;
-	protected String mail;
-	protected String licence;
-	protected String username;
-	protected String password;
-	protected Bulletin myBulletin;
-	protected int vie;
-	protected int score;
-	protected int defis;
-	protected int defisReussis;
-	protected boolean admin;
+	private static int count = 0;
+	private int id;
+	private String nom;
+	private String prenom;
+	private int age;
+	private String mail;
+	private String licence;
+	private String username;
+	private String password;
+	private Bulletin myBulletin;
+	private int vie;
+	private int score;
+	private int defis;
+	private int defisReussis;
+	private boolean admin;
 	
 	/**
 	 * Constructeur par defaut de la classe Player
@@ -49,11 +49,14 @@ public class Player implements java.io.Serializable{
 	}
 	
 	/**
-	 * Constructeur de la classe Player 
+	 * Constructeur de la classe Player
 	 * @param nom - Le nom du joueur
 	 * @param prenom - Le prénom du joueur
-	 * @param age - L'age du joueur
+	 * @param age - L'âge du joueur
 	 * @param mail - Le mail du joueur
+	 * @param licence - La licence du joueur
+	 * @param username - L'username du joueur
+	 * @param password - Le password du joueur
 	 */
 	public Player(String nom, String prenom, int age, String mail, String licence, String username, String password) {
 		count++;
@@ -84,7 +87,7 @@ public class Player implements java.io.Serializable{
 	// ID //
 	/**
 	 * Permet de récupérer l'ID d'un joueur
-	 * @return (int) id l'ID du joueur.
+	 * @return id l'ID du joueur.
 	 */
 	public int getID() {
 		return this.id;
@@ -92,7 +95,7 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir l'ID d'un joueur
-	 * @param (int) id - L'ID à définir
+	 * @param id - L'ID à définir
 	 */
 	public void setID(int id) {
 		this.id = id;
@@ -101,7 +104,7 @@ public class Player implements java.io.Serializable{
 	// NOM //
 	/**
 	 * Permet de récupérer le nom d'un joueur
-	 * @return (String) nom - le nom du joueur.
+	 * @return nom - le nom du joueur.
 	 */
 	public String getNom() {
 		return this.nom;
@@ -109,7 +112,7 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir le nom d'un joueur;
-	 * @param (String) nom - Le nom à définir
+	 * @param nom - Le nom à définir
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
@@ -118,7 +121,7 @@ public class Player implements java.io.Serializable{
 	// PRENOM //
 	/**
 	 * Permet de récupérer le prénom d'un joueur;
-	 * @return (String) prenom - Le prénom du joueur
+	 * @return prenom - Le prénom du joueur
 	 */
 	public String getPrenom() {
 		return this.prenom;
@@ -126,7 +129,7 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir le prénom d'un joueur;
-	 * @param (String) prenom - Le prénom à définir
+	 * @param prenom - Le prénom à définir
 	 */
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
@@ -135,7 +138,7 @@ public class Player implements java.io.Serializable{
 	// AGE //
 	/**
 	 * Permet de récupérer l'âge d'un joueur
-	 * @return (int) age - L'âge du joueur
+	 * @return age - L'âge du joueur
 	 */
 	public int getAge() {
 		return this.age;
@@ -143,7 +146,7 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir l'âge d'un joueur
-	 * @param (int) age - L'âge à définir
+	 * @param age - L'âge à définir
 	 */
 	public void setAge(int age) {
 		this.age = age;
@@ -152,7 +155,7 @@ public class Player implements java.io.Serializable{
 	// MAIL //
 	/**
 	 * Permet de récupérer le mail d'un joueur
-	 * @return (String) mail - Le mail du joueur
+	 * @return mail - Le mail du joueur
 	 */
 	public String getMail() {
 		return this.mail;
@@ -160,7 +163,7 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir le mail d'un joueur
-	 * @param (String) mail - le mail à définir
+	 * @param mail - le mail à définir
 	 */
 	public void setMail(String mail) {
 		this.mail = mail;
@@ -169,7 +172,7 @@ public class Player implements java.io.Serializable{
 	// LICENCE //
 	/**
 	 * Permet de récupérer la licence d'un joueur
-	 * @return (String) licence - La licence du joueur
+	 * @return licence - La licence du joueur
 	 */
 	public String getLicence() {
 		return this.licence;
@@ -177,7 +180,7 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir la licence d'un joueur
-	 * @param (String) licence - La licence à définir
+	 * @param licence - La licence à définir
 	 */
 	public void setLicence(String licence) {
 		this.licence = licence;
@@ -186,7 +189,7 @@ public class Player implements java.io.Serializable{
 	// USERNAME //
 	/**
 	 * Permet de récupérer le username d'un joueur
-	 * @return (String) username - Le username du joueur
+	 * @return username - Le username du joueur
 	 */
 	public String getUsername() {
 		return this.username;
@@ -194,7 +197,7 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir le username d'un joueur
-	 * @param (String) username - Le username à définir
+	 * @param username - Le username à définir
 	 */
 	public void setUsername(String username) {
 		this.username = username;
@@ -203,7 +206,7 @@ public class Player implements java.io.Serializable{
 	// PASSWORD //
 	/**
 	 * Permet de récupérer le password d'un joueur
-	 * @return (String) password - Le password du joueur
+	 * @return password - Le password du joueur
 	 */
 	public String getPassword() {
 		return this.password;
@@ -211,17 +214,25 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir le password d'un joueur
-	 * @param (String) password - Le password à définir
+	 * @param password - Le password à définir
 	 */
 	public void setPassword(String password) {
 		this.password = password;
 	}
 	
 	// BULLETIN //
+	/**
+	 * Permet de récuperer l'objet Bulletin d'un joueur
+	 * @return myBulletin
+	 */
 	public Bulletin getBulletin() {
 		return this.myBulletin;
 	}
 	
+	/**
+	 * Permet de définir l'objet Bulletin d'un joueur
+	 * @param bulletin - L'objet à définir
+	 */
 	public void setBulletin(Bulletin bulletin) {
 		this.myBulletin = bulletin;
 	}
@@ -237,7 +248,7 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir la vie d'un joueur
-	 * @param (int) vie - La vie à définir
+	 * @param vie - La vie à définir
 	 */
 	public void setVie(int vie) {
 		this.vie = vie;
@@ -246,7 +257,7 @@ public class Player implements java.io.Serializable{
 	// SCORE //
 	/**
 	 * Permet de récupérer le score d'un joueur
-	 * @return (int) score - Le score du joueur
+	 * @return score - Le score du joueur
 	 */
 	public int getScore() {
 		return this.score;
@@ -254,32 +265,59 @@ public class Player implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir le score d'un joueur
-	 * @param (int) score - Le score à définir
+	 * @param score - Le score à définir
 	 */
 	public void setScore(int score) {
 		this.score = score;
 	}
 	
+	// DEFIS //
+	/**
+	 * Permet de récupérer le nombre de défi réçu
+	 * @return le nombre de défi
+	 */
 	public int getDefis() {
 		return defis;
 	}
 
+	/**
+	 * Permet de définir le nombre de défi reçu
+	 * @param defis - le nombre de défi à définir
+	 */
 	public void setDefis(int defis) {
 		this.defis = defis;
 	}
 
+	// DEFIS REUSSIS //
+	/**
+	 * Permet de récuperer le nombre de défis réussis
+	 * @return le nombre de défis réussis
+	 */
 	public int getDefisReussis() {
 		return defisReussis;
 	}
 
+	/**
+	 * Permet de définir le nombre de défis réussis
+	 * @param defisReussis - Le nombre de défis
+	 */
 	public void setDefisReussis(int defisReussis) {
 		this.defisReussis = defisReussis;
 	}
 
+	// ADMIN //
+	/**
+	 * Permet de savoir si un utilisateur est un administrateur
+	 * @return true si l'utilisateur est un administrateur, false sinon
+	 */
 	public boolean isAdmin() {
 		return admin;
 	}
 
+	/**
+	 * Permet de définir si un utilisateur est un administrateur
+	 * @param admin (true / false)
+	 */
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
 	}
@@ -306,9 +344,9 @@ public class Player implements java.io.Serializable{
 	
 	// EQUALS //
 	/**
-	 * Permet de comparer deux joueurs.
-	 * @param (Player) player - Le joueur avec qui comparer
-	 * @return true si les joueurs sont identiques, false sinon.
+	 * Permet de comparer deux objets Player
+	 * @param player - Le player avec qui comparer
+	 * @return true s'ils sont identiques, false sinon
 	 */
 	public boolean equals(Player player) {
 		return (this.id == player.id) && (this.nom.equals(player.nom)) && (this.prenom.equals(player.prenom)) && (this.age == player.age) && (this.mail.equals(player.mail)) && (this.username.equals(player.username)) && (this.password.equals(player.password)); 

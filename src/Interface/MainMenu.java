@@ -14,16 +14,30 @@ import javax.swing.JPanel;
 
 import Components.Factory;
 
+/**
+ * Fenêtre de démarrage de l'interface
+ * @author Guillaume
+ */
 public class MainMenu {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe MainMenu
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public MainMenu(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage du menu principal
+	 */
 	public void repaint() {
+		// On récupère le panel principal
 		JPanel main = new JPanel();
 		main.setLayout(new BoxLayout(main, BoxLayout.PAGE_AXIS));
 		main.setMaximumSize(frame.getSize());
@@ -36,15 +50,13 @@ public class MainMenu {
 		titrePanel.add(titre);
 		main.add(titrePanel);
 		
-		
 		// AUTEUR //
 		JPanel authorPanel = Factory.addPanel();
 		JLabel author = Factory.addLabel("by Bertherat Guillaume",  19, false);
 		authorPanel.add(author);
 		main.add(authorPanel);
 		
-		main.add(Box.createRigidArea(new Dimension(720,60)));
-		
+		main.add(Box.createRigidArea(new Dimension(720,60)));	
 		
 		// BOUTON: SE CONNECTER
 		JPanel connectPanel = Factory.addPanel();
@@ -62,7 +74,7 @@ public class MainMenu {
 		
 		main.add(Box.createRigidArea(new Dimension(720,40)));
 		
-		// BOUTON S'INSCRIRE
+		// BOUTON : S'INSCRIRE
 		Inscription pageInscription = new Inscription(myGui, frame);
 		
 		JPanel signInPanel = Factory.addPanel();
@@ -80,7 +92,7 @@ public class MainMenu {
 		
 		main.add(Box.createRigidArea(new Dimension(720,40)));
 		
-		// BOUTON QUITTER
+		// BOUTON : QUITTER
 		JPanel quitPanel = Factory.addPanel();
 		JButton quitter = Factory.addButton("Quitter", 150, 50);
 		quitter.addActionListener(new ActionListener() {

@@ -2,16 +2,24 @@ package v1;
 
 import java.util.ArrayList;
 
+/**
+ * Permet la création d'objet Bulletin
+ * @author Guillaume
+ */
 public class Bulletin implements java.io.Serializable{
 	/**
 	 * Version serial
 	 */
 	private static final long serialVersionUID = 8311730116008434511L;
 	
+	// VARS //
 	private static int count = 0;
 	private int id;
 	private ArrayList<Integer> listeNotes;
 	
+	/**
+	 * Constructeur par défaut de la classe Bulletin
+	 */
 	public Bulletin() {
 		count++;
 		id = count;
@@ -29,7 +37,7 @@ public class Bulletin implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir l'id d'un bulletin
-	 * @param (int) id - l'id à définir
+	 * @param id - l'id à définir
 	 */
 	public void setID(int id) {
 		this.id = id;
@@ -39,7 +47,7 @@ public class Bulletin implements java.io.Serializable{
 	// LISTE NOTES //
 	/**
 	 * Permet de récupérer la liste des notes d'un bulletin
-	 * @return (ArrayList<Integer>) listeNotes - La liste des notes du bulletin
+	 * @return listeNotes - La liste des notes du bulletin
 	 */
 	public ArrayList<Integer> getListeNotes() {
 		return this.listeNotes;
@@ -47,7 +55,7 @@ public class Bulletin implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir la liste des notes d'un bulletin
-	 * @param (ArrayList<Integer>) listeNotes - La liste des notes à définir
+	 * @param listeNotes - La liste des notes à définir
 	 */
 	public void setListeNote(ArrayList<Integer> listeNotes) {
 		this.listeNotes = listeNotes;
@@ -55,7 +63,7 @@ public class Bulletin implements java.io.Serializable{
 	
 	/**
 	 * Permet d'ajoute une note à la liste des notes d'un bulletin
-	 * @param (int) note - La note à ajouter
+	 * @param note - La note à ajouter
 	 */
 	public void addNote(int note) {
 		this.listeNotes.add(note);
@@ -63,13 +71,12 @@ public class Bulletin implements java.io.Serializable{
 	
 	/**
 	 * Permet de retirer une note de la liste des notes d'un bulletin
-	 * @param (int) index - L'index de la note à retirer
+	 * @param index - L'index de la note à retirer
 	 */
 	public void delNote(int index) {
 		this.listeNotes.remove(index);
 	}
 	
-	// TOSTRING //
 	/**
 	 * Permet d'afficher la valeur des attributs d'un objet Bulletin
 	 */
@@ -79,7 +86,6 @@ public class Bulletin implements java.io.Serializable{
 		return toReturn.toString();
 	}
 	
-	// EQUALS //
 	/**
 	 * Permet de comparer deux objets Bulletin
 	 * @param bulletin - L'object avec lequel comparer

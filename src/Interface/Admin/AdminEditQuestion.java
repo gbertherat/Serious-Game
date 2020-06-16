@@ -25,21 +25,35 @@ import v1.Defi;
 import v1.Player;
 import v1.Question;
 
+/**
+ * Fenêtre administrateur pour modifier une question
+ * @author Guillaume
+ */
 public class AdminEditQuestion {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
-	private Player selected;
 	private static int nbPress = 0;
 	
+	/**
+	 * Constructeur de la classe AdminEditQuestion
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public AdminEditQuestion(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre 
+	 * @param id - L'id de la question à modifier
+	 */
 	public void repaint(int id) {
 		if(GUI.idSession != 0) {
-			selected = myGui.getPlayer(GUI.idSession);
-			if(selected.isAdmin()) {
+			Player selected = myGui.getPlayer(GUI.idSession);
+			if(selected.isAdmin()) { // Si le joueur est un administrateur
+				// On récupère le panel principal
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();
@@ -140,15 +154,20 @@ public class AdminEditQuestion {
 				JButton deleteButton = Factory.addButton("Supprimer", 130, 40);
 				deleteButton.setForeground(Color.red);
 				
+				/**
+				 * Permet la modification d'un object Question
+				 */
 				validButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
 						nbPress = 0;
+						// On récupère les données entrées
 						String inputTitre = titleField.getText();
 						String fieldCategorie = categorieBox.getSelectedItem().toString();
 						String fieldQuestion = contentField.getText();
 						String fieldReponse = reponseField.getText();
 						
+						// On vérifie ces données
 						if(inputTitre.length() < 3) {
 							messageLabel.setText("Erreur : Titre invalide (< 3 caractères)");
 							return;
@@ -166,14 +185,15 @@ public class AdminEditQuestion {
 						buttonsPanel.remove(validButton);
 						buttonsPanel.remove(deleteButton);
 						
+						// On modifie les attributs de l'objet Question selectionné par les données entrées
 						question.setTitre(inputTitre);
 						question.setCategorie(fieldCategorie);
 						question.setContenu(fieldQuestion);
 						messageLabel.setText("Modifications enregistrées");
 						
 						question.setReponses(new ArrayList<String>());
-						String[] allReponses = fieldReponse.split(";");
-						for(String r : allReponses) {
+						String[] allReponses = fieldReponse.split(";"); 
+						for(String r : allReponses) { // On récupère toutes les réponses entrées
 							question.addReponse(r.toLowerCase());
 						}
 						myGui.saveAll();
@@ -190,6 +210,9 @@ public class AdminEditQuestion {
 				});
 				
 				// BOUTON : SUPPRIMER
+				/**
+				 * Permet la suppression d'un objet Question
+				 */
 				deleteButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent arg0) {
@@ -204,12 +227,12 @@ public class AdminEditQuestion {
 							@SuppressWarnings("unchecked")
 							ArrayList<Defi> defis = (ArrayList<Defi>) myGui.getListeDefis().clone();
 							for(Defi d : myGui.getListeDefis()) {
-								if(d.getQuestion() == question) {
-									defis.remove(d);
+								if(d.getQuestion() == question) { // Si un défi contient la question supprimée 
+									defis.remove(d); // On retire le défi
 								}
 							}
 							myGui.setListeDefis(defis);
-							myGui.delQuestion(question);
+							myGui.delQuestion(question); // On supprime l'objet de la liste des questions
 							messageLabel.setText("Question supprimée");
 							myGui.saveAll();
 							ActionListener panel = new ActionListener() {

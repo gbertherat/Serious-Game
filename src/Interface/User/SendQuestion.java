@@ -24,19 +24,34 @@ import v1.Mail;
 import v1.Player;
 import v1.Question;
 
+/**
+ * Fenêtre utilisateur pour envoyer une question
+ * @author Guillaume
+ */
 public class SendQuestion {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	private static int nbPress = 0;
 	private Player destinataire = null;
 	
+	/**
+	 * Constructeur de la classe SendQuestion
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public SendQuestion(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 * @param id - L'id de la question à envoyer
+	 */
 	public void repaint(int id) {
 		if(GUI.idSession != 0) {
+			// On récupère le panel principal //
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
@@ -148,6 +163,10 @@ public class SendQuestion {
 			// BOUTON : ENVOYER //
 			JPanel sendPanel = Factory.addPanel();
 			JButton sendButton = Factory.addButton("Envoyer!", 150, 40);
+			
+			/**
+			 * Permet d'envoyer la question
+			 */
 			sendButton.addActionListener(new ActionListener() {	
 				@Override
 				public void actionPerformed(ActionEvent e) {
@@ -180,6 +199,7 @@ public class SendQuestion {
 						ActionListener panel = new ActionListener() {
 							@Override
 							public void actionPerformed(ActionEvent arg0) {
+								// On envoie un mail
 								Mail.sendMail(destinataire.getMail(), 
 										"Vous avez reçu un défi!", 
 										"Le joueur " + selected.getUsername() + " viens de vous envoyer un défi! Venez vite y répondre!\n"

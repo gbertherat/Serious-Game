@@ -22,22 +22,35 @@ import Interface.GUI;
 import v1.Defi;
 import v1.Player;
 
+/**
+ * Fenêtre administrateur pour modifier un utilisateur
+ * @author Guillaume
+ */
 public class AdminEditUser {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
-	private Player selected;
 	private static int nbPress = 0;
 	
-	
+	/**
+	 * Constructeur de la classe AdminEditUser
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public AdminEditUser(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 * @param id - L'id de l'utilisateur à modifier
+	 */
 	public void repaint(int id) {
 		if(GUI.idSession != 0) {
-			selected = myGui.getPlayer(GUI.idSession);
-			if(selected.isAdmin()) {
+			Player selected = myGui.getPlayer(GUI.idSession);
+			if(selected.isAdmin()) { // Si le joueur est un administrateur
+				// On récupère le panel principal
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();
@@ -55,7 +68,6 @@ public class AdminEditUser {
 				
 				panel.add(Box.createRigidArea(new Dimension(500, 20)));	
 
-				
 				// USER ID //
 				JPanel idPanel = Factory.addPanel();
 				idPanel.setMaximumSize(new Dimension(300, 30));
@@ -186,6 +198,9 @@ public class AdminEditUser {
 				JButton deleteButton = Factory.addButton("Supprimer", 130, 40);
 				deleteButton.setForeground(Color.red);
 				
+				/**
+				 * Permet la modification d'un objet Player
+				 */
 				validButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
@@ -195,6 +210,8 @@ public class AdminEditUser {
 							messageLabel.setText("Vous ne pouvez pas modifier le compte d'un administrateur");
 							return;
 						}
+						
+						// On récupère les données entrées
 						String nom = nomInput.getText();
 						String prenom = prenomInput.getText();
 						int age = 0;
@@ -221,6 +238,7 @@ public class AdminEditUser {
 							return;
 						}
 						
+						// On vérifie ces données
 						if(nom.isEmpty()) {
 							messageLabel.setText("Erreur: Nom invalide");
 							return;
@@ -241,6 +259,7 @@ public class AdminEditUser {
 						buttonsPanel.remove(validButton);
 						buttonsPanel.remove(deleteButton);
 						
+						// On modifie les attributs de l'objet Player par les données entrées
 						player.setNom(nom);
 						player.setPrenom(prenom);
 						player.setAge(age);
@@ -254,7 +273,7 @@ public class AdminEditUser {
 							player.setAdmin(false);
 						}
 						messageLabel.setText("Modifications sauvegardées");
-						myGui.saveAll();
+						myGui.saveAll(); // On sauvegarde
 						ActionListener panel = new ActionListener() {
 							@Override
 							public void actionPerformed(ActionEvent arg0) {
@@ -268,6 +287,9 @@ public class AdminEditUser {
 				});
 				
 				// BOUTON : SUPPRIMER
+				/**
+				 * Permet la suppression d'un objet Player
+				 */
 				deleteButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent arg0) {

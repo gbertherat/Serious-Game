@@ -22,17 +22,33 @@ import javax.swing.JRadioButton;
 
 import Components.Factory;
 
+/**
+ * Fenêtre utilisateur pour l'affichage du classement
+ * @author Guillaume
+ */
 public class Classement {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe Classement
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public Classement(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 * @param type - Type de classement
+	 * @param index - Numéro de la page
+	 */
 	public void repaint(int type, int index) {
 		if(GUI.idSession != 0) {
+			// On récupère le panel principal
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
@@ -47,7 +63,7 @@ public class Classement {
 			
 			panel.add(Box.createRigidArea(new Dimension(500, 30)));
 			
-			// TYPE CLASSEMENT //
+			// TYPE DE CLASSEMENT //
 			JPanel typePanel = Factory.addPanel();
 			ButtonGroup group = new ButtonGroup();
 			JRadioButton score = new JRadioButton("Score");

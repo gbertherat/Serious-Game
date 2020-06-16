@@ -12,8 +12,6 @@ import org.apache.pdfbox.text.PDFTextStripper;
 public class PDFTest {
     public static void main( String[] args ) throws IOException
     {
-    	boolean approvedDoc = false;
-    	
     	PDDocument document = PDDocument.load(new File("notes2.pdf"));
 	    PDFTextStripper stripper = new PDFTextStripper();
 	    

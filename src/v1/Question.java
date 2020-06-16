@@ -38,6 +38,7 @@ public class Question implements java.io.Serializable{
 	
 	/**
 	 * Constructeur de la classe Question
+	 * @param titre - Le titre de la question
 	 * @param contenu - Le contenu de la question
 	 * @param categorie - La catégorie de la question
 	 */
@@ -52,10 +53,19 @@ public class Question implements java.io.Serializable{
 		this.nbJuste = 0;
 	}
 	
+	// COUNT //
+	/**
+	 * Permet de récupérer le count de la classe
+	 * @return le count
+	 */
 	public static int getCount() {
 		return count;
 	}
 
+	/**
+	 * Permet de définir le count de la classe
+	 * @param count - le count à définir
+	 */
 	public static void setCount(int count) {
 		Question.count = count;
 	}
@@ -63,7 +73,7 @@ public class Question implements java.io.Serializable{
 	// ID //
 	/**
 	 * Permet de récupérer l'id d'une question
-	 * @return (int) id - l'id de la question
+	 * @return id - l'id de la question
 	 */
 	public int getID() {
 		return this.id;
@@ -71,7 +81,7 @@ public class Question implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir l'id d'une question
-	 * @param (int) id - l'id à définir
+	 * @param id - l'id à définir
 	 */
 	public void setID(int id) {
 		this.id = id;
@@ -98,7 +108,7 @@ public class Question implements java.io.Serializable{
 	// CONTENU //
 	/**
 	 * Permet de récupérer le contenu d'une question
-	 * @return (String) contenu - le contenu de la question
+	 * @return contenu - le contenu de la question
 	 */
 	public String getContenu() {
 		return this.contenu;
@@ -106,7 +116,7 @@ public class Question implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir le contenu d'une question
-	 * @param (String) contenu - le contenu à définir
+	 * @param contenu - le contenu à définir
 	 */
 	public void setContenu(String contenu) {
 		this.contenu = contenu;
@@ -115,7 +125,7 @@ public class Question implements java.io.Serializable{
 	// LISTE DE REPONSES //
 	/**
 	 * Permet de récupérer la liste des réponses d'une question
-	 * @return (ArrayList<String>) listeReponses - La liste des réponses d'une question
+	 * @return listeReponses - La liste des réponses d'une question
 	 */
 	public ArrayList<String> getReponses() {
 		return this.listeReponses;
@@ -123,7 +133,7 @@ public class Question implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir la liste des réponses d'une question
-	 * @param (ArrayList<String>) liste - La liste à définir
+	 * @param liste - La liste à définir
 	 */
 	public void setReponses(ArrayList<String> liste) {
 		this.listeReponses = liste;
@@ -131,7 +141,7 @@ public class Question implements java.io.Serializable{
 	
 	/**
 	 * Permet d'ajouter une réponse à la liste de réponses d'une question
-	 * @param (String) reponse - La réponse à ajouter
+	 * @param reponse - La réponse à ajouter
 	 */
 	public void addReponse(String reponse) {
 		this.listeReponses.add(reponse);
@@ -139,16 +149,16 @@ public class Question implements java.io.Serializable{
 	
 	/**
 	 * Permet de retirer une réponse de la liste de réponses d'une question
-	 * @param (String) reponse - La réponse à retirer
+	 * @param reponse - La réponse à retirer
 	 */
-	public void DelReponse(String reponse) {
+	public void delReponse(String reponse) {
 		this.listeReponses.remove(reponse);
 	}
 	
 	// CATEGORIE //
 	/**
 	 * Permet de récupérer la catégorie d'une question
-	 * @return (String) categorie - La catégorie de la question
+	 * @return categorie - La catégorie de la question
 	 */
 	public String getCategorie() {
 		return this.categorie;
@@ -156,7 +166,7 @@ public class Question implements java.io.Serializable{
 
 	/**
 	 * Permet de définir la catégorie d'une question
-	 * @param (String) categorie - La catégorie à définir
+	 * @param categorie - La catégorie à définir
 	 */
 	public void setCategorie(String categorie) {
 		this.categorie = categorie;
@@ -165,7 +175,7 @@ public class Question implements java.io.Serializable{
 	// NOMBRE TENTATIVES //
 	/**
 	 * Permet de récupérer le nombre de tentatives d'une question
-	 * @return (int) nbTentatives - Le nombre de tentatives de la question
+	 * @return nbTentatives - Le nombre de tentatives de la question
 	 */
 	public int getTentatives() {
 		return this.nbTentatives;
@@ -173,7 +183,7 @@ public class Question implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir le nombre de tentatives d'une question
-	 * @param (int) nbTentatives - Le nombre de tentatives à définir
+	 * @param nbTentatives - Le nombre de tentatives à définir
 	 */
 	public void setTentatives(int nbTentatives) {
 		this.nbTentatives = nbTentatives;
@@ -182,7 +192,7 @@ public class Question implements java.io.Serializable{
 	// NOMBRE JUSTE //
 	/**
 	 * Permet de récupérer le nombre de bonne réponse d'une question
-	 * @return (int) nbJuste - Le nombre de bonne réponse d'une question
+	 * @return nbJuste - Le nombre de bonne réponse d'une question
 	 */
 	public int getNbJuste() {
 		return this.nbJuste;
@@ -190,7 +200,7 @@ public class Question implements java.io.Serializable{
 	
 	/**
 	 * Permet de définir le nombre de bonne réponse d'une question
-	 * @param (int) nbJuste - Le nombre à définir
+	 * @param nbJuste - Le nombre à définir
 	 */
 	public void setNbJuste(int nbJuste) {
 		this.nbJuste = nbJuste;

@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_bWelAK6kEeqnTrEtlm2ujA">
+  <modelElement href="Serious-Game.uml#_cU58IK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck1Oga6kEeqnTrEtlm2ujA" targetItem="_clIwgK6kEeqnTrEtlm2ujA" sourceItem="_ck1OgK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck2coa6kEeqnTrEtlm2ujA" targetItem="_clIwuK6kEeqnTrEtlm2ujA" sourceItem="_ck2coK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck3DsK6kEeqnTrEtlm2ujA" targetItem="_clIwvq6kEeqnTrEtlm2ujA" sourceItem="_ck2coq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck4R0K6kEeqnTrEtlm2ujA" targetItem="_clIwxK6kEeqnTrEtlm2ujA" sourceItem="_ck3qwK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck4R0q6kEeqnTrEtlm2ujA" targetItem="_clIwya6kEeqnTrEtlm2ujA" sourceItem="_ck4R0a6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck4R1K6kEeqnTrEtlm2ujA" targetItem="_clIwzq6kEeqnTrEtlm2ujA" sourceItem="_ck4R066kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck444a6kEeqnTrEtlm2ujA" targetItem="_clIw066kEeqnTrEtlm2ujA" sourceItem="_ck444K6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck44466kEeqnTrEtlm2ujA" targetItem="_clIw2a6kEeqnTrEtlm2ujA" sourceItem="_ck444q6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck5f8a6kEeqnTrEtlm2ujA" targetItem="_clIw366kEeqnTrEtlm2ujA" sourceItem="_ck5f8K6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck5f866kEeqnTrEtlm2ujA" targetItem="_clIw5K6kEeqnTrEtlm2ujA" sourceItem="_ck5f8q6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck6HAa6kEeqnTrEtlm2ujA" targetItem="_clIw6q6kEeqnTrEtlm2ujA" sourceItem="_ck6HAK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck6uEK6kEeqnTrEtlm2ujA" targetItem="_clIw766kEeqnTrEtlm2ujA" sourceItem="_ck6HAq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck6uEq6kEeqnTrEtlm2ujA" targetItem="_clIxAa6kEeqnTrEtlm2ujA" sourceItem="_ck6uEa6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck7VIa6kEeqnTrEtlm2ujA" targetItem="_clIxB66kEeqnTrEtlm2ujA" sourceItem="_ck7VIK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_ck7VI66kEeqnTrEtlm2ujA" targetItem="_clIxD66kEeqnTrEtlm2ujA" sourceItem="_ck7VIq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_clANoK6kEeqnTrEtlm2ujA" sourceAnchor="0.0,208.0" targetAnchor="484.0,219.0" target="_clIwgK6kEeqnTrEtlm2ujA" source="_cnLX4K6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ-CUK6kEeqnTrEtlm2ujA"/>
+    <nameVisual xmi:id="_clANoa6kEeqnTrEtlm2ujA" text="">
+      <visualProperties xmi:id="_dCgpAK6kEeqnTrEtlm2ujA" position="-1.0,2.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_clANoq6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="question" navigable="true">
+      <modelElement href="Serious-Game.uml#_cZRewK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_dCgB8K6kEeqnTrEtlm2ujA" position="-78.0,-47.0"/>
+      <visibility xmi:id="_clANo66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clANpK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_clANpa6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="">
+      <modelElement href="Serious-Game.uml#_cZ-pYK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_dCgpAa6kEeqnTrEtlm2ujA" position="12.0,-47.00000000000006"/>
+      <visibility xmi:id="_clANpq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clANp66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_clA0sK6kEeqnTrEtlm2ujA" sourceAnchor="690.0,220.0" targetAnchor="0.0,217.0" target="_clIwgK6kEeqnTrEtlm2ujA" source="_cl4-ea6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_QcK6kEeqnTrEtlm2ujA"/>
+    <nameVisual xmi:id="_clA0sa6kEeqnTrEtlm2ujA" text="">
+      <visualProperties xmi:id="_dCdlsK6kEeqnTrEtlm2ujA" position="-5.0,2.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_clA0sq6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="destinataire" navigable="true">
+      <modelElement href="Serious-Game.uml#_cZSF0a6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_dCcXkK6kEeqnTrEtlm2ujA" position="11.0,-47.0"/>
+      <visibility xmi:id="_clA0s66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clA0tK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_clA0ta6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="">
+      <modelElement href="Serious-Game.uml#_cZ_Qca6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_dCdlsa6kEeqnTrEtlm2ujA" position="-28.0,2.0"/>
+      <visibility xmi:id="_clA0tq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clA0t66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_clBbwK6kEeqnTrEtlm2ujA" target="_clIwgK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_Qcq6kEeqnTrEtlm2ujA"/>
+    <nameVisual xmi:id="_clBbwa6kEeqnTrEtlm2ujA" text=""/>
+    <sourceRole xmi:id="_clBbwq6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="dateExpiration" navigable="true">
+      <modelElement href="Serious-Game.uml#_cZTT8a6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clBbw66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clBbxK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_clBbxa6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="">
+      <modelElement href="Serious-Game.uml#_cZ_Qc66kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clBbxq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clBbx66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_clFtMK6kEeqnTrEtlm2ujA" sourceAnchor="0.0,321.0" targetAnchor="690.0,324.0" target="_cl4-ea6kEeqnTrEtlm2ujA" source="_clIwgK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caMEwK6kEeqnTrEtlm2ujA"/>
+    <stereotypes xmi:id="_clFtMa6kEeqnTrEtlm2ujA" name="Reference">
+      <modelElement href="Serious-Game.uml#_caNS4K6kEeqnTrEtlm2ujA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_clFtMq6kEeqnTrEtlm2ujA" text="">
+      <visualProperties xmi:id="_dCaiYK6kEeqnTrEtlm2ujA" position="-29.999999999999986,-19.00000000000003"/>
+    </nameVisual>
+    <sourceRole xmi:id="_clFtM66kEeqnTrEtlm2ujA" aggregationKind="NONE" name="">
+      <modelElement href="Serious-Game.uml#_caMEwa6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_dCZ7UK6kEeqnTrEtlm2ujA" position="-27.99999999999999,-47.000000000000014"/>
+      <visibility xmi:id="_clFtNK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clFtNa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_clFtNq6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="expediteur" navigable="true">
+      <modelElement href="Serious-Game.uml#_cZRewa6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_dCbJcK6kEeqnTrEtlm2ujA" position="13.0,1.9999999999999858"/>
+      <visibility xmi:id="_clFtN66kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_clFtOK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_clHiYK6kEeqnTrEtlm2ujA" source="_clIwgK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caN58K6kEeqnTrEtlm2ujA"/>
+    <stereotypes xmi:id="_clHiYa6kEeqnTrEtlm2ujA" name="Reference">
+      <modelElement href="Serious-Game.uml#_caN58q6kEeqnTrEtlm2ujA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_clHiYq6kEeqnTrEtlm2ujA" text=""/>
+    <sourceRole xmi:id="_clHiY66kEeqnTrEtlm2ujA" aggregationKind="NONE" name="">
+      <modelElement href="Serious-Game.uml#_caN58a6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clHiZK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clHiZa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_clHiZq6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="date" navigable="true">
+      <modelElement href="Serious-Game.uml#_cZSs4a6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clHiZ66kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_clHiaK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clkOUa6kEeqnTrEtlm2ujA" targetItem="_cl4-ea6kEeqnTrEtlm2ujA" sourceItem="_clkOUK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cllcca6kEeqnTrEtlm2ujA" targetItem="_cl4-v66kEeqnTrEtlm2ujA" sourceItem="_cllccK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clmqkK6kEeqnTrEtlm2ujA" targetItem="_cl4-xa6kEeqnTrEtlm2ujA" sourceItem="_clmDgK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clnRoa6kEeqnTrEtlm2ujA" targetItem="_cl4-4K6kEeqnTrEtlm2ujA" sourceItem="_clnRoK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clnRo66kEeqnTrEtlm2ujA" targetItem="_cl4-5a6kEeqnTrEtlm2ujA" sourceItem="_clnRoq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clpt4a6kEeqnTrEtlm2ujA" targetItem="_cl4-666kEeqnTrEtlm2ujA" sourceItem="_clpt4K6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clqU8a6kEeqnTrEtlm2ujA" targetItem="_cl5lha6kEeqnTrEtlm2ujA" sourceItem="_clqU8K6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clsKIK6kEeqnTrEtlm2ujA" targetItem="_cl5li66kEeqnTrEtlm2ujA" sourceItem="_clq8AK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clsxMa6kEeqnTrEtlm2ujA" targetItem="_cl5lka6kEeqnTrEtlm2ujA" sourceItem="_clsxMK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clsxM66kEeqnTrEtlm2ujA" targetItem="_cl5ll66kEeqnTrEtlm2ujA" sourceItem="_clsxMq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cltYQa6kEeqnTrEtlm2ujA" targetItem="_cl5lna6kEeqnTrEtlm2ujA" sourceItem="_cltYQK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clt_Ua6kEeqnTrEtlm2ujA" targetItem="_cl5lo66kEeqnTrEtlm2ujA" sourceItem="_clt_UK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clumYK6kEeqnTrEtlm2ujA" targetItem="_cl5lrq6kEeqnTrEtlm2ujA" sourceItem="_clt_Uq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clv0ga6kEeqnTrEtlm2ujA" targetItem="_cl5ltK6kEeqnTrEtlm2ujA" sourceItem="_clv0gK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clwbkK6kEeqnTrEtlm2ujA" targetItem="_cl5luq6kEeqnTrEtlm2ujA" sourceItem="_clv0gq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_clxCoa6kEeqnTrEtlm2ujA" targetItem="_cl5lxa6kEeqnTrEtlm2ujA" sourceItem="_clxCoK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_cl4-cK6kEeqnTrEtlm2ujA" sourceAnchor="690.0,635.0" targetAnchor="0.0,27.0" target="_cmvTCa6kEeqnTrEtlm2ujA" source="_cl4-ea6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caPIEa6kEeqnTrEtlm2ujA"/>
+    <stereotypes xmi:id="_cl4-ca6kEeqnTrEtlm2ujA" name="Reference">
+      <modelElement href="Serious-Game.uml#_caQWMK6kEeqnTrEtlm2ujA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_cl4-cq6kEeqnTrEtlm2ujA" text="">
+      <visualProperties xmi:id="_dCez0K6kEeqnTrEtlm2ujA" position="-20.5,-19.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_cl4-c66kEeqnTrEtlm2ujA" aggregationKind="NONE" name="">
+      <modelElement href="Serious-Game.uml#_caPIEq6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_dCeMwK6kEeqnTrEtlm2ujA" position="23.58064516129032,2.0"/>
+      <visibility xmi:id="_cl4-dK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-da6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_cl4-dq6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="myBulletin" navigable="true">
+      <modelElement href="Serious-Game.uml#_cZbPwa6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_dCez0a6kEeqnTrEtlm2ujA" position="-137.29999999999995,-47.0"/>
+      <visibility xmi:id="_cl4-d66kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cl4-eK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cmqaga6kEeqnTrEtlm2ujA" targetItem="_cmvTJa6kEeqnTrEtlm2ujA" sourceItem="_cmqagK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cmqag66kEeqnTrEtlm2ujA" targetItem="_cmvTKq6kEeqnTrEtlm2ujA" sourceItem="_cmqagq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cmrBka6kEeqnTrEtlm2ujA" targetItem="_cmvTMK6kEeqnTrEtlm2ujA" sourceItem="_cmrBkK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cmrBk66kEeqnTrEtlm2ujA" targetItem="_cmvTNq6kEeqnTrEtlm2ujA" sourceItem="_cmrBkq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cmrooa6kEeqnTrEtlm2ujA" targetItem="_cmvTPK6kEeqnTrEtlm2ujA" sourceItem="_cmrooK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cmroo66kEeqnTrEtlm2ujA" targetItem="_cmvTQa6kEeqnTrEtlm2ujA" sourceItem="_cmrooq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cmsPsa6kEeqnTrEtlm2ujA" targetItem="_cmvTSa6kEeqnTrEtlm2ujA" sourceItem="_cmsPsK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_cmvTAK6kEeqnTrEtlm2ujA" source="_cmvTCa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caOhAK6kEeqnTrEtlm2ujA"/>
+    <stereotypes xmi:id="_cmvTAa6kEeqnTrEtlm2ujA" name="Reference">
+      <modelElement href="Serious-Game.uml#_caPIEK6kEeqnTrEtlm2ujA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_cmvTAq6kEeqnTrEtlm2ujA" text=""/>
+    <sourceRole xmi:id="_cmvTA66kEeqnTrEtlm2ujA" aggregationKind="NONE" name="">
+      <modelElement href="Serious-Game.uml#_caOhAa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTBK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTBa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_cmvTBq6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="listeNotes" navigable="true">
+      <modelElement href="Serious-Game.uml#_cZW-U66kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTB66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTCK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm5EAa6kEeqnTrEtlm2ujA" targetItem="_cnLX4K6kEeqnTrEtlm2ujA" sourceItem="_cm5EAK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_cm5rEK6kEeqnTrEtlm2ujA" source="_cnLX4K6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caQWMa6kEeqnTrEtlm2ujA"/>
+    <stereotypes xmi:id="_cnIUka6kEeqnTrEtlm2ujA" name="Reference">
+      <modelElement href="Serious-Game.uml#_caQ9QK6kEeqnTrEtlm2ujA"/>
+    </stereotypes>
+    <nameVisual xmi:id="_cnHtgK6kEeqnTrEtlm2ujA" text=""/>
+    <sourceRole xmi:id="_cnHtga6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="">
+      <modelElement href="Serious-Game.uml#_caQWMq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnJisK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnI7oK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_cnIUkK6kEeqnTrEtlm2ujA" aggregationKind="NONE" name="listeReponses" navigable="true">
+      <modelElement href="Serious-Game.uml#_cZlAwq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnJisq6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cnJisa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm6SIK6kEeqnTrEtlm2ujA" targetItem="_cnLYDK6kEeqnTrEtlm2ujA" sourceItem="_cm5rEa6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm6SIq6kEeqnTrEtlm2ujA" targetItem="_cnLYEq6kEeqnTrEtlm2ujA" sourceItem="_cm6SIa6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm65Ma6kEeqnTrEtlm2ujA" targetItem="_cnLYIa6kEeqnTrEtlm2ujA" sourceItem="_cm65MK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm65M66kEeqnTrEtlm2ujA" targetItem="_cnLYJq6kEeqnTrEtlm2ujA" sourceItem="_cm65Mq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm8HUK6kEeqnTrEtlm2ujA" targetItem="_cnLYLK6kEeqnTrEtlm2ujA" sourceItem="_cm7gQK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm8HUq6kEeqnTrEtlm2ujA" targetItem="_cnLYMq6kEeqnTrEtlm2ujA" sourceItem="_cm8HUa6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm8uYa6kEeqnTrEtlm2ujA" targetItem="_cnLYOK6kEeqnTrEtlm2ujA" sourceItem="_cm8uYK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm8uY66kEeqnTrEtlm2ujA" targetItem="_cnLYPq6kEeqnTrEtlm2ujA" sourceItem="_cm8uYq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm9Vca6kEeqnTrEtlm2ujA" targetItem="_cnLYRK6kEeqnTrEtlm2ujA" sourceItem="_cm9VcK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm9Vc66kEeqnTrEtlm2ujA" targetItem="_cnLYSq6kEeqnTrEtlm2ujA" sourceItem="_cm9Vcq6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm9Vda6kEeqnTrEtlm2ujA" targetItem="_cnLYUK6kEeqnTrEtlm2ujA" sourceItem="_cm9VdK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cm-jkK6kEeqnTrEtlm2ujA" targetItem="_cnLYVa6kEeqnTrEtlm2ujA" sourceItem="_cm98gK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cnAYwa6kEeqnTrEtlm2ujA" targetItem="_cnLYW66kEeqnTrEtlm2ujA" sourceItem="_cnAYwK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cnCN8K6kEeqnTrEtlm2ujA" targetItem="_cnLYYa6kEeqnTrEtlm2ujA" sourceItem="_cnBm4K6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cnDcEa6kEeqnTrEtlm2ujA" targetItem="_cnLYZq6kEeqnTrEtlm2ujA" sourceItem="_cnDcEK6kEeqnTrEtlm2ujA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_cnEDIa6kEeqnTrEtlm2ujA" targetItem="_cnLYbq6kEeqnTrEtlm2ujA" sourceItem="_cnEDIK6kEeqnTrEtlm2ujA"/>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck1OgK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck1Oga6kEeqnTrEtlm2ujA" text="La classe Defi permet la création de défis.&#xD;&#xA;@author Guillaume" item="_clIwgK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ80MK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck2coK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck2coa6kEeqnTrEtlm2ujA" text="Constructeur par défaut de la classe Defi" item="_clIwuK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_QdK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck2coq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck3DsK6kEeqnTrEtlm2ujA" text="Permet de définir l'ID d'un défi&#xD;&#xA;&#x9; * @param (int) id - L'ID à définir" item="_clIwvq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3ga6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck3qwK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck4R0K6kEeqnTrEtlm2ujA" text="Permet de récupérer l'expediteur d'un défi&#xD;&#xA;&#x9; * @return (Player) expediteur - L'expediteur du défi" item="_clIwxK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3gq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck4R0a6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck4R0q6kEeqnTrEtlm2ujA" text="Permet de récupérer la date d'envoi d'un défi&#xD;&#xA;&#x9; * @return (LocalDate) date - La date d'envoi du défi" item="_clIwya6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3hK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck4R066kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck4R1K6kEeqnTrEtlm2ujA" text="Permet de récupérer le booléen admin reviewed&#xD;&#xA;&#x9; * @return (boolean) reviewed - Le booléen admin reviewed" item="_clIwzq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3hq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck444K6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck444a6kEeqnTrEtlm2ujA" text="Permet de définir le booléen admin reviewed&#xD;&#xA;&#x9; * @param reviewed - Le booléen à définir" item="_clIw066kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3h66kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck444q6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck44466kEeqnTrEtlm2ujA" text="Permet de définir le booléen accepte&#xD;&#xA;&#x9; * @param (boolean) accepte - Le booléen à définir" item="_clIw2a6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3iK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck5f8K6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck5f8a6kEeqnTrEtlm2ujA" text="Permet de récupérer le nombre de points d'un défi&#xD;&#xA;&#x9; * @return (int) points - Le nombre de points du défi" item="_clIw366kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3ia6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck5f8q6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck5f866kEeqnTrEtlm2ujA" text="Permet de définir le nombre de points d'un défi&#xD;&#xA;&#x9; * @param (int) points - Le nombre de points à définir" item="_clIw5K6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3iq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck6HAK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck6HAa6kEeqnTrEtlm2ujA" text="Permet d'afficher la valeur des attributs d'un objet Defi" item="_clIw6q6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3i66kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck6HAq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck6uEK6kEeqnTrEtlm2ujA" text="Constructeur de la classe Defi&#xD;&#xA;&#x9; * @param question - La question du défi&#xD;&#xA;&#x9; * @param expediteur - L'expéditeur du défi&#xD;&#xA;&#x9; * @param destinataire - Le destinataire du défi" item="_clIw766kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3gK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck6uEa6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck6uEq6kEeqnTrEtlm2ujA" text="Permet de définir l'expediteur d'un défi&#xD;&#xA;&#x9; * @param (Player) expediteur - L'expediteur à définir" item="_clIxAa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3g66kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck7VIK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck7VIa6kEeqnTrEtlm2ujA" text="Permet de comparer deux objets defi&#xD;&#xA;&#x9; * @param defi - L'objet avec lequel comparer&#xD;&#xA;&#x9; * @return true si les deux objets sont identiques, false sinon" item="_clIxB66kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3jK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_ck7VIq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_ck7VI66kEeqnTrEtlm2ujA" text="Permet de définir la date d'envoi d'un défi&#xD;&#xA;&#x9; * @param (LocalDate) date - La date à définir" item="_clIxD66kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cZ_3ha6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clkOUK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clkOUa6kEeqnTrEtlm2ujA" text="La classe Player permet la création de profil joueur.&#xD;&#xA;@author Guillaume" item="_cl4-ea6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBssK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cllccK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cllcca6kEeqnTrEtlm2ujA" text="Constructeur par defaut de la classe Player" item="_cl4-v66kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBssa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clmDgK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clmqkK6kEeqnTrEtlm2ujA" text="Constructeur de la classe Player &#xD;&#xA;&#x9; * @param nom - Le nom du joueur&#xD;&#xA;&#x9; * @param prenom - Le prénom du joueur&#xD;&#xA;&#x9; * @param age - L'age du joueur&#xD;&#xA;&#x9; * @param mail - Le mail du joueur" item="_cl4-xa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBssq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clnRoK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clnRoa6kEeqnTrEtlm2ujA" text="Permet de récupérer l'ID d'un joueur&#xD;&#xA;&#x9; * @return (int) id l'ID du joueur." item="_cl4-4K6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caEI8K6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clnRoq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clnRo66kEeqnTrEtlm2ujA" text="Permet de définir l'ID d'un joueur&#xD;&#xA;&#x9; * @param (int) id - L'ID à définir" item="_cl4-5a6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caEI8a6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clpt4K6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clpt4a6kEeqnTrEtlm2ujA" text="Permet de définir le nom d'un joueur;&#xD;&#xA;&#x9; * @param (String) nom - Le nom à définir" item="_cl4-666kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caEwAK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clqU8K6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clqU8a6kEeqnTrEtlm2ujA" text="Permet de définir le prénom d'un joueur;&#xD;&#xA;&#x9; * @param (String) prenom - Le prénom à définir" item="_cl5lha6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caEwAa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clq8AK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clsKIK6kEeqnTrEtlm2ujA" text="Permet de définir l'âge d'un joueur&#xD;&#xA;&#x9; * @param (int) age - L'âge à définir" item="_cl5li66kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caEwAq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clsxMK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clsxMa6kEeqnTrEtlm2ujA" text="Permet de définir le mail d'un joueur&#xD;&#xA;&#x9; * @param (String) mail - le mail à définir" item="_cl5lka6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caFXEK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clsxMq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clsxM66kEeqnTrEtlm2ujA" text="Permet de définir la licence d'un joueur&#xD;&#xA;&#x9; * @param (String) licence - La licence à définir" item="_cl5ll66kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caFXEa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cltYQK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cltYQa6kEeqnTrEtlm2ujA" text="Permet de définir le username d'un joueur&#xD;&#xA;&#x9; * @param (String) username - Le username à définir" item="_cl5lna6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caFXEq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clt_UK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clt_Ua6kEeqnTrEtlm2ujA" text="Permet de définir le password d'un joueur&#xD;&#xA;&#x9; * @param (String) password - Le password à définir" item="_cl5lo66kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caFXE66kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clt_Uq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clumYK6kEeqnTrEtlm2ujA" text="Permet de définir la vie d'un joueur&#xD;&#xA;&#x9; * @param (int) vie - La vie à définir" item="_cl5lrq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caFXFK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clv0gK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clv0ga6kEeqnTrEtlm2ujA" text="Permet de définir le score d'un joueur&#xD;&#xA;&#x9; * @param (int) score - Le score à définir" item="_cl5ltK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caFXFa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clv0gq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clwbkK6kEeqnTrEtlm2ujA" text="Permet d'afficher les attributs d'un joueur dans la console" item="_cl5luq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caFXFq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_clxCoK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_clxCoa6kEeqnTrEtlm2ujA" text="Permet de comparer deux joueurs.&#xD;&#xA;&#x9; * @param (Player) player - Le joueur avec qui comparer&#xD;&#xA;&#x9; * @return true si les joueurs sont identiques, false sinon." item="_cl5lxa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caFXF66kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cmqagK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cmqaga6kEeqnTrEtlm2ujA" text="Permet de récupérer l'id d'un bulletin&#xD;&#xA;&#x9; * @return (int) id - l'id du bulletin" item="_cmvTJa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBFoK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cmqagq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cmqag66kEeqnTrEtlm2ujA" text="Permet de définir l'id d'un bulletin&#xD;&#xA;&#x9; * @param (int) id - l'id à définir" item="_cmvTKq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBFoa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cmrBkK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cmrBka6kEeqnTrEtlm2ujA" text="Permet d'ajoute une note à la liste des notes d'un bulletin&#xD;&#xA;&#x9; * @param (int) note - La note à ajouter" item="_cmvTMK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBFo66kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cmrBkq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cmrBk66kEeqnTrEtlm2ujA" text="Permet de retirer une note de la liste des notes d'un bulletin&#xD;&#xA;&#x9; * @param (int) index - L'index de la note à retirer" item="_cmvTNq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBFpK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cmrooK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cmrooa6kEeqnTrEtlm2ujA" text="Permet d'afficher la valeur des attributs d'un objet Bulletin" item="_cmvTPK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBFpa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cmrooq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cmroo66kEeqnTrEtlm2ujA" text="Permet de comparer deux objets Bulletin&#xD;&#xA;&#x9; * @param bulletin - L'object avec lequel comparer&#xD;&#xA;&#x9; * @return true si les deux objets sont identiques, false sinon." item="_cmvTQa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBFpq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cmsPsK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cmsPsa6kEeqnTrEtlm2ujA" text="Permet de définir la liste des notes d'un bulletin&#xD;&#xA;&#x9; * @param (ArrayList&lt;Integer>) listeNotes - La liste des notes à définir" item="_cmvTSa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caBFoq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm5EAK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm5EAa6kEeqnTrEtlm2ujA" text="La classe Question permet la création de questions&#xD;&#xA;@author Guillaume" item="_cnLX4K6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caF-IK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm5rEa6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm6SIK6kEeqnTrEtlm2ujA" text="Constructeur par défaut de la classe Question" item="_cnLYDK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caF-Ia6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm6SIa6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm6SIq6kEeqnTrEtlm2ujA" text="Constructeur de la classe Question&#xD;&#xA;&#x9; * @param contenu - Le contenu de la question&#xD;&#xA;&#x9; * @param categorie - La catégorie de la question" item="_cnLYEq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caF-Iq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm65MK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm65Ma6kEeqnTrEtlm2ujA" text="Permet de récupérer l'id d'une question&#xD;&#xA;&#x9; * @return (int) id - l'id de la question" item="_cnLYIa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caGlMK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm65Mq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm65M66kEeqnTrEtlm2ujA" text="Permet de définir l'id d'une question&#xD;&#xA;&#x9; * @param (int) id - l'id à définir" item="_cnLYJq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caGlMa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm7gQK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm8HUK6kEeqnTrEtlm2ujA" text="Permet de définir le titre d'une question&#xD;&#xA;&#x9; * @param titre - Le titre à définir" item="_cnLYLK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caGlMq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm8HUa6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm8HUq6kEeqnTrEtlm2ujA" text="Permet de définir le contenu d'une question&#xD;&#xA;&#x9; * @param (String) contenu - le contenu à définir" item="_cnLYMq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caGlM66kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm8uYK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm8uYa6kEeqnTrEtlm2ujA" text="Permet de récupérer la liste des réponses d'une question&#xD;&#xA;&#x9; * @return (ArrayList&lt;String>) listeReponses - La liste des réponses d'une question" item="_cnLYOK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caGlNK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm8uYq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm8uY66kEeqnTrEtlm2ujA" text="Permet d'ajouter une réponse à la liste de réponses d'une question&#xD;&#xA;&#x9; * @param (String) reponse - La réponse à ajouter" item="_cnLYPq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caGlNq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm9VcK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm9Vca6kEeqnTrEtlm2ujA" text="Permet de retirer une réponse de la liste de réponses d'une question&#xD;&#xA;&#x9; * @param (String) reponse - La réponse à retirer" item="_cnLYRK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caHMQK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm9Vcq6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm9Vc66kEeqnTrEtlm2ujA" text="Permet de définir la catégorie d'une question&#xD;&#xA;&#x9; * @param (String) categorie - La catégorie à définir" item="_cnLYSq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caHMQa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm9VdK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm9Vda6kEeqnTrEtlm2ujA" text="Permet de récupérer le nombre de tentatives d'une question&#xD;&#xA;&#x9; * @return (int) nbTentatives - Le nombre de tentatives de la question" item="_cnLYUK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caHMQq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cm98gK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cm-jkK6kEeqnTrEtlm2ujA" text="Permet de définir le nombre de tentatives d'une question&#xD;&#xA;&#x9; * @param (int) nbTentatives - Le nombre de tentatives à définir" item="_cnLYVa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caHMQ66kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cnAYwK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cnAYwa6kEeqnTrEtlm2ujA" text="Permet de définir le nombre de bonne réponse d'une question&#xD;&#xA;&#x9; * @param (int) nbJuste - Le nombre à définir" item="_cnLYW66kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caHMRK6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cnBm4K6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cnCN8K6kEeqnTrEtlm2ujA" text="Permet d'afficher la valeur des attributs d'un objet Question" item="_cnLYYa6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caHMRa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cnDcEK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cnDcEa6kEeqnTrEtlm2ujA" text="Permet de comparer deux objets Question&#xD;&#xA;&#x9; * @param question - L'object avec lequel comparer&#xD;&#xA;&#x9; * @return true si les deux objets sont identiques, false sinon" item="_cnLYZq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caHMRq6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_cnEDIK6kEeqnTrEtlm2ujA" sourceConnectionVisual="_cnEDIa6kEeqnTrEtlm2ujA" text="Permet de définir la liste des réponses d'une question&#xD;&#xA;&#x9; * @param (ArrayList&lt;String>) liste - La liste à définir" item="_cnLYbq6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_caGlNa6kEeqnTrEtlm2ujA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_clIwgK6kEeqnTrEtlm2ujA" comments="_ck1OgK6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck1Oga6kEeqnTrEtlm2ujA" name="Defi" associationsIn="_clANoK6kEeqnTrEtlm2ujA _clA0sK6kEeqnTrEtlm2ujA _clBbwK6kEeqnTrEtlm2ujA" associationsOut="_clFtMK6kEeqnTrEtlm2ujA _clHiYK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cWDLoK6kEeqnTrEtlm2ujA"/>
+    <visualProperties xmi:id="_clIwga6kEeqnTrEtlm2ujA" position="-2.0,-293.0" size="484.0,440.0"/>
+    <visibility xmi:id="_clIwgq6kEeqnTrEtlm2ujA" label="+"/>
+    <attributes xmi:id="_clIwg66kEeqnTrEtlm2ujA" defaultValue="7168126960424290878L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="Serious-Game.uml#_cZObcK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwhK6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_clIwha6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwhq6kEeqnTrEtlm2ujA" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwh66kEeqnTrEtlm2ujA" defaultValue="0" name="count" staticAttribute="true">
+      <modelElement href="Serious-Game.uml#_cZPCga6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_clIwiK6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZPpkK6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_clIwia6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwiq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwi66kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwjK6kEeqnTrEtlm2ujA" name="id">
+      <modelElement href="Serious-Game.uml#_cZQ3sa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwja6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwjq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwj66kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwkK6kEeqnTrEtlm2ujA" name="question">
+      <modelElement href="Serious-Game.uml#_cZRewK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwka6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwkq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwk66kEeqnTrEtlm2ujA" name="Question">
+        <modelElement href="Serious-Game.uml#_cW-_wK6kEeqnTrEtlm2ujA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwlK6kEeqnTrEtlm2ujA" name="expediteur">
+      <modelElement href="Serious-Game.uml#_cZRewa6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_clIwla6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZSF0K6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_clIwlq6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_clIwl66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwmK6kEeqnTrEtlm2ujA" name="Player">
+        <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwma6kEeqnTrEtlm2ujA" name="destinataire">
+      <modelElement href="Serious-Game.uml#_cZSF0a6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwmq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwm66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwnK6kEeqnTrEtlm2ujA" name="Player">
+        <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwna6kEeqnTrEtlm2ujA" name="points">
+      <modelElement href="Serious-Game.uml#_cZSF0q6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_clIwnq6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZSs4K6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_clIwn66kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_clIwoK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwoa6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwoq6kEeqnTrEtlm2ujA" name="date">
+      <modelElement href="Serious-Game.uml#_cZSs4a6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_clIwo66kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZTT8K6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_clIwpK6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_clIwpa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwpq6kEeqnTrEtlm2ujA" name="LocalDateTime">
+        <modelElement href="Serious-Game.uml#_cYgpwK6kEeqnTrEtlm2ujA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwp66kEeqnTrEtlm2ujA" name="dateExpiration">
+      <modelElement href="Serious-Game.uml#_cZTT8a6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwqK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwqa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwqq6kEeqnTrEtlm2ujA" name="LocalDateTime">
+        <modelElement href="Serious-Game.uml#_cYgpwK6kEeqnTrEtlm2ujA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwq66kEeqnTrEtlm2ujA" name="reviewed">
+      <modelElement href="Serious-Game.uml#_cZT7AK6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_clIwrK6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZUiEK6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_clIwra6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_clIwrq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwr66kEeqnTrEtlm2ujA" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwsK6kEeqnTrEtlm2ujA" name="accepte">
+      <modelElement href="Serious-Game.uml#_cZUiEa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwsa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwsq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIws66kEeqnTrEtlm2ujA" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_clIwtK6kEeqnTrEtlm2ujA" name="termine">
+      <modelElement href="Serious-Game.uml#_cZUiEq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwta6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwtq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_clIwt66kEeqnTrEtlm2ujA" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_clIwuK6kEeqnTrEtlm2ujA" comments="_ck2coK6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck2coa6kEeqnTrEtlm2ujA" name="Defi">
+      <modelElement href="Serious-Game.uml#_cWTDQK6kEeqnTrEtlm2ujA"/>
+      <keywords xmi:id="_clIwua6kEeqnTrEtlm2ujA" keyword="create"/>
+      <visibility xmi:id="_clIwuq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwu66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_clIwvK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWTDQ66kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_clIwva6kEeqnTrEtlm2ujA" name="Defi">
+          <modelElement href="Serious-Game.uml#_cWDLoK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_clIwvq6kEeqnTrEtlm2ujA" comments="_ck2coq6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck3DsK6kEeqnTrEtlm2ujA" name="setId">
+      <modelElement href="Serious-Game.uml#_cWU4cK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwv66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwwK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_clIwwa6kEeqnTrEtlm2ujA" name="id">
+        <modelElement href="Serious-Game.uml#_cWU4ca6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIwwq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIww66kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_clIwxK6kEeqnTrEtlm2ujA" comments="_ck3qwK6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck4R0K6kEeqnTrEtlm2ujA" name="getExpediteur">
+      <modelElement href="Serious-Game.uml#_cWVfgK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwxa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwxq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_clIwx66kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cYjGAK6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_clIwyK6kEeqnTrEtlm2ujA" name="Player">
+          <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_clIwya6kEeqnTrEtlm2ujA" comments="_ck4R0a6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck4R0q6kEeqnTrEtlm2ujA" name="getDate">
+      <modelElement href="Serious-Game.uml#_cWWGkK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwyq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIwy66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_clIwzK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cY65cK6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_clIwza6kEeqnTrEtlm2ujA" name="LocalDateTime">
+          <modelElement href="Serious-Game.uml#_cYgpwK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_clIwzq6kEeqnTrEtlm2ujA" comments="_ck4R066kEeqnTrEtlm2ujA" targetConnectionVisual="_ck4R1K6kEeqnTrEtlm2ujA" name="isReviewed">
+      <modelElement href="Serious-Game.uml#_cWWGka6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIwz66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIw0K6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_clIw0a6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWWtoK6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_clIw0q6kEeqnTrEtlm2ujA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_clIw066kEeqnTrEtlm2ujA" comments="_ck444K6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck444a6kEeqnTrEtlm2ujA" name="setReviewed">
+      <modelElement href="Serious-Game.uml#_cWWtoa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIw1K6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIw1a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_clIw1q6kEeqnTrEtlm2ujA" name="reviewed">
+        <modelElement href="Serious-Game.uml#_cWWtoq6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIw166kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIw2K6kEeqnTrEtlm2ujA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_clIw2a6kEeqnTrEtlm2ujA" comments="_ck444q6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck44466kEeqnTrEtlm2ujA" name="setAccepte">
+      <modelElement href="Serious-Game.uml#_cWXUsK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIw2q6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIw266kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_clIw3K6kEeqnTrEtlm2ujA" name="accepte">
+        <modelElement href="Serious-Game.uml#_cWXUsa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIw3a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIw3q6kEeqnTrEtlm2ujA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_clIw366kEeqnTrEtlm2ujA" comments="_ck5f8K6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck5f8a6kEeqnTrEtlm2ujA" name="getPoints">
+      <modelElement href="Serious-Game.uml#_cWX7wK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIw4K6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIw4a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_clIw4q6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWX7wa6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_clIw466kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_clIw5K6kEeqnTrEtlm2ujA" comments="_ck5f8q6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck5f866kEeqnTrEtlm2ujA" name="setPoints">
+      <modelElement href="Serious-Game.uml#_cWX7wq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIw5a6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIw5q6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_clIw566kEeqnTrEtlm2ujA" name="points">
+        <modelElement href="Serious-Game.uml#_cWYi0K6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIw6K6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIw6a6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_clIw6q6kEeqnTrEtlm2ujA" comments="_ck6HAK6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck6HAa6kEeqnTrEtlm2ujA" name="toString">
+      <modelElement href="Serious-Game.uml#_cWZJ4K6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIw666kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIw7K6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_clIw7a6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWZJ4a6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_clIw7q6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_clIw766kEeqnTrEtlm2ujA" comments="_ck6HAq6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck6uEK6kEeqnTrEtlm2ujA" name="Defi">
+      <modelElement href="Serious-Game.uml#_cYie8K6kEeqnTrEtlm2ujA"/>
+      <keywords xmi:id="_clIw8K6kEeqnTrEtlm2ujA" keyword="create"/>
+      <visibility xmi:id="_clIw8a6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIw8q6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_clIw866kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cYie966kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_clIw9K6kEeqnTrEtlm2ujA" name="Defi">
+          <modelElement href="Serious-Game.uml#_cWDLoK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_clIw9a6kEeqnTrEtlm2ujA" name="question">
+        <modelElement href="Serious-Game.uml#_cYie8a6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIw9q6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIw966kEeqnTrEtlm2ujA" name="Question">
+          <modelElement href="Serious-Game.uml#_cW-_wK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_clIw-K6kEeqnTrEtlm2ujA" name="expediteur">
+        <modelElement href="Serious-Game.uml#_cYie8q6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIw-a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIw-q6kEeqnTrEtlm2ujA" name="Player">
+          <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_clIw-66kEeqnTrEtlm2ujA" name="destinataire">
+        <modelElement href="Serious-Game.uml#_cYie866kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIw_K6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIw_a6kEeqnTrEtlm2ujA" name="Player">
+          <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_clIw_q6kEeqnTrEtlm2ujA" name="points">
+        <modelElement href="Serious-Game.uml#_cYie9K6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIw_66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIxAK6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_clIxAa6kEeqnTrEtlm2ujA" comments="_ck6uEa6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck6uEq6kEeqnTrEtlm2ujA" name="setExpediteur">
+      <modelElement href="Serious-Game.uml#_cYjGAa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIxAq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIxA66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_clIxBK6kEeqnTrEtlm2ujA" name="expediteur">
+        <modelElement href="Serious-Game.uml#_cYjGAq6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIxBa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIxBq6kEeqnTrEtlm2ujA" name="Player">
+          <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_clIxB66kEeqnTrEtlm2ujA" comments="_ck7VIK6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck7VIa6kEeqnTrEtlm2ujA" name="equals">
+      <modelElement href="Serious-Game.uml#_cYjtEK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIxCK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIxCa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_clIxCq6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cYjtEq6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_clIxC66kEeqnTrEtlm2ujA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_clIxDK6kEeqnTrEtlm2ujA" name="defi">
+        <modelElement href="Serious-Game.uml#_cYjtEa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIxDa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIxDq6kEeqnTrEtlm2ujA" name="Defi">
+          <modelElement href="Serious-Game.uml#_cWDLoK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_clIxD66kEeqnTrEtlm2ujA" comments="_ck7VIq6kEeqnTrEtlm2ujA" targetConnectionVisual="_ck7VI66kEeqnTrEtlm2ujA" name="setDate">
+      <modelElement href="Serious-Game.uml#_cY65ca6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clIxEK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clIxEa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_clIxEq6kEeqnTrEtlm2ujA" name="date">
+        <modelElement href="Serious-Game.uml#_cY65cq6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clIxE66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clIxFK6kEeqnTrEtlm2ujA" name="LocalDateTime">
+          <modelElement href="Serious-Game.uml#_cYgpwK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_cnLX4K6kEeqnTrEtlm2ujA" comments="_cm5EAK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm5EAa6kEeqnTrEtlm2ujA" name="Question" associationsOut="_clANoK6kEeqnTrEtlm2ujA _cm5rEK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cW-_wK6kEeqnTrEtlm2ujA"/>
+    <visualProperties xmi:id="_cnLX4a6kEeqnTrEtlm2ujA" position="593.0,-282.0" size="334.0,418.0"/>
+    <visibility xmi:id="_cnLX4q6kEeqnTrEtlm2ujA" label="+"/>
+    <attributes xmi:id="_cnLX466kEeqnTrEtlm2ujA" defaultValue="-6111312377771338140L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="Serious-Game.uml#_cZikgK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLX5K6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cnLX5a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cnLX5q6kEeqnTrEtlm2ujA" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cnLX566kEeqnTrEtlm2ujA" defaultValue="0" name="count" staticAttribute="true">
+      <modelElement href="Serious-Game.uml#_cZjLka6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cnLX6K6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZjLkq6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cnLX6a6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLX6q6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cnLX666kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cnLX7K6kEeqnTrEtlm2ujA" name="id">
+      <modelElement href="Serious-Game.uml#_cZkZsK6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cnLX7a6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZkZsa6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cnLX7q6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cnLX766kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cnLX8K6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cnLX8a6kEeqnTrEtlm2ujA" name="titre">
+      <modelElement href="Serious-Game.uml#_cZkZsq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLX8q6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLX866kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cnLX9K6kEeqnTrEtlm2ujA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cnLX9a6kEeqnTrEtlm2ujA" name="contenu">
+      <modelElement href="Serious-Game.uml#_cZlAwK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLX9q6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLX966kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cnLX-K6kEeqnTrEtlm2ujA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cnLX-a6kEeqnTrEtlm2ujA" name="categorie">
+      <modelElement href="Serious-Game.uml#_cZlAwa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLX-q6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLX-66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cnLX_K6kEeqnTrEtlm2ujA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cnLX_a6kEeqnTrEtlm2ujA" name="listeReponses">
+      <modelElement href="Serious-Game.uml#_cZlAwq6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cnLX_q6kEeqnTrEtlm2ujA" name="Generics">
+        <modelElement href="Serious-Game.uml#_cZln0K6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <stereotypes xmi:id="_cnLX_66kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZln0a6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cnLYAK6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cnLYAa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cnLYAq6kEeqnTrEtlm2ujA" name="ArrayList">
+        <modelElement href="Serious-Game.uml#_cYmwYK6kEeqnTrEtlm2ujA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cnLYA66kEeqnTrEtlm2ujA" name="nbTentatives">
+      <modelElement href="Serious-Game.uml#_cZmO4K6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cnLYBK6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZmO4a6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cnLYBa6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cnLYBq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cnLYB66kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cnLYCK6kEeqnTrEtlm2ujA" name="nbJuste">
+      <modelElement href="Serious-Game.uml#_cZmO4q6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYCa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYCq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cnLYC66kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_cnLYDK6kEeqnTrEtlm2ujA" comments="_cm5rEa6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm6SIK6kEeqnTrEtlm2ujA" name="Question">
+      <modelElement href="Serious-Game.uml#_cXA08K6kEeqnTrEtlm2ujA"/>
+      <keywords xmi:id="_cnLYDa6kEeqnTrEtlm2ujA" keyword="create"/>
+      <visibility xmi:id="_cnLYDq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYD66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cnLYEK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cXA0866kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cnLYEa6kEeqnTrEtlm2ujA" name="Question">
+          <modelElement href="Serious-Game.uml#_cW-_wK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cnLYEq6kEeqnTrEtlm2ujA" comments="_cm6SIa6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm6SIq6kEeqnTrEtlm2ujA" name="Question">
+      <modelElement href="Serious-Game.uml#_cXA09K6kEeqnTrEtlm2ujA"/>
+      <keywords xmi:id="_cnLYE66kEeqnTrEtlm2ujA" keyword="create"/>
+      <visibility xmi:id="_cnLYFK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYFa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cnLYFq6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cXBcBK6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cnLYF66kEeqnTrEtlm2ujA" name="Question">
+          <modelElement href="Serious-Game.uml#_cW-_wK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_cnLYGK6kEeqnTrEtlm2ujA" name="titre">
+        <modelElement href="Serious-Game.uml#_cXA09a6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYGa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYGq6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_cnLYG66kEeqnTrEtlm2ujA" name="contenu">
+        <modelElement href="Serious-Game.uml#_cXBcAK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYHK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYHa6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_cnLYHq6kEeqnTrEtlm2ujA" name="categorie">
+        <modelElement href="Serious-Game.uml#_cXBcAa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYH66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYIK6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYIa6kEeqnTrEtlm2ujA" comments="_cm65MK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm65Ma6kEeqnTrEtlm2ujA" name="getID">
+      <modelElement href="Serious-Game.uml#_cXBcBa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYIq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYI66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cnLYJK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cXBcBq6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cnLYJa6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cnLYJq6kEeqnTrEtlm2ujA" comments="_cm65Mq6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm65M66kEeqnTrEtlm2ujA" name="setID">
+      <modelElement href="Serious-Game.uml#_cXCDEK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYJ66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYKK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cnLYKa6kEeqnTrEtlm2ujA" name="id">
+        <modelElement href="Serious-Game.uml#_cXCDEa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYKq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYK66kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYLK6kEeqnTrEtlm2ujA" comments="_cm7gQK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm8HUK6kEeqnTrEtlm2ujA" name="setTitre">
+      <modelElement href="Serious-Game.uml#_cXCDEq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYLa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYLq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cnLYL66kEeqnTrEtlm2ujA" name="titre">
+        <modelElement href="Serious-Game.uml#_cXCDE66kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYMK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYMa6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYMq6kEeqnTrEtlm2ujA" comments="_cm8HUa6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm8HUq6kEeqnTrEtlm2ujA" name="setContenu">
+      <modelElement href="Serious-Game.uml#_cXCqIK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYM66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYNK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cnLYNa6kEeqnTrEtlm2ujA" name="contenu">
+        <modelElement href="Serious-Game.uml#_cXCqIa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYNq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYN66kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYOK6kEeqnTrEtlm2ujA" comments="_cm8uYK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm8uYa6kEeqnTrEtlm2ujA" name="getReponses">
+      <modelElement href="Serious-Game.uml#_cXCqIq6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cnLYOa6kEeqnTrEtlm2ujA" name="Generics">
+        <modelElement href="Serious-Game.uml#_cXFGYK6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cnLYOq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYO66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cnLYPK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cZC1QK6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cnLYPa6kEeqnTrEtlm2ujA" name="ArrayList">
+          <modelElement href="Serious-Game.uml#_cYmwYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cnLYPq6kEeqnTrEtlm2ujA" comments="_cm8uYq6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm8uY66kEeqnTrEtlm2ujA" name="addReponse">
+      <modelElement href="Serious-Game.uml#_cXFGYa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYP66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYQK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cnLYQa6kEeqnTrEtlm2ujA" name="reponse">
+        <modelElement href="Serious-Game.uml#_cXFtcK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYQq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYQ66kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYRK6kEeqnTrEtlm2ujA" comments="_cm9VcK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm9Vca6kEeqnTrEtlm2ujA" name="delReponse">
+      <modelElement href="Serious-Game.uml#_cXFtca6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYRa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYRq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cnLYR66kEeqnTrEtlm2ujA" name="reponse">
+        <modelElement href="Serious-Game.uml#_cXFtcq6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYSK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYSa6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYSq6kEeqnTrEtlm2ujA" comments="_cm9Vcq6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm9Vc66kEeqnTrEtlm2ujA" name="setCategorie">
+      <modelElement href="Serious-Game.uml#_cXFtc66kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYS66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYTK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cnLYTa6kEeqnTrEtlm2ujA" name="categorie">
+        <modelElement href="Serious-Game.uml#_cXFtdK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYTq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYT66kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYUK6kEeqnTrEtlm2ujA" comments="_cm9VdK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm9Vda6kEeqnTrEtlm2ujA" name="getTentatives">
+      <modelElement href="Serious-Game.uml#_cXGUgK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYUa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYUq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cnLYU66kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cXGUga6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cnLYVK6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cnLYVa6kEeqnTrEtlm2ujA" comments="_cm98gK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cm-jkK6kEeqnTrEtlm2ujA" name="setTentatives">
+      <modelElement href="Serious-Game.uml#_cXGUgq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYVq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYV66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cnLYWK6kEeqnTrEtlm2ujA" name="nbTentatives">
+        <modelElement href="Serious-Game.uml#_cXGUg66kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYWa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYWq6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYW66kEeqnTrEtlm2ujA" comments="_cnAYwK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cnAYwa6kEeqnTrEtlm2ujA" name="setNbJuste">
+      <modelElement href="Serious-Game.uml#_cXG7kK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYXK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYXa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cnLYXq6kEeqnTrEtlm2ujA" name="nbJuste">
+        <modelElement href="Serious-Game.uml#_cXG7ka6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYX66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYYK6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYYa6kEeqnTrEtlm2ujA" comments="_cnBm4K6kEeqnTrEtlm2ujA" targetConnectionVisual="_cnCN8K6kEeqnTrEtlm2ujA" name="toString">
+      <modelElement href="Serious-Game.uml#_cXG7kq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYYq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYY66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cnLYZK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cXG7k66kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cnLYZa6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cnLYZq6kEeqnTrEtlm2ujA" comments="_cnDcEK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cnDcEa6kEeqnTrEtlm2ujA" name="equals">
+      <modelElement href="Serious-Game.uml#_cYxIcK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYZ66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYaK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cnLYaa6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cYxvga6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cnLYaq6kEeqnTrEtlm2ujA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_cnLYa66kEeqnTrEtlm2ujA" name="question">
+        <modelElement href="Serious-Game.uml#_cYxvgK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYbK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYba6kEeqnTrEtlm2ujA" name="Question">
+          <modelElement href="Serious-Game.uml#_cW-_wK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cnLYbq6kEeqnTrEtlm2ujA" comments="_cnEDIK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cnEDIa6kEeqnTrEtlm2ujA" name="setReponses">
+      <modelElement href="Serious-Game.uml#_cZEDYK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnLYb66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnLYcK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cnLYca6kEeqnTrEtlm2ujA" name="liste">
+        <modelElement href="Serious-Game.uml#_cZEDYa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnLYcq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnLYc66kEeqnTrEtlm2ujA" name="ArrayList">
+          <modelElement href="Serious-Game.uml#_cYmwYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_cmvTCa6kEeqnTrEtlm2ujA" name="Bulletin" associationsIn="_cl4-cK6kEeqnTrEtlm2ujA" associationsOut="_cmvTAK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cWfQgK6kEeqnTrEtlm2ujA"/>
+    <visualProperties xmi:id="_cmvTCq6kEeqnTrEtlm2ujA" position="606.0,312.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_cmvTC66kEeqnTrEtlm2ujA" label="+"/>
+    <attributes xmi:id="_cmvTDK6kEeqnTrEtlm2ujA" defaultValue="8311730116008434511L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="Serious-Game.uml#_cZVwMK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTDa6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cmvTDq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cmvTD66kEeqnTrEtlm2ujA" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cmvTEK6kEeqnTrEtlm2ujA" defaultValue="0" name="count" staticAttribute="true">
+      <modelElement href="Serious-Game.uml#_cZWXQa6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cmvTEa6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZW-UK6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cmvTEq6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cmvTE66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cmvTFK6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cmvTFa6kEeqnTrEtlm2ujA" name="id">
+      <modelElement href="Serious-Game.uml#_cZW-Ua6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cmvTFq6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZW-Uq6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cmvTF66kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cmvTGK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cmvTGa6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cmvTGq6kEeqnTrEtlm2ujA" name="listeNotes">
+      <modelElement href="Serious-Game.uml#_cZW-U66kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cmvTG66kEeqnTrEtlm2ujA" name="Generics">
+        <modelElement href="Serious-Game.uml#_cZXlYK6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cmvTHK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTHa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cmvTHq6kEeqnTrEtlm2ujA" name="ArrayList">
+        <modelElement href="Serious-Game.uml#_cYmwYK6kEeqnTrEtlm2ujA"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_cmvTH66kEeqnTrEtlm2ujA" name="Bulletin">
+      <modelElement href="Serious-Game.uml#_cWgeoK6kEeqnTrEtlm2ujA"/>
+      <keywords xmi:id="_cmvTIK6kEeqnTrEtlm2ujA" keyword="create"/>
+      <visibility xmi:id="_cmvTIa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTIq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cmvTI66kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWhFsa6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cmvTJK6kEeqnTrEtlm2ujA" name="Bulletin">
+          <modelElement href="Serious-Game.uml#_cWfQgK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cmvTJa6kEeqnTrEtlm2ujA" comments="_cmqagK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cmqaga6kEeqnTrEtlm2ujA" name="getID">
+      <modelElement href="Serious-Game.uml#_cWhswK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTJq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTJ66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cmvTKK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWiT0K6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cmvTKa6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cmvTKq6kEeqnTrEtlm2ujA" comments="_cmqagq6kEeqnTrEtlm2ujA" targetConnectionVisual="_cmqag66kEeqnTrEtlm2ujA" name="setID">
+      <modelElement href="Serious-Game.uml#_cWjh8K6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTK66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTLK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cmvTLa6kEeqnTrEtlm2ujA" name="id">
+        <modelElement href="Serious-Game.uml#_cWkJAK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cmvTLq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cmvTL66kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cmvTMK6kEeqnTrEtlm2ujA" comments="_cmrBkK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cmrBka6kEeqnTrEtlm2ujA" name="addNote">
+      <modelElement href="Serious-Game.uml#_cWlXIK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTMa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTMq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cmvTM66kEeqnTrEtlm2ujA" name="note">
+        <modelElement href="Serious-Game.uml#_cWlXIa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cmvTNK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cmvTNa6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cmvTNq6kEeqnTrEtlm2ujA" comments="_cmrBkq6kEeqnTrEtlm2ujA" targetConnectionVisual="_cmrBk66kEeqnTrEtlm2ujA" name="delNote">
+      <modelElement href="Serious-Game.uml#_cWl-MK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTN66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTOK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cmvTOa6kEeqnTrEtlm2ujA" name="index">
+        <modelElement href="Serious-Game.uml#_cWl-Ma6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cmvTOq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cmvTO66kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cmvTPK6kEeqnTrEtlm2ujA" comments="_cmrooK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cmrooa6kEeqnTrEtlm2ujA" name="toString">
+      <modelElement href="Serious-Game.uml#_cWl-Mq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTPa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTPq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cmvTP66kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWl-M66kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cmvTQK6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cmvTQa6kEeqnTrEtlm2ujA" comments="_cmrooq6kEeqnTrEtlm2ujA" targetConnectionVisual="_cmroo66kEeqnTrEtlm2ujA" name="equals">
+      <modelElement href="Serious-Game.uml#_cYqawK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTQq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTQ66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cmvTRK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cYro4K6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cmvTRa6kEeqnTrEtlm2ujA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_cmvTRq6kEeqnTrEtlm2ujA" name="bulletin">
+        <modelElement href="Serious-Game.uml#_cYrB0K6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cmvTR66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cmvTSK6kEeqnTrEtlm2ujA" name="Bulletin">
+          <modelElement href="Serious-Game.uml#_cWfQgK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cmvTSa6kEeqnTrEtlm2ujA" comments="_cmsPsK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cmsPsa6kEeqnTrEtlm2ujA" name="setListeNote">
+      <modelElement href="Serious-Game.uml#_cY9VsK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cmvTSq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cmvTS66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cmvTTK6kEeqnTrEtlm2ujA" name="listeNotes">
+        <modelElement href="Serious-Game.uml#_cY98wK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cmvTTa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cmvTTq6kEeqnTrEtlm2ujA" name="ArrayList">
+          <modelElement href="Serious-Game.uml#_cYmwYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_clf84K6kEeqnTrEtlm2ujA" name="Mail">
+    <modelElement href="Serious-Game.uml#_cWBWcq6kEeqnTrEtlm2ujA"/>
+    <visualProperties xmi:id="_clf84a6kEeqnTrEtlm2ujA" position="-782.0,377.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_clf84q6kEeqnTrEtlm2ujA" label="+"/>
+    <operations xmi:id="_clf8466kEeqnTrEtlm2ujA" name="sendMail" staticOperation="true">
+      <modelElement href="Serious-Game.uml#_cWCkkK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_clf85K6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_clf85a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_clf85q6kEeqnTrEtlm2ujA" name="destinataire">
+        <modelElement href="Serious-Game.uml#_cWCkka6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clf8566kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clf86K6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_clf86a6kEeqnTrEtlm2ujA" name="titre">
+        <modelElement href="Serious-Game.uml#_cWCkkq6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clf86q6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clf8666kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_clf87K6kEeqnTrEtlm2ujA" name="contenu">
+        <modelElement href="Serious-Game.uml#_cWCkk66kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_clf87a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_clf87q6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_cnoq4K6kEeqnTrEtlm2ujA" name="Password">
+    <modelElement href="Serious-Game.uml#_cV_hQK6kEeqnTrEtlm2ujA"/>
+    <visualProperties xmi:id="_cnoq4a6kEeqnTrEtlm2ujA" position="-786.0,451.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_cnoq4q6kEeqnTrEtlm2ujA" label="+"/>
+    <operations xmi:id="_cnoq466kEeqnTrEtlm2ujA" name="encryptPassword" staticOperation="true">
+      <modelElement href="Serious-Game.uml#_cWAvYK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cnoq5K6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cnoq5a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cnoq5q6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWBWca6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cnoq566kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_cnoq6K6kEeqnTrEtlm2ujA" name="password">
+        <modelElement href="Serious-Game.uml#_cWBWcK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cnoq6a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cnoq6q6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_cl4-ea6kEeqnTrEtlm2ujA" comments="_clkOUK6kEeqnTrEtlm2ujA" targetConnectionVisual="_clkOUa6kEeqnTrEtlm2ujA" name="Player" associationsIn="_clFtMK6kEeqnTrEtlm2ujA" associationsOut="_clA0sK6kEeqnTrEtlm2ujA _cl4-cK6kEeqnTrEtlm2ujA">
+    <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+    <visualProperties xmi:id="_cl4-eq6kEeqnTrEtlm2ujA" position="-801.0,-296.0" size="690.0,650.0"/>
+    <visibility xmi:id="_cl4-e66kEeqnTrEtlm2ujA" label="+"/>
+    <attributes xmi:id="_cl4-fK6kEeqnTrEtlm2ujA" defaultValue="8093318821280100491L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="Serious-Game.uml#_cZYMcK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-fa6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cl4-fq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-f66kEeqnTrEtlm2ujA" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-gK6kEeqnTrEtlm2ujA" defaultValue="0" name="count" staticAttribute="true">
+      <modelElement href="Serious-Game.uml#_cZYzgK6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cl4-ga6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZYzga6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cl4-gq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-g66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-hK6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-ha6kEeqnTrEtlm2ujA" name="id">
+      <modelElement href="Serious-Game.uml#_cZZakq6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cl4-hq6kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZaBoK6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cl4-h66kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cl4-iK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-ia6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-iq6kEeqnTrEtlm2ujA" name="nom">
+      <modelElement href="Serious-Game.uml#_cZaBoa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-i66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-jK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-ja6kEeqnTrEtlm2ujA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-jq6kEeqnTrEtlm2ujA" name="prenom">
+      <modelElement href="Serious-Game.uml#_cZaBoq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-j66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-kK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-ka6kEeqnTrEtlm2ujA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-kq6kEeqnTrEtlm2ujA" name="age">
+      <modelElement href="Serious-Game.uml#_cZaBo66kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-k66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-lK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-la6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-lq6kEeqnTrEtlm2ujA" name="mail">
+      <modelElement href="Serious-Game.uml#_cZaosK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-l66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-mK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-ma6kEeqnTrEtlm2ujA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-mq6kEeqnTrEtlm2ujA" name="licence">
+      <modelElement href="Serious-Game.uml#_cZaosa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-m66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-nK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-na6kEeqnTrEtlm2ujA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-nq6kEeqnTrEtlm2ujA" name="username">
+      <modelElement href="Serious-Game.uml#_cZaosq6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-n66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-oK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-oa6kEeqnTrEtlm2ujA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-oq6kEeqnTrEtlm2ujA" name="password">
+      <modelElement href="Serious-Game.uml#_cZbPwK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-o66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-pK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-pa6kEeqnTrEtlm2ujA" name="String">
+        <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-pq6kEeqnTrEtlm2ujA" name="myBulletin">
+      <modelElement href="Serious-Game.uml#_cZbPwa6kEeqnTrEtlm2ujA"/>
+      <stereotypes xmi:id="_cl4-p66kEeqnTrEtlm2ujA" name="LegacyStyledElement">
+        <modelElement href="Serious-Game.uml#_cZbPwq6kEeqnTrEtlm2ujA"/>
+      </stereotypes>
+      <visibility xmi:id="_cl4-qK6kEeqnTrEtlm2ujA" label="-"/>
+      <cardinality xmi:id="_cl4-qa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-qq6kEeqnTrEtlm2ujA" name="Bulletin">
+        <modelElement href="Serious-Game.uml#_cWfQgK6kEeqnTrEtlm2ujA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-q66kEeqnTrEtlm2ujA" name="vie">
+      <modelElement href="Serious-Game.uml#_cZdE8K6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-rK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-ra6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-rq6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-r66kEeqnTrEtlm2ujA" name="score">
+      <modelElement href="Serious-Game.uml#_cZeTEK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-sK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-sa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-sq6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-s66kEeqnTrEtlm2ujA" name="defis">
+      <modelElement href="Serious-Game.uml#_cZeTEa6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-tK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-ta6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-tq6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-t66kEeqnTrEtlm2ujA" name="defisReussis">
+      <modelElement href="Serious-Game.uml#_cZfhMK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-uK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-ua6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-uq6kEeqnTrEtlm2ujA" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_cl4-u66kEeqnTrEtlm2ujA" name="admin">
+      <modelElement href="Serious-Game.uml#_cZgIQK6kEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-vK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-va6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <type xmi:id="_cl4-vq6kEeqnTrEtlm2ujA" name="boolean">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_cl4-v66kEeqnTrEtlm2ujA" comments="_cllccK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cllcca6kEeqnTrEtlm2ujA" name="Player">
+      <modelElement href="Serious-Game.uml#_cWqPoK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a36kQK6lEeqnTrEtlm2ujA"/>
+      <keywords xmi:id="_cl4-wK6kEeqnTrEtlm2ujA" keyword="create"/>
+      <visibility xmi:id="_cl4-wa6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-wq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cl4-w66kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWqPo66kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cl4-xK6kEeqnTrEtlm2ujA" name="Player">
+          <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cl4-xa6kEeqnTrEtlm2ujA" comments="_clmDgK6kEeqnTrEtlm2ujA" targetConnectionVisual="_clmqkK6kEeqnTrEtlm2ujA" name="Player">
+      <modelElement href="Serious-Game.uml#_cWrdwK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a37LUK6lEeqnTrEtlm2ujA"/>
+      <keywords xmi:id="_cl4-xq6kEeqnTrEtlm2ujA" keyword="create"/>
+      <visibility xmi:id="_cl4-x66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-yK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cl4-ya6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWsE0q6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cl4-yq6kEeqnTrEtlm2ujA" name="Player">
+          <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_cl4-y66kEeqnTrEtlm2ujA" name="nom">
+        <modelElement href="Serious-Game.uml#_cWrdwa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl4-zK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl4-za6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_cl4-zq6kEeqnTrEtlm2ujA" name="prenom">
+        <modelElement href="Serious-Game.uml#_cWrdwq6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl4-z66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl4-0K6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_cl4-0a6kEeqnTrEtlm2ujA" name="age">
+        <modelElement href="Serious-Game.uml#_cWrdw66kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl4-0q6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl4-066kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_cl4-1K6kEeqnTrEtlm2ujA" name="mail">
+        <modelElement href="Serious-Game.uml#_cWrdxK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl4-1a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl4-1q6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_cl4-166kEeqnTrEtlm2ujA" name="licence">
+        <modelElement href="Serious-Game.uml#_cWrdxa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl4-2K6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl4-2a6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_cl4-2q6kEeqnTrEtlm2ujA" name="username">
+        <modelElement href="Serious-Game.uml#_cWrdxq6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl4-266kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl4-3K6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_cl4-3a6kEeqnTrEtlm2ujA" name="password">
+        <modelElement href="Serious-Game.uml#_cWrdx66kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl4-3q6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl4-366kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl4-4K6kEeqnTrEtlm2ujA" comments="_clnRoK6kEeqnTrEtlm2ujA" targetConnectionVisual="_clnRoa6kEeqnTrEtlm2ujA" name="getID">
+      <modelElement href="Serious-Game.uml#_cWsE066kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a37LUa6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-4a6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-4q6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cl4-466kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cWsr4K6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cl4-5K6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cl4-5a6kEeqnTrEtlm2ujA" comments="_clnRoq6kEeqnTrEtlm2ujA" targetConnectionVisual="_clnRo66kEeqnTrEtlm2ujA" name="setID">
+      <modelElement href="Serious-Game.uml#_cWsr4a6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a37LUq6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl4-5q6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl4-566kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl4-6K6kEeqnTrEtlm2ujA" name="id">
+        <modelElement href="Serious-Game.uml#_cWsr4q6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl4-6a6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl4-6q6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl4-666kEeqnTrEtlm2ujA" comments="_clpt4K6kEeqnTrEtlm2ujA" targetConnectionVisual="_clpt4a6kEeqnTrEtlm2ujA" name="setNom">
+      <modelElement href="Serious-Game.uml#_cWt6AK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a37LU66lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lgK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lga6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5lgq6kEeqnTrEtlm2ujA" name="nom">
+        <modelElement href="Serious-Game.uml#_cWuhEK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5lg66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5lhK6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5lha6kEeqnTrEtlm2ujA" comments="_clqU8K6kEeqnTrEtlm2ujA" targetConnectionVisual="_clqU8a6kEeqnTrEtlm2ujA" name="setPrenom">
+      <modelElement href="Serious-Game.uml#_cWvvMK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a37LVK6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lhq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lh66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5liK6kEeqnTrEtlm2ujA" name="prenom">
+        <modelElement href="Serious-Game.uml#_cWwWQK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5lia6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5liq6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5li66kEeqnTrEtlm2ujA" comments="_clq8AK6kEeqnTrEtlm2ujA" targetConnectionVisual="_clsKIK6kEeqnTrEtlm2ujA" name="setAge">
+      <modelElement href="Serious-Game.uml#_cWwWQa6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a37yYK6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5ljK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lja6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5ljq6kEeqnTrEtlm2ujA" name="age">
+        <modelElement href="Serious-Game.uml#_cWw9UK6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5lj66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5lkK6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5lka6kEeqnTrEtlm2ujA" comments="_clsxMK6kEeqnTrEtlm2ujA" targetConnectionVisual="_clsxMa6kEeqnTrEtlm2ujA" name="setMail">
+      <modelElement href="Serious-Game.uml#_cWxkYK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a37yYa6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lkq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lk66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5llK6kEeqnTrEtlm2ujA" name="mail">
+        <modelElement href="Serious-Game.uml#_cWxkYa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5lla6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5llq6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5ll66kEeqnTrEtlm2ujA" comments="_clsxMq6kEeqnTrEtlm2ujA" targetConnectionVisual="_clsxM66kEeqnTrEtlm2ujA" name="setLicence">
+      <modelElement href="Serious-Game.uml#_cWyLcK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a37yYq6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lmK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lma6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5lmq6kEeqnTrEtlm2ujA" name="licence">
+        <modelElement href="Serious-Game.uml#_cWyLca6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5lm66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5lnK6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5lna6kEeqnTrEtlm2ujA" comments="_cltYQK6kEeqnTrEtlm2ujA" targetConnectionVisual="_cltYQa6kEeqnTrEtlm2ujA" name="setUsername">
+      <modelElement href="Serious-Game.uml#_cW110K6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a37yY66lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lnq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5ln66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5loK6kEeqnTrEtlm2ujA" name="username">
+        <modelElement href="Serious-Game.uml#_cW2c4K6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5loa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5loq6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5lo66kEeqnTrEtlm2ujA" comments="_clt_UK6kEeqnTrEtlm2ujA" targetConnectionVisual="_clt_Ua6kEeqnTrEtlm2ujA" name="setPassword">
+      <modelElement href="Serious-Game.uml#_cW3rAK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a38ZcK6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lpK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lpa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5lpq6kEeqnTrEtlm2ujA" name="password">
+        <modelElement href="Serious-Game.uml#_cW3rAa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5lp66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5lqK6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5lqa6kEeqnTrEtlm2ujA" name="getBulletin">
+      <modelElement href="Serious-Game.uml#_cW4SEK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a38Zca6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lqq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lq66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cl5lrK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cYteEK6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cl5lra6kEeqnTrEtlm2ujA" name="Bulletin">
+          <modelElement href="Serious-Game.uml#_cWfQgK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cl5lrq6kEeqnTrEtlm2ujA" comments="_clt_Uq6kEeqnTrEtlm2ujA" targetConnectionVisual="_clumYK6kEeqnTrEtlm2ujA" name="setVie">
+      <modelElement href="Serious-Game.uml#_cW4SEa6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a38Zcq6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lr66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lsK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5lsa6kEeqnTrEtlm2ujA" name="vie">
+        <modelElement href="Serious-Game.uml#_cW4SEq6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5lsq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5ls66kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5ltK6kEeqnTrEtlm2ujA" comments="_clv0gK6kEeqnTrEtlm2ujA" targetConnectionVisual="_clv0ga6kEeqnTrEtlm2ujA" name="setScore">
+      <modelElement href="Serious-Game.uml#_cW45IK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a38Zc66lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lta6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5ltq6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5lt66kEeqnTrEtlm2ujA" name="score">
+        <modelElement href="Serious-Game.uml#_cW45Ia6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5luK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5lua6kEeqnTrEtlm2ujA" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5luq6kEeqnTrEtlm2ujA" comments="_clv0gq6kEeqnTrEtlm2ujA" targetConnectionVisual="_clwbkK6kEeqnTrEtlm2ujA" name="toString">
+      <modelElement href="Serious-Game.uml#_cW45Iq6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a38ZdK6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lu66kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lvK6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cl5lva6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cW7VYK6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cl5lvq6kEeqnTrEtlm2ujA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_cl5lv66kEeqnTrEtlm2ujA" name="setBulletin">
+      <modelElement href="Serious-Game.uml#_cYteEa6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a38Zda6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lwK6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lwa6kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <parameters xmi:id="_cl5lwq6kEeqnTrEtlm2ujA" name="bulletin">
+        <modelElement href="Serious-Game.uml#_cYteEq6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5lw66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5lxK6kEeqnTrEtlm2ujA" name="Bulletin">
+          <modelElement href="Serious-Game.uml#_cWfQgK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_cl5lxa6kEeqnTrEtlm2ujA" comments="_clxCoK6kEeqnTrEtlm2ujA" targetConnectionVisual="_clxCoa6kEeqnTrEtlm2ujA" name="equals">
+      <modelElement href="Serious-Game.uml#_cYuFIK6kEeqnTrEtlm2ujA"/>
+      <visualProperties xmi:id="_a38Zdq6lEeqnTrEtlm2ujA"/>
+      <visibility xmi:id="_cl5lxq6kEeqnTrEtlm2ujA" label="+"/>
+      <cardinality xmi:id="_cl5lx66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_cl5lyK6kEeqnTrEtlm2ujA">
+        <modelElement href="Serious-Game.uml#_cYuFIq6kEeqnTrEtlm2ujA"/>
+        <type xmi:id="_cl5lya6kEeqnTrEtlm2ujA" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_cl5lyq6kEeqnTrEtlm2ujA" name="player">
+        <modelElement href="Serious-Game.uml#_cYuFIa6kEeqnTrEtlm2ujA"/>
+        <cardinality xmi:id="_cl5ly66kEeqnTrEtlm2ujA" label="1" max="1" min="1"/>
+        <type xmi:id="_cl5lzK6kEeqnTrEtlm2ujA" name="Player">
+          <modelElement href="Serious-Game.uml#_cWnzYK6kEeqnTrEtlm2ujA"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

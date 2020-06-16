@@ -17,16 +17,31 @@ import Interface.GUI;
 import v1.Defi;
 import v1.Player;
 
+/**
+ * Fenêtre utilisateur pour afficher son profil
+ * @author Guillaume
+ */
 public class Profil {
+	// VARS //
 	GUI myGui;
 	JFrame frame;
 	
+	/**
+	 * Constructeur de la classe Profil
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public Profil(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 * @param id - L'id du joueur à afficher
+	 */
 	public void repaint(int id) {
+		// On récupère le panel principal
 		Container panel = frame.getContentPane();
 		panel.removeAll();
 		panel.revalidate();

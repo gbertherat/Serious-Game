@@ -26,17 +26,31 @@ import v1.Defi;
 import v1.Player;
 import v1.Question;
 
+/**
+ * Fenêtre utilisateur pour envoyer une question personnalisée
+ * @author Guillaume
+ */
 public class SendCustomQuestion {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 
+	/**
+	 * Constructeur de la classe SendCustomQuestion
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public SendCustomQuestion(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 */
 	public void repaint() {
-		if(GUI.idSession != 0) {			
+		if(GUI.idSession != 0) {
+			// On récupère le panel principal //
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
@@ -156,10 +170,14 @@ public class SendCustomQuestion {
 			JPanel sendPanel = Factory.addPanel();
 			
 			JButton sendButton = Factory.addButton("Envoyer!", 100, 75);
+			
+			/**
+			 * Permet d'envoyer le défi
+			 */
 			sendButton.addActionListener(new ActionListener() {
-	
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
+					// On récupère les données entrées
 					String fieldTitre = titreField.getText();
 					String fieldCategorie = categorieBox.getSelectedItem().toString();
 					String fieldQuestion = contenuField.getText();
@@ -172,6 +190,7 @@ public class SendCustomQuestion {
 						return;
 					}
 					
+					// On vérifie ces données
 					if(fieldTitre.length() < 3) {
 						messageLabel.setText("Erreur : Titre invalide (< 3 caractères)");
 						return;
@@ -189,6 +208,7 @@ public class SendCustomQuestion {
 					boolean error = true;
 					Question newQuestion = new Question(fieldTitre, fieldQuestion, fieldCategorie);
 					
+					// On récupère les questions entrées
 					newQuestion.setReponses(new ArrayList<String>());
 					String[] allReponses = fieldReponse.split(";");
 					for(String r : allReponses) {

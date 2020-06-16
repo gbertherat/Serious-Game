@@ -15,17 +15,31 @@ import javax.swing.JPanel;
 import Components.Factory;
 import Interface.GUI;
 
+/**
+ * Fenêtre utilisateur pour afficher la liste des questions existantes
+ * @author Guillaume
+ */
 public class SendQuestionPanel {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe SendQuestionPanel
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public SendQuestionPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 */
 	public void repaint() {
 		if(GUI.idSession != 0) {
+			// On récupère le panel principal
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();

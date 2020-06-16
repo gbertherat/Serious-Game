@@ -23,19 +23,33 @@ import Interface.GUI;
 import v1.Player;
 import v1.Question;
 
+/**
+ * Fenêtre administrateur pour ajouter une question
+ * @author Guillaume
+ */
 public class AdminAddQuestion {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe AdminAddQuestion
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public AdminAddQuestion(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 */
 	public void repaint() {
 		if(GUI.idSession != 0) {
 			Player selected = myGui.getPlayer(GUI.idSession);
-			if(selected.isAdmin()) {
+			if(selected.isAdmin()) { // Si le joueur est un administrateur
+				// On récupère le panel principal
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();
@@ -127,10 +141,12 @@ public class AdminAddQuestion {
 				validButton.addActionListener(new ActionListener() {
 					@Override
 					public void actionPerformed(ActionEvent e) {
+						// On récupère les données entrées
 						String titre = titleField.getText();
 						String categorie = categorieBox.getSelectedItem().toString();
 						String contenu = contenuField.getText();
 						
+						// On vérifie ces données
 						if(titre.isEmpty()) {
 							messageLabel.setText("Erreur: Titre invalide");
 							return;
@@ -146,6 +162,7 @@ public class AdminAddQuestion {
 						
 						panel.remove(validPanel);
 						
+						// On créé un nouvel objet Question
 						Question newQuestion = new Question(titre, contenu, categorie);
 						for(String s : reponses) {
 							newQuestion.addReponse(s.toLowerCase());

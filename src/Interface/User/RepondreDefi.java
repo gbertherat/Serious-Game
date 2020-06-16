@@ -23,20 +23,35 @@ import v1.Defi;
 import v1.Player;
 import v1.Question;
 
+/**
+ * Fenêtre utilisateur pour répondre à un défi
+ * @author Guillaume
+ */
 public class RepondreDefi {
+	// VAR //
 	private GUI myGui;
 	private JFrame frame;
 	private int time;
 	private static Timer temps = null;
 	private static int nbPress = 0;
 	
+	/**
+	 * Constructeur de la classe RepondreDefi
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public RepondreDefi(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre 
+	 * @param id - Id du défi afficher
+	 */
 	public void repaint(int id) {
 		if(GUI.idSession != 0) {
+			// On récupère le panel principal //
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
@@ -176,6 +191,9 @@ public class RepondreDefi {
 			JButton delButton = Factory.addButton("Abandonner", 110, 30);
 			delButton.setForeground(Color.red);
 			
+			/**
+			 * L'utilisateur a 60 secondes pour répondre
+			 */
 			ActionListener TempsDefi = new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
@@ -208,6 +226,9 @@ public class RepondreDefi {
 			temps = new Timer(1000, TempsDefi);
 			temps.start();
 			
+			/**
+			 * Permet d'envoyer sa réponse
+			 */
 			validButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
@@ -229,9 +250,10 @@ public class RepondreDefi {
 						Timer timer = new Timer(2000, panel);
 						timer.start();
 						timer.setRepeats(false);
-						if(question.getReponses().contains(fieldReponse)) {
+						if(question.getReponses().contains(fieldReponse)) { // On vérifie les réponses
 							messageLabel.setText("Bonne réponse!");
 							
+							// L'utilisateur gagne des points de vie et son score diminue
 							defiSel.getExpediteur().setVie(defiSel.getExpediteur().getVie()-defiSel.getPoints());
 							selected.setVie(selected.getVie()+defiSel.getPoints());
 							
@@ -239,6 +261,7 @@ public class RepondreDefi {
 							selected.setDefisReussis(selected.getDefisReussis()+1);
 						} else {
 							messageLabel.setText("Mauvaise réponse");
+							// L'utilisateur perds des points de vie et son score diminue
 							defiSel.getExpediteur().setVie(defiSel.getExpediteur().getVie()+(10-defiSel.getPoints()));
 							selected.setVie(selected.getVie()-(10-defiSel.getPoints()));
 							
@@ -249,6 +272,9 @@ public class RepondreDefi {
 				}
 			});
 			
+			/**
+			 * Permet d'abandonner le défi
+			 */
 			delButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent arg0) {
@@ -261,6 +287,7 @@ public class RepondreDefi {
 						buttonsPanel.remove(delButton);
 						nbPress = 0;
 						
+						// L'utilisateur perds des points de vie et son score diminue
 						defiSel.getExpediteur().setVie(defiSel.getExpediteur().getVie()+(10-defiSel.getPoints()));
 						selected.setVie(selected.getVie()-(10-defiSel.getPoints()));
 						

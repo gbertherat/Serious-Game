@@ -30,11 +30,21 @@ import v1.Defi;
 import v1.Player;
 import v1.Question;
 
+/**
+ * Fenêtre administrateur pour vérifier une question
+ * @author Guillaume
+ */
 public class AdminVerifyQuestion {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	private static int nbPress = 0;
 	
+	/**
+	 * Constructeur de la classe AdminVerifyQuestion
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public AdminVerifyQuestion(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
@@ -43,7 +53,8 @@ public class AdminVerifyQuestion {
 	public void repaint(int id) {
 		if(GUI.idSession != 0) {
 			Player selected = myGui.getPlayer(GUI.idSession);
-			if(selected.isAdmin()) {
+			if(selected.isAdmin()) { // Si le joueur est un administrateur
+				// On récupère le panel principal
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();

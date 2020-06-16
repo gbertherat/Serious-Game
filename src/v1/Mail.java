@@ -10,7 +10,18 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+/**
+ * Classe pour envoyer un mail
+ * @author Guillaume
+ */
 public class Mail {
+	
+	/**
+	 * Permet l'envoi d'un mail
+	 * @param destinataire - Mail destinataire
+	 * @param titre - Titre du mail
+	 * @param contenu - Contenu du mail
+	 */
 	public static void sendMail(String destinataire, String titre, String contenu) {
 		final String username = "unc.serious.game@gmail.com";
         final String password = "3kncB9VRC4EJuvA#@xnJ";

@@ -20,7 +20,7 @@ import v1.Defi;
 import v1.Player;
 
 /**
- * La classe AccepterDefi correspond à la fenêtre affichant tous les défis disponibles et de pouvoir en accepter un.
+ * Fenêtre utilisateur affichant tous les défis en attente.
  * @author Guillaume
  */
 public class DefisPanel {
@@ -28,7 +28,7 @@ public class DefisPanel {
 	JFrame frame;
 	
 	/**
-	 * Constructeur de la classe AccepterDefi
+	 * Constructeur de la classe DefisPanel
 	 * @param myGui - Le GUI
 	 * @param frame - La frame du GUI
 	 */
@@ -38,7 +38,7 @@ public class DefisPanel {
 	}
 	
 	/**
-	 * Permet d'afficher la fenêtre pour accepter un défi
+	 * Permet l'affichage de la fenêtre
 	 * @param index - Le numéro de la page
 	 */
 	public void repaint(int index) {
@@ -62,9 +62,9 @@ public class DefisPanel {
 			
 			// LISTE DES DEFIS DISPONIBLE //
 			ArrayList<Defi> liste = new ArrayList<>();
-			for(Defi p : myGui.getListeDefis()) { // On récupère tous les défis disponibles
-				if(p.isReviewed() && !p.isAccepte() && !p.isTermine() && p.getDestinataire() == selected) {
-					liste.add(p); // On ajoute le défi à la liste des défis disponibles s'il n'a pas déjà été accepté et terminé
+			for(Defi d : myGui.getListeDefis()) { // On récupère tous les défis disponibles
+				if(d.isReviewed() && !d.isAccepte() && !d.isTermine() && d.getDestinataire() == selected) {
+					liste.add(d); // On ajoute le défi à la liste des défis disponibles s'il n'a pas déjà été accepté et terminé
 				}
 			}
 			

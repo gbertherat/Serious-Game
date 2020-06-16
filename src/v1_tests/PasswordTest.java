@@ -2,7 +2,6 @@ package v1_tests;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
 
 public class PasswordTest {
 	public static void main(String[] args) throws NoSuchAlgorithmException {

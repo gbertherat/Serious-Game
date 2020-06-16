@@ -3,7 +3,17 @@ package v1;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * Permet l'encryption d'un mot de passe
+ * @author Guillaume
+ */
 public class Password {
+	
+	/**
+	 * Permet l'encryption d'un mot de passe
+	 * @param password - Le mot de passe à encrypter
+	 * @return le mot de passe encrypté
+	 */
 	public static String encryptPassword(String password) {
 		String generatedPassword = null;
 	    try {

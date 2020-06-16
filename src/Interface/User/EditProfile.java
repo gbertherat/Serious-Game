@@ -1,7 +1,6 @@
 package Interface.User;
 
 import Interface.GUI;
-import Interface.Admin.AdminUsersPanel;
 import v1.Password;
 import v1.Player;
 
@@ -24,17 +23,42 @@ import javax.swing.Timer;
 
 import Components.Factory;
 
+/**
+ * Fenêtre utilisateur pour modifier son profil
+ * @author Guillaume
+ */
 public class EditProfile {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe EditProfile
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public EditProfile(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Vérifie le format d'une entrée e-mail
+	 * @param email - L'entrée à vérifier
+	 * @return true s'il s'agît bien d'un format e-mail, false sinon.
+	 */
+	static boolean isValid(String email) {
+		String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
+		return email.matches(regex);
+	}
+	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 * @param id - L'id du joueur à modifier
+	 */
 	public void repaint(int id) {
 		if(GUI.idSession != 0 && id == GUI.idSession) {
+			// On récupère le panel principal
 			Container panel = frame.getContentPane();
 			panel.removeAll();
 			panel.revalidate();
@@ -166,9 +190,13 @@ public class EditProfile {
 			JPanel buttonsPanel = Factory.addPanel();
 			JButton validButton = Factory.addButton("Valider", 130, 40);
 			
+			/**
+			 * Permet de valider les modifications du profil
+			 */
 			validButton.addActionListener(new ActionListener() {
 				@Override
 				public void actionPerformed(ActionEvent e) {
+					// On récupère les données entrées
 					String nom = nomInput.getText();
 					String prenom = prenomInput.getText();
 					int age = (int) ageInput.getValue();
@@ -178,6 +206,7 @@ public class EditProfile {
 					String newPassword2 = String.valueOf(confirmField.getPassword());
 					String currentPassword = String.valueOf(mdpField.getPassword());
 					
+					// On vérifie ces données
 					if(nom.length() < 3) {
 						messageLabel.setText("Erreur: Nom invalide (< 3 caractères)");
 						return;
@@ -209,6 +238,7 @@ public class EditProfile {
 					
 					buttonsPanel.remove(validButton);
 					
+					// On modifie les attributs de l'objet Player par les données entrées
 					player.setNom(nom);
 					player.setPrenom(prenom);
 					player.setAge(age);
@@ -217,7 +247,7 @@ public class EditProfile {
 					player.setPassword(Password.encryptPassword(newPassword1));
 
 					messageLabel.setText("Modifications sauvegardées");
-					myGui.saveAll();
+					myGui.saveAll(); // On sauvegarde
 					ActionListener panel = new ActionListener() {
 						@Override
 						public void actionPerformed(ActionEvent arg0) {
@@ -251,15 +281,5 @@ public class EditProfile {
 		
 			panel.repaint();
 		}
-	}
-	
-	/**
-	 * Vérifie le format d'une entrée e-mail
-	 * @param email - L'entrée à vérifier
-	 * @return true s'il s'agît bien d'un format e-mail, false sinon.
-	 */
-	static boolean isValid(String email) {
-		String regex = "^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$";
-		return email.matches(regex);
 	}
 }

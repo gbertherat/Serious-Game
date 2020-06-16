@@ -2,7 +2,6 @@ package Interface;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -22,11 +21,10 @@ import v1.Question;
  * @author Guillaume
  */
 public class GUI{
-
-	protected JFrame frame;
-	protected ArrayList<Player> listeJoueurs;
-	protected ArrayList<Defi> listeDefis;
-	protected ArrayList<Question> listeQuestions;
+	// VARS //
+	private ArrayList<Player> listeJoueurs;
+	private ArrayList<Defi> listeDefis;
+	private ArrayList<Question> listeQuestions;
 	public String[] categories = {"C", "Python", "Java", "Réseaux", "Autre"};
 	public static int idSession = 0;
 	
@@ -34,8 +32,6 @@ public class GUI{
 		this.listeJoueurs = new ArrayList<>();
 		this.listeDefis = new ArrayList<>();
 		this.listeQuestions = new ArrayList<>();
-		this.frame = frame;
-		
 		try {
 			UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
@@ -91,6 +87,8 @@ public class GUI{
 		this.listeJoueurs.remove(player);
 	}
 	
+	
+	// LISTE DEFIS //
 	/**
 	 * Permet de récupérer la liste des joueurs
 	 * @return la liste des joueurs
@@ -100,13 +98,18 @@ public class GUI{
 	}
 
 	/**
-	 * Permet de définir la liste des joueurs
-	 * @param listeJoueurs - la liste à définir
+	 * Permet de définir la liste des défis
+	 * @param listeDefis - la liste à définir
 	 */
 	public void setListeDefis(ArrayList<Defi> listeDefis) {
 		this.listeDefis = listeDefis;
 	}
 	
+	/**
+	 * Permet de récupérer un défi grâce à son id
+	 * @param id - l'id du défi à récupérer
+	 * @return Un défi s'il existe, null sinon
+	 */
 	public Defi getDefi(int id) {
 		for(Defi d : listeDefis) {
 			if(d.getId() == id) {
@@ -132,6 +135,7 @@ public class GUI{
 		this.listeDefis.remove(defi);
 	}
 	
+	// LISTE QUESTIONS //
 	/**
 	 * Permet de récupérer la liste des questions
 	 * @return listeQuestions - La liste des questions
@@ -173,6 +177,9 @@ public class GUI{
 		return null;
 	}
 	
+	/**
+	 * Permet de sauvegarder / serialiser toutes les données du jeu.
+	 */
 	public void saveAll() {
 		try {
 			new File("ser/data.ser").delete();
@@ -190,6 +197,9 @@ public class GUI{
 		}
 	}
 	
+	/**
+	 * Permet de récupérer les données du jeu
+	 */
 	@SuppressWarnings("unchecked")
 	public void loadAll() {
 		try {		
@@ -227,26 +237,21 @@ public class GUI{
 		}
 	}
 
-	// MAIN //
+	/**
+	 * Methode main() du jeu
+	 * @param args - Autre paramètres
+	 */
 	public static void main(String[] args){
-		JFrame frame = new JFrame();
+		// On créé un object JFrame() et on modifie ses options
+		JFrame frame = new JFrame(); 
 		frame.setTitle("Serious-Game by Bertherat Guillaume");
 		frame.setSize(1024, 576);
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		GUI myGui = new GUI(frame);
 		
-		/*
-		Player addMe = new Player();
-		addMe.setUsername("Motzen");
-		addMe.setPassword("40bd001563085fc35165329ea1ff5c5ecbdbbeef");
-		addMe.setAdmin(true);
-		myGui.addJoueur(addMe);
-		myGui.saveAll();
-		*/
-		
-		myGui.loadAll();
-		new MainMenu(myGui, frame).repaint();
+		myGui.loadAll(); // On charge toutes les données du jeu
+		new MainMenu(myGui, frame).repaint(); // On affiche le menu principal
 	}
 	
 }

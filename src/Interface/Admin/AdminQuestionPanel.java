@@ -18,19 +18,34 @@ import Interface.GUI;
 import v1.Player;
 import v1.Question;
 
+/**
+ * Fenêtre administrateur affichant toutes les questions
+ * @author Guillaume
+ */
 public class AdminQuestionPanel {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe AdminEditUser
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public AdminQuestionPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 * @param index - Numéro de la page à afficher
+	 */
 	public void repaint(int index) {
-		if(GUI.idSession != 0) {
+		if(GUI.idSession != 0) { 
 			Player selected = myGui.getPlayer(GUI.idSession);
-			if(selected.isAdmin()) {
+			if(selected.isAdmin()) { // Si le joueur est un administrateur
+				// On récupère le panel principal
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();

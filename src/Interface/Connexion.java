@@ -25,15 +25,24 @@ import v1.Player;
  * @author Guillaume
  */
 public class Connexion {
-	protected GUI myGui;
-	protected JFrame frame;
+	private GUI myGui;
+	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe Connexion
+	 * @param myGui - Le GUI utilisé
+	 * @param frame - La JFrame utilisé
+	 */
 	public Connexion(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Méthode de repaint() pour afficher la fenêtre JSwing
+	 */
 	public void repaint() {
+		// On récupère le panel principal
 		Container panel = frame.getContentPane();
 		panel.removeAll();
 		panel.revalidate();
@@ -87,6 +96,7 @@ public class Connexion {
 			public void actionPerformed(ActionEvent e) {
 				Player selected = null;
 				String username = inUsername.getText();
+				// On vérifie que l'utilisateur entré existe dans la liste des joueurs
 				for(Player p : myGui.getListeJoueurs()) {
 					if(p.getUsername().equals(username)) {
 						selected = p;
@@ -94,13 +104,14 @@ public class Connexion {
 					}
 				}
 				
+				// Si l'utilisateur a été trouvé
 				if(selected != null) {
 					String password = Password.encryptPassword(String.valueOf(inPassword.getPassword()));
-					if(selected.getPassword().equals(password)) {
-						GUI.idSession = selected.getID();
-						new Menu(myGui, frame).repaint();
+					if(selected.getPassword().equals(password)) { // On vérifie que les mots de passes correspondent
+						GUI.idSession = selected.getID(); // Si c'est le cas, on change l'id de Session
+						new Menu(myGui, frame).repaint(); // Et on affiche le menu
 					} else {
-						message.setText("Identifiants invalides");
+						message.setText("Identifiants invalides"); // Sinon on affiche un message d'erreur
 						return;
 					}
 				} else {

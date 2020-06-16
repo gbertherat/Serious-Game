@@ -19,19 +19,34 @@ import Components.Factory;
 import Interface.GUI;
 import v1.Player;
 
+/**
+ * Fenêtre administrateur affichant la liste des joueurs
+ * @author Guillaume
+ */
 public class AdminUsersPanel {
+	// VARS //
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe AdminUsersPanel
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public AdminUsersPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 * @param index - Le numéro de la page à afficher
+	 */
 	public void repaint(int index) {
 		if(GUI.idSession != 0) {
 			Player selected = myGui.getPlayer(GUI.idSession);
-			if(selected.isAdmin()) {
+			if(selected.isAdmin()) { // Si le joueur est un administrateur
+				// On récupère le panel principal
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();

@@ -18,19 +18,32 @@ import Interface.User.Menu;
 import v1.Defi;
 import v1.Player;
 
+/**
+ * Fenêtre administrateur principale
+ * @author Guillaume
+ */
 public class AdminPanel {
 	private GUI myGui;
 	private JFrame frame;
 	
+	/**
+	 * Constructeur de la classe AdminPanel
+	 * @param myGui - GUI à utiliser
+	 * @param frame - Frame à utiliser
+	 */
 	public AdminPanel(GUI myGui, JFrame frame) {
 		this.myGui = myGui;
 		this.frame = frame;
 	}
 	
+	/**
+	 * Permet l'affichage de la fenêtre
+	 */
 	public void repaint() {
 		if(GUI.idSession != 0) {
 			Player selected = myGui.getPlayer(GUI.idSession);
-			if(selected.isAdmin()) {
+			if(selected.isAdmin()) { // Si l'utilisateur est un administrateur
+				// On récupère le panel principal
 				Container panel = frame.getContentPane();
 				panel.removeAll();
 				panel.revalidate();
